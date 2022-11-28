@@ -10,5 +10,5 @@ void Main(array<String^>^ args) {
     Application::SetCompatibleTextRenderingDefault(false);
     CESIProject::LoginPage form;
     Application::Run(% form);
-
+    // test monsieur
 }

@@ -51,6 +51,7 @@ namespace CESIProject {
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
+	private: System::Windows::Forms::Button^ btneyes;
 	protected:
 
 	private:
@@ -68,6 +69,7 @@ namespace CESIProject {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(LoginPage::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->btneyes = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
@@ -92,6 +94,7 @@ namespace CESIProject {
 			// 
 			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
 			this->panel1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panel1->Controls->Add(this->btneyes);
 			this->panel1->Controls->Add(this->label4);
 			this->panel1->Controls->Add(this->panel3);
 			this->panel1->Controls->Add(this->panel2);
@@ -108,6 +111,19 @@ namespace CESIProject {
 			this->panel1->Size = System::Drawing::Size(1188, 682);
 			this->panel1->TabIndex = 0;
 			this->panel1->Click += gcnew System::EventHandler(this, &LoginPage::otherclick);
+			// 
+			// btneyes
+			// 
+			this->btneyes->BackColor = System::Drawing::Color::Transparent;
+			this->btneyes->FlatAppearance->BorderSize = 0;
+			this->btneyes->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btneyes->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btneyes.Image")));
+			this->btneyes->Location = System::Drawing::Point(992, 327);
+			this->btneyes->Name = L"btneyes";
+			this->btneyes->Size = System::Drawing::Size(40, 33);
+			this->btneyes->TabIndex = 14;
+			this->btneyes->UseVisualStyleBackColor = false;
+			this->btneyes->Click += gcnew System::EventHandler(this, &LoginPage::btneyes_Click);
 			// 
 			// label4
 			// 
@@ -137,6 +153,7 @@ namespace CESIProject {
 			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->textBox2->Location = System::Drawing::Point(22, 19);
 			this->textBox2->Name = L"textBox2";
+			this->textBox2->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->textBox2->Size = System::Drawing::Size(404, 19);
 			this->textBox2->TabIndex = 0;
 			this->textBox2->Text = L"Password";
@@ -231,9 +248,9 @@ namespace CESIProject {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 13.25F));
 			this->label1->Location = System::Drawing::Point(172, 475);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(141, 24);
+			this->label1->Size = System::Drawing::Size(130, 24);
 			this->label1->TabIndex = 3;
-			this->label1->Text = L"Pas de compte \? ";
+			this->label1->Text = L"Besoin d\'aide \? ";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->label1->Click += gcnew System::EventHandler(this, &LoginPage::otherclick);
 			// 
@@ -281,6 +298,7 @@ namespace CESIProject {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1186, 687);
 			this->Controls->Add(this->panel1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximumSize = System::Drawing::Size(1202, 726);
 			this->MinimumSize = System::Drawing::Size(1202, 726);
 			this->Name = L"LoginPage";
@@ -385,5 +403,15 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	}
 }
 
+private: System::Void btneyes_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (textBox2->UseSystemPasswordChar == true) 
+	{
+		textBox2->UseSystemPasswordChar = false;
+	}
+	else
+	{
+		textBox2->UseSystemPasswordChar = true;
+	}
+}
 };
 }

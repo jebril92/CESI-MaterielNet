@@ -44,6 +44,7 @@ namespace CESIProject {
 	private: System::Windows::Forms::Panel^ panelLogo;
 	private: System::Windows::Forms::PictureBox^ btnHome;
 	private: System::Windows::Forms::FlowLayoutPanel^ panelTitleBar;
+	private: System::Windows::Forms::Panel^ pnlNav;
 	protected:
 
 	protected:
@@ -70,13 +71,14 @@ namespace CESIProject {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Form2::typeid));
 			this->panelMenu = (gcnew System::Windows::Forms::Panel());
-			this->panelLogo = (gcnew System::Windows::Forms::Panel());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->pnlNav = (gcnew System::Windows::Forms::Panel());
 			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->panelLogo = (gcnew System::Windows::Forms::Panel());
 			this->btnHome = (gcnew System::Windows::Forms::PictureBox());
 			this->panelTitleBar = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->panelMenu->SuspendLayout();
@@ -88,6 +90,7 @@ namespace CESIProject {
 			// 
 			this->panelMenu->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
 				static_cast<System::Int32>(static_cast<System::Byte>(68)));
+			this->panelMenu->Controls->Add(this->pnlNav);
 			this->panelMenu->Controls->Add(this->button6);
 			this->panelMenu->Controls->Add(this->button5);
 			this->panelMenu->Controls->Add(this->button4);
@@ -101,104 +104,14 @@ namespace CESIProject {
 			this->panelMenu->Size = System::Drawing::Size(220, 673);
 			this->panelMenu->TabIndex = 0;
 			// 
-			// panelLogo
+			// pnlNav
 			// 
-			this->panelLogo->Controls->Add(this->btnHome);
-			this->panelLogo->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panelLogo->Location = System::Drawing::Point(0, 0);
-			this->panelLogo->Name = L"panelLogo";
-			this->panelLogo->Size = System::Drawing::Size(220, 140);
-			this->panelLogo->TabIndex = 0;
-			// 
-			// button1
-			// 
-			this->button1->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button1->FlatAppearance->BorderSize = 0;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::Color::White;
-			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
-			this->button1->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button1->Location = System::Drawing::Point(0, 140);
-			this->button1->Name = L"button1";
-			this->button1->Padding = System::Windows::Forms::Padding(10, 0, 20, 0);
-			this->button1->Size = System::Drawing::Size(220, 60);
-			this->button1->TabIndex = 0;
-			this->button1->Text = L"Dashboard";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
-			// button2
-			// 
-			this->button2->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button2->FlatAppearance->BorderSize = 0;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button2->ForeColor = System::Drawing::Color::White;
-			this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
-			this->button2->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button2->Location = System::Drawing::Point(0, 200);
-			this->button2->Name = L"button2";
-			this->button2->Padding = System::Windows::Forms::Padding(10, 0, 20, 0);
-			this->button2->Size = System::Drawing::Size(220, 60);
-			this->button2->TabIndex = 1;
-			this->button2->Text = L"Orders";
-			this->button2->UseVisualStyleBackColor = true;
-			// 
-			// button3
-			// 
-			this->button3->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button3->FlatAppearance->BorderSize = 0;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button3->ForeColor = System::Drawing::Color::White;
-			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
-			this->button3->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button3->Location = System::Drawing::Point(0, 260);
-			this->button3->Name = L"button3";
-			this->button3->Padding = System::Windows::Forms::Padding(10, 0, 20, 0);
-			this->button3->Size = System::Drawing::Size(220, 60);
-			this->button3->TabIndex = 2;
-			this->button3->Text = L"Produts";
-			this->button3->UseVisualStyleBackColor = true;
-			// 
-			// button4
-			// 
-			this->button4->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button4->FlatAppearance->BorderSize = 0;
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button4->ForeColor = System::Drawing::Color::White;
-			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
-			this->button4->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button4->Location = System::Drawing::Point(0, 320);
-			this->button4->Name = L"button4";
-			this->button4->Padding = System::Windows::Forms::Padding(10, 0, 20, 0);
-			this->button4->Size = System::Drawing::Size(220, 60);
-			this->button4->TabIndex = 3;
-			this->button4->Text = L"Customers";
-			this->button4->UseVisualStyleBackColor = true;
-			// 
-			// button5
-			// 
-			this->button5->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button5->FlatAppearance->BorderSize = 0;
-			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button5->ForeColor = System::Drawing::Color::White;
-			this->button5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.Image")));
-			this->button5->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button5->Location = System::Drawing::Point(0, 380);
-			this->button5->Name = L"button5";
-			this->button5->Padding = System::Windows::Forms::Padding(10, 0, 20, 0);
-			this->button5->Size = System::Drawing::Size(220, 60);
-			this->button5->TabIndex = 4;
-			this->button5->Text = L"Marketing";
-			this->button5->UseVisualStyleBackColor = true;
+			this->pnlNav->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(126)),
+				static_cast<System::Int32>(static_cast<System::Byte>(249)));
+			this->pnlNav->Location = System::Drawing::Point(0, 193);
+			this->pnlNav->Name = L"pnlNav";
+			this->pnlNav->Size = System::Drawing::Size(3, 100);
+			this->pnlNav->TabIndex = 2;
 			// 
 			// button6
 			// 
@@ -217,6 +130,117 @@ namespace CESIProject {
 			this->button6->TabIndex = 5;
 			this->button6->Text = L"Settings";
 			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &Form2::button6_Click);
+			this->button6->Leave += gcnew System::EventHandler(this, &Form2::button6_Leave);
+			// 
+			// button5
+			// 
+			this->button5->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button5->FlatAppearance->BorderSize = 0;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button5->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button5->ForeColor = System::Drawing::Color::White;
+			this->button5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.Image")));
+			this->button5->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button5->Location = System::Drawing::Point(0, 380);
+			this->button5->Name = L"button5";
+			this->button5->Padding = System::Windows::Forms::Padding(10, 0, 20, 0);
+			this->button5->Size = System::Drawing::Size(220, 60);
+			this->button5->TabIndex = 4;
+			this->button5->Text = L"Marketing";
+			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &Form2::button5_Click);
+			this->button5->Leave += gcnew System::EventHandler(this, &Form2::button5_Leave);
+			// 
+			// button4
+			// 
+			this->button4->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button4->FlatAppearance->BorderSize = 0;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button4->ForeColor = System::Drawing::Color::White;
+			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
+			this->button4->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button4->Location = System::Drawing::Point(0, 320);
+			this->button4->Name = L"button4";
+			this->button4->Padding = System::Windows::Forms::Padding(10, 0, 20, 0);
+			this->button4->Size = System::Drawing::Size(220, 60);
+			this->button4->TabIndex = 3;
+			this->button4->Text = L"Customers";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &Form2::button4_Click);
+			this->button4->Leave += gcnew System::EventHandler(this, &Form2::button4_Leave);
+			// 
+			// button3
+			// 
+			this->button3->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button3->FlatAppearance->BorderSize = 0;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::Color::White;
+			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
+			this->button3->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button3->Location = System::Drawing::Point(0, 260);
+			this->button3->Name = L"button3";
+			this->button3->Padding = System::Windows::Forms::Padding(10, 0, 20, 0);
+			this->button3->Size = System::Drawing::Size(220, 60);
+			this->button3->TabIndex = 2;
+			this->button3->Text = L"Products";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &Form2::button3_Click);
+			this->button3->Leave += gcnew System::EventHandler(this, &Form2::button3_Leave);
+			// 
+			// button2
+			// 
+			this->button2->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button2->FlatAppearance->BorderSize = 0;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->ForeColor = System::Drawing::Color::White;
+			this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
+			this->button2->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button2->Location = System::Drawing::Point(0, 200);
+			this->button2->Name = L"button2";
+			this->button2->Padding = System::Windows::Forms::Padding(10, 0, 20, 0);
+			this->button2->Size = System::Drawing::Size(220, 60);
+			this->button2->TabIndex = 1;
+			this->button2->Text = L"Orders";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &Form2::button2_Click);
+			this->button2->Leave += gcnew System::EventHandler(this, &Form2::button2_Leave);
+			// 
+			// button1
+			// 
+			this->button1->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->ForeColor = System::Drawing::Color::White;
+			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
+			this->button1->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button1->Location = System::Drawing::Point(0, 140);
+			this->button1->Name = L"button1";
+			this->button1->Padding = System::Windows::Forms::Padding(10, 0, 20, 0);
+			this->button1->Size = System::Drawing::Size(220, 60);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"Dashboard";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Form2::button1_Click);
+			this->button1->Leave += gcnew System::EventHandler(this, &Form2::button1_Leave);
+			// 
+			// panelLogo
+			// 
+			this->panelLogo->Controls->Add(this->btnHome);
+			this->panelLogo->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panelLogo->Location = System::Drawing::Point(0, 0);
+			this->panelLogo->Name = L"panelLogo";
+			this->panelLogo->Size = System::Drawing::Size(220, 140);
+			this->panelLogo->TabIndex = 0;
 			// 
 			// btnHome
 			// 
@@ -227,6 +251,7 @@ namespace CESIProject {
 			this->btnHome->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->btnHome->TabIndex = 0;
 			this->btnHome->TabStop = false;
+			this->btnHome->Click += gcnew System::EventHandler(this, &Form2::btnHome_Click);
 			// 
 			// panelTitleBar
 			// 
@@ -257,5 +282,62 @@ namespace CESIProject {
 
 		}
 #pragma endregion
-	};
+	private: System::Void btnHome_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	pnlNav->Height = button1->Height;
+	pnlNav->Top = button1->Top;
+	pnlNav->Left = button1->Left;
+	button1->BackColor = Color::FromArgb(46, 51, 73);
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	pnlNav->Height = button2->Height;
+	pnlNav->Top = button2->Top;
+	pnlNav->Left = button2->Left;
+	button2->BackColor = Color::FromArgb(46, 51, 73);
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	pnlNav->Height = button3->Height;
+	pnlNav->Top = button3->Top;
+	pnlNav->Left = button3->Left;
+	button3->BackColor = Color::FromArgb(46, 51, 73);
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	pnlNav->Height = button4->Height;
+	pnlNav->Top = button4->Top;
+	pnlNav->Left = button4->Left;
+	button4->BackColor = Color::FromArgb(46, 51, 73);
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	pnlNav->Height = button5->Height;
+	pnlNav->Top = button5->Top;
+	pnlNav->Left = button5->Left;
+	button5->BackColor = Color::FromArgb(46, 51, 73);
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	pnlNav->Height = button6->Height;
+	pnlNav->Top = button6->Top;
+	pnlNav->Left = button6->Left;
+	button6->BackColor = Color::FromArgb(46, 51, 73);
+}
+private: System::Void button1_Leave(System::Object^ sender, System::EventArgs^ e) {
+	button1->BackColor = Color::FromArgb(31, 30, 68);
+}
+private: System::Void button2_Leave(System::Object^ sender, System::EventArgs^ e) {
+	button2->BackColor = Color::FromArgb(31, 30, 68);
+}
+private: System::Void button3_Leave(System::Object^ sender, System::EventArgs^ e) {
+	button3->BackColor = Color::FromArgb(31, 30, 68);
+}
+private: System::Void button4_Leave(System::Object^ sender, System::EventArgs^ e) {
+	button4->BackColor = Color::FromArgb(31, 30, 68);
+}
+private: System::Void button5_Leave(System::Object^ sender, System::EventArgs^ e) {
+	button5->BackColor = Color::FromArgb(31, 30, 68);
+}
+private: System::Void button6_Leave(System::Object^ sender, System::EventArgs^ e) {
+	button6->BackColor = Color::FromArgb(31, 30, 68);
+}
+};
 }

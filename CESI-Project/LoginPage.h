@@ -381,7 +381,6 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	{
 		if (textBox2->Text == "root")
 		{
-			MessageBox::Show("Connexion reussite !");
 			Form2^ frm2 = gcnew Form2;
 			frm2->Show();
 		}

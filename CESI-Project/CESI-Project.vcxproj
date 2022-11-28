@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClCompile Include="Form2.cpp" />
     <ClCompile Include="LoginPage.cpp" />
+    <ClCompile Include="StaffManagement.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form2.h">
@@ -131,6 +132,7 @@
     <ClInclude Include="LoginPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="StaffManagement.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form2.resx">

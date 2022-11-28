@@ -11,4 +11,5 @@ void Main(array<String^>^ args) {
     CESIProject::LoginPage form;
     Application::Run(% form);
     // test monsieur
+    
 }

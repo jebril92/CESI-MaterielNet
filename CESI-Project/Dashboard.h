@@ -1,4 +1,5 @@
 #pragma once
+#include "InterfacePersonnel.h"
 
 namespace CESIProject {
 
@@ -55,8 +56,10 @@ namespace CESIProject {
 	private: System::Windows::Forms::Label^ labelOrders;
 	private: System::Windows::Forms::Panel^ panelProducts;
 	private: System::Windows::Forms::Label^ labelProducts;
-	private: System::Windows::Forms::Panel^ panelCustomers;
-	private: System::Windows::Forms::Label^ labelCustomers;
+	private: System::Windows::Forms::Panel^ panelPersonnels;
+
+	private: System::Windows::Forms::Label^ labelPersonnels;
+
 	private: System::Windows::Forms::Panel^ panelMarketing;
 
 	private: System::Windows::Forms::Label^ labelMarketing;
@@ -123,14 +126,14 @@ namespace CESIProject {
 			this->labelProducts = (gcnew System::Windows::Forms::Label());
 			this->panelOrders = (gcnew System::Windows::Forms::Panel());
 			this->labelOrders = (gcnew System::Windows::Forms::Label());
-			this->panelCustomers = (gcnew System::Windows::Forms::Panel());
+			this->panelPersonnels = (gcnew System::Windows::Forms::Panel());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->btnchargerbdd = (gcnew System::Windows::Forms::Button());
 			this->btnSupprimer = (gcnew System::Windows::Forms::Button());
 			this->btnModifier = (gcnew System::Windows::Forms::Button());
 			this->btnNouveau = (gcnew System::Windows::Forms::Button());
 			this->btnEnregistrer = (gcnew System::Windows::Forms::Button());
-			this->labelCustomers = (gcnew System::Windows::Forms::Label());
+			this->labelPersonnels = (gcnew System::Windows::Forms::Label());
 			this->panelMarketing = (gcnew System::Windows::Forms::Panel());
 			this->labelMarketing = (gcnew System::Windows::Forms::Label());
 			this->panelSettings = (gcnew System::Windows::Forms::Panel());
@@ -143,7 +146,7 @@ namespace CESIProject {
 			this->panelDashboard->SuspendLayout();
 			this->panelProducts->SuspendLayout();
 			this->panelOrders->SuspendLayout();
-			this->panelCustomers->SuspendLayout();
+			this->panelPersonnels->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->panelMarketing->SuspendLayout();
 			this->panelSettings->SuspendLayout();
@@ -236,7 +239,7 @@ namespace CESIProject {
 			this->button4->Padding = System::Windows::Forms::Padding(11, 0, 20, 0);
 			this->button4->Size = System::Drawing::Size(220, 60);
 			this->button4->TabIndex = 3;
-			this->button4->Text = L"Customers";
+			this->button4->Text = L"Personnels";
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &Dashboard::button4_Click);
 			this->button4->Leave += gcnew System::EventHandler(this, &Dashboard::button4_Leave);
@@ -402,23 +405,23 @@ namespace CESIProject {
 			this->labelOrders->TabIndex = 0;
 			this->labelOrders->Text = L"Orders";
 			// 
-			// panelCustomers
+			// panelPersonnels
 			// 
-			this->panelCustomers->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
+			this->panelPersonnels->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
 				static_cast<System::Int32>(static_cast<System::Byte>(70)));
-			this->panelCustomers->Controls->Add(this->dataGridView1);
-			this->panelCustomers->Controls->Add(this->btnchargerbdd);
-			this->panelCustomers->Controls->Add(this->btnSupprimer);
-			this->panelCustomers->Controls->Add(this->btnModifier);
-			this->panelCustomers->Controls->Add(this->btnNouveau);
-			this->panelCustomers->Controls->Add(this->btnEnregistrer);
-			this->panelCustomers->Controls->Add(this->labelCustomers);
-			this->panelCustomers->Location = System::Drawing::Point(220, 76);
-			this->panelCustomers->Margin = System::Windows::Forms::Padding(4);
-			this->panelCustomers->Name = L"panelCustomers";
-			this->panelCustomers->Size = System::Drawing::Size(961, 597);
-			this->panelCustomers->TabIndex = 5;
-			this->panelCustomers->Visible = false;
+			this->panelPersonnels->Controls->Add(this->dataGridView1);
+			this->panelPersonnels->Controls->Add(this->btnchargerbdd);
+			this->panelPersonnels->Controls->Add(this->btnSupprimer);
+			this->panelPersonnels->Controls->Add(this->btnModifier);
+			this->panelPersonnels->Controls->Add(this->btnNouveau);
+			this->panelPersonnels->Controls->Add(this->btnEnregistrer);
+			this->panelPersonnels->Controls->Add(this->labelPersonnels);
+			this->panelPersonnels->Location = System::Drawing::Point(220, 76);
+			this->panelPersonnels->Margin = System::Windows::Forms::Padding(4);
+			this->panelPersonnels->Name = L"panelPersonnels";
+			this->panelPersonnels->Size = System::Drawing::Size(961, 597);
+			this->panelPersonnels->TabIndex = 5;
+			this->panelPersonnels->Visible = false;
 			// 
 			// dataGridView1
 			// 
@@ -478,6 +481,7 @@ namespace CESIProject {
 			this->btnNouveau->TabIndex = 11;
 			this->btnNouveau->Text = L"Nouveau";
 			this->btnNouveau->UseVisualStyleBackColor = true;
+			this->btnNouveau->Click += gcnew System::EventHandler(this, &Dashboard::btnNouveau_Click);
 			// 
 			// btnEnregistrer
 			// 
@@ -491,19 +495,19 @@ namespace CESIProject {
 			this->btnEnregistrer->Text = L"   Enregistrer";
 			this->btnEnregistrer->UseVisualStyleBackColor = true;
 			// 
-			// labelCustomers
+			// labelPersonnels
 			// 
-			this->labelCustomers->AutoSize = true;
-			this->labelCustomers->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labelPersonnels->AutoSize = true;
+			this->labelPersonnels->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelCustomers->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(158)), static_cast<System::Int32>(static_cast<System::Byte>(161)),
+			this->labelPersonnels->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(158)), static_cast<System::Int32>(static_cast<System::Byte>(161)),
 				static_cast<System::Int32>(static_cast<System::Byte>(176)));
-			this->labelCustomers->Location = System::Drawing::Point(13, 15);
-			this->labelCustomers->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->labelCustomers->Name = L"labelCustomers";
-			this->labelCustomers->Size = System::Drawing::Size(187, 39);
-			this->labelCustomers->TabIndex = 0;
-			this->labelCustomers->Text = L"Customers";
+			this->labelPersonnels->Location = System::Drawing::Point(13, 15);
+			this->labelPersonnels->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->labelPersonnels->Name = L"labelPersonnels";
+			this->labelPersonnels->Size = System::Drawing::Size(191, 39);
+			this->labelPersonnels->TabIndex = 0;
+			this->labelPersonnels->Text = L"Personnels";
 			// 
 			// panelMarketing
 			// 
@@ -582,7 +586,7 @@ namespace CESIProject {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
 			this->ClientSize = System::Drawing::Size(1179, 663);
-			this->Controls->Add(this->panelCustomers);
+			this->Controls->Add(this->panelPersonnels);
 			this->Controls->Add(this->labelBienvenue);
 			this->Controls->Add(this->panelDashboard);
 			this->Controls->Add(this->labelAdmin);
@@ -607,8 +611,8 @@ namespace CESIProject {
 			this->panelProducts->PerformLayout();
 			this->panelOrders->ResumeLayout(false);
 			this->panelOrders->PerformLayout();
-			this->panelCustomers->ResumeLayout(false);
-			this->panelCustomers->PerformLayout();
+			this->panelPersonnels->ResumeLayout(false);
+			this->panelPersonnels->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->panelMarketing->ResumeLayout(false);
 			this->panelMarketing->PerformLayout();
@@ -629,7 +633,7 @@ namespace CESIProject {
 		panelDashboard->Visible = false;
 		panelOrders->Visible = false;
 		panelProducts->Visible = false;
-		panelCustomers->Visible = false;
+		panelPersonnels->Visible = false;
 		panelMarketing->Visible = false;
 		panelSettings->Visible = false;
 	}
@@ -644,7 +648,7 @@ namespace CESIProject {
 			panelDashboard->Visible = true;
 			panelOrders->Visible = false;
 			panelProducts->Visible = false;
-			panelCustomers->Visible = false;
+			panelPersonnels->Visible = false;
 			panelMarketing->Visible = false;
 			panelSettings->Visible = false;
 		}
@@ -659,7 +663,7 @@ namespace CESIProject {
 			panelOrders->Visible = true;
 			panelDashboard->Visible = false;
 			panelProducts->Visible = false;
-			panelCustomers->Visible = false;
+			panelPersonnels->Visible = false;
 			panelMarketing->Visible = false;
 			panelSettings->Visible = false;
 		}
@@ -674,7 +678,7 @@ namespace CESIProject {
 			panelProducts->Visible = true;
 			panelOrders->Visible = false;
 			panelDashboard->Visible = false;
-			panelCustomers->Visible = false;
+			panelPersonnels->Visible = false;
 			panelMarketing->Visible = false;
 			panelSettings->Visible = false;
 		}
@@ -684,9 +688,9 @@ namespace CESIProject {
 		pnlNav->Top = button4->Top;
 		pnlNav->Left = button4->Left;
 		button4->BackColor = Color::FromArgb(46, 51, 73);
-		if (panelCustomers->Visible == false)
+		if (panelPersonnels->Visible == false)
 		{
-			panelCustomers->Visible = true;
+			panelPersonnels->Visible = true;
 			panelOrders->Visible = false;
 			panelDashboard->Visible = false;
 			panelProducts->Visible = false;
@@ -705,7 +709,7 @@ namespace CESIProject {
 			panelOrders->Visible = false;
 			panelDashboard->Visible = false;
 			panelProducts->Visible = false;
-			panelCustomers->Visible = false;
+			panelPersonnels->Visible = false;
 			panelSettings->Visible = false;
 		}
 	}
@@ -720,7 +724,7 @@ namespace CESIProject {
 			panelOrders->Visible = false;
 			panelDashboard->Visible = false;
 			panelProducts->Visible = false;
-			panelCustomers->Visible = false;
+			panelPersonnels->Visible = false;
 			panelMarketing->Visible = false;
 		}
 	}
@@ -746,5 +750,9 @@ namespace CESIProject {
 	}
 	private: System::Void panelTitleBar_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 	}
+private: System::Void btnNouveau_Click(System::Object^ sender, System::EventArgs^ e) {
+	InterfacePersonnel^ frm3 = gcnew InterfacePersonnel;
+	frm3->Show();
+}
 };
 }

@@ -148,6 +148,9 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfacePersonnel.resx">
+      <DependentUpon>InterfacePersonnel.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.h</DependentUpon>
     </EmbeddedResource>

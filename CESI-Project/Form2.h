@@ -33,6 +33,10 @@ namespace CESIProject {
 			{
 				delete components;
 			}
+
+			Application::Exit();
+			//Environment::Exit(0);
+
 		}
 	private: System::Windows::Forms::Panel^ panelMenu;
 	private: System::Windows::Forms::Button^ button6;
@@ -96,7 +100,7 @@ namespace CESIProject {
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -737,115 +741,115 @@ namespace CESIProject {
 		panelSettings->Visible = false;
 	}
 
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	pnlNav->Height = button1->Height;
-	pnlNav->Top = button1->Top;
-	pnlNav->Left = button1->Left;
-	button1->BackColor = Color::FromArgb(46, 51, 73);
-	if (panelDashboard->Visible == false) 
-	{
-		panelDashboard->Visible = true;
-		panelOrders->Visible = false;
-		panelProducts->Visible = false;
-		panelCustomers->Visible = false;
-		panelMarketing->Visible = false;
-		panelSettings->Visible = false;
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		pnlNav->Height = button1->Height;
+		pnlNav->Top = button1->Top;
+		pnlNav->Left = button1->Left;
+		button1->BackColor = Color::FromArgb(46, 51, 73);
+		if (panelDashboard->Visible == false)
+		{
+			panelDashboard->Visible = true;
+			panelOrders->Visible = false;
+			panelProducts->Visible = false;
+			panelCustomers->Visible = false;
+			panelMarketing->Visible = false;
+			panelSettings->Visible = false;
+		}
 	}
-}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	pnlNav->Height = button2->Height;
-	pnlNav->Top = button2->Top;
-	pnlNav->Left = button2->Left;
-	button2->BackColor = Color::FromArgb(46, 51, 73);
-	if (panelOrders->Visible == false)
-	{
-		panelOrders->Visible = true;
-		panelDashboard->Visible = false;
-		panelProducts->Visible = false;
-		panelCustomers->Visible = false;
-		panelMarketing->Visible = false;
-		panelSettings->Visible = false;
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		pnlNav->Height = button2->Height;
+		pnlNav->Top = button2->Top;
+		pnlNav->Left = button2->Left;
+		button2->BackColor = Color::FromArgb(46, 51, 73);
+		if (panelOrders->Visible == false)
+		{
+			panelOrders->Visible = true;
+			panelDashboard->Visible = false;
+			panelProducts->Visible = false;
+			panelCustomers->Visible = false;
+			panelMarketing->Visible = false;
+			panelSettings->Visible = false;
+		}
 	}
-}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	pnlNav->Height = button3->Height;
-	pnlNav->Top = button3->Top;
-	pnlNav->Left = button3->Left;
-	button3->BackColor = Color::FromArgb(46, 51, 73);
-	if (panelProducts->Visible == false)
-	{
-		panelProducts->Visible = true;
-		panelOrders->Visible = false;
-		panelDashboard->Visible = false;
-		panelCustomers->Visible = false;
-		panelMarketing->Visible = false;
-		panelSettings->Visible = false;
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		pnlNav->Height = button3->Height;
+		pnlNav->Top = button3->Top;
+		pnlNav->Left = button3->Left;
+		button3->BackColor = Color::FromArgb(46, 51, 73);
+		if (panelProducts->Visible == false)
+		{
+			panelProducts->Visible = true;
+			panelOrders->Visible = false;
+			panelDashboard->Visible = false;
+			panelCustomers->Visible = false;
+			panelMarketing->Visible = false;
+			panelSettings->Visible = false;
+		}
 	}
-}
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	pnlNav->Height = button4->Height;
-	pnlNav->Top = button4->Top;
-	pnlNav->Left = button4->Left;
-	button4->BackColor = Color::FromArgb(46, 51, 73);
-	if (panelCustomers->Visible == false)
-	{
-		panelCustomers->Visible = true;
-		panelOrders->Visible = false;
-		panelDashboard->Visible = false;
-		panelProducts->Visible = false;
-		panelMarketing->Visible = false;
-		panelSettings->Visible = false;
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		pnlNav->Height = button4->Height;
+		pnlNav->Top = button4->Top;
+		pnlNav->Left = button4->Left;
+		button4->BackColor = Color::FromArgb(46, 51, 73);
+		if (panelCustomers->Visible == false)
+		{
+			panelCustomers->Visible = true;
+			panelOrders->Visible = false;
+			panelDashboard->Visible = false;
+			panelProducts->Visible = false;
+			panelMarketing->Visible = false;
+			panelSettings->Visible = false;
+		}
 	}
-}
-private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-	pnlNav->Height = button5->Height;
-	pnlNav->Top = button5->Top;
-	pnlNav->Left = button5->Left;
-	button5->BackColor = Color::FromArgb(46, 51, 73);
-	if (panelMarketing->Visible == false)
-	{
-		panelMarketing->Visible = true;
-		panelOrders->Visible = false;
-		panelDashboard->Visible = false;
-		panelProducts->Visible = false;
-		panelCustomers->Visible = false;
-		panelSettings->Visible = false;
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+		pnlNav->Height = button5->Height;
+		pnlNav->Top = button5->Top;
+		pnlNav->Left = button5->Left;
+		button5->BackColor = Color::FromArgb(46, 51, 73);
+		if (panelMarketing->Visible == false)
+		{
+			panelMarketing->Visible = true;
+			panelOrders->Visible = false;
+			panelDashboard->Visible = false;
+			panelProducts->Visible = false;
+			panelCustomers->Visible = false;
+			panelSettings->Visible = false;
+		}
 	}
-}
-private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-	pnlNav->Height = button6->Height;
-	pnlNav->Top = button6->Top;
-	pnlNav->Left = button6->Left;
-	button6->BackColor = Color::FromArgb(46, 51, 73);
-	if (panelSettings->Visible == false)
-	{
-		panelSettings->Visible = true;
-		panelOrders->Visible = false;
-		panelDashboard->Visible = false;
-		panelProducts->Visible = false;
-		panelCustomers->Visible = false;
-		panelMarketing->Visible = false;
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+		pnlNav->Height = button6->Height;
+		pnlNav->Top = button6->Top;
+		pnlNav->Left = button6->Left;
+		button6->BackColor = Color::FromArgb(46, 51, 73);
+		if (panelSettings->Visible == false)
+		{
+			panelSettings->Visible = true;
+			panelOrders->Visible = false;
+			panelDashboard->Visible = false;
+			panelProducts->Visible = false;
+			panelCustomers->Visible = false;
+			panelMarketing->Visible = false;
+		}
 	}
-}
-private: System::Void button1_Leave(System::Object^ sender, System::EventArgs^ e) {
-	button1->BackColor = Color::FromArgb(31, 30, 68);
-}
-private: System::Void button2_Leave(System::Object^ sender, System::EventArgs^ e) {
-	button2->BackColor = Color::FromArgb(31, 30, 68);
-}
-private: System::Void button3_Leave(System::Object^ sender, System::EventArgs^ e) {
-	button3->BackColor = Color::FromArgb(31, 30, 68);
-}
-private: System::Void button4_Leave(System::Object^ sender, System::EventArgs^ e) {
-	button4->BackColor = Color::FromArgb(31, 30, 68);
-}
-private: System::Void button5_Leave(System::Object^ sender, System::EventArgs^ e) {
-	button5->BackColor = Color::FromArgb(31, 30, 68);
-}
-private: System::Void button6_Leave(System::Object^ sender, System::EventArgs^ e) {
-	button6->BackColor = Color::FromArgb(31, 30, 68);
-}
-private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+	private: System::Void button1_Leave(System::Object^ sender, System::EventArgs^ e) {
+		button1->BackColor = Color::FromArgb(31, 30, 68);
+	}
+	private: System::Void button2_Leave(System::Object^ sender, System::EventArgs^ e) {
+		button2->BackColor = Color::FromArgb(31, 30, 68);
+	}
+	private: System::Void button3_Leave(System::Object^ sender, System::EventArgs^ e) {
+		button3->BackColor = Color::FromArgb(31, 30, 68);
+	}
+	private: System::Void button4_Leave(System::Object^ sender, System::EventArgs^ e) {
+		button4->BackColor = Color::FromArgb(31, 30, 68);
+	}
+	private: System::Void button5_Leave(System::Object^ sender, System::EventArgs^ e) {
+		button5->BackColor = Color::FromArgb(31, 30, 68);
+	}
+	private: System::Void button6_Leave(System::Object^ sender, System::EventArgs^ e) {
+		button6->BackColor = Color::FromArgb(31, 30, 68);
+	}
+	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	};
 }

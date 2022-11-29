@@ -9,7 +9,7 @@ void Main(array<String^>^ args) {
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
     CESIProject::LoginPage form;
+
     Application::Run(% form);
-    // test monsieur
     
 }

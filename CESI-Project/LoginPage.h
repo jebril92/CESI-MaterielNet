@@ -30,11 +30,14 @@ namespace CESIProject {
 		/// </summary>
 		~LoginPage()
 		{
+
 			if (components)
 			{
 				delete components;
 			}
+
 		}
+
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Button^ button1;
 
@@ -58,7 +61,7 @@ namespace CESIProject {
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -106,11 +109,13 @@ namespace CESIProject {
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->pictureBox1);
 			this->panel1->Controls->Add(this->pictureBox3);
-			this->panel1->Location = System::Drawing::Point(-3, -4);
+			this->panel1->Location = System::Drawing::Point(-4, -5);
+			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1188, 682);
+			this->panel1->Size = System::Drawing::Size(1584, 839);
 			this->panel1->TabIndex = 0;
 			this->panel1->Click += gcnew System::EventHandler(this, &LoginPage::otherclick);
+			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &LoginPage::panel1_Paint);
 			// 
 			// btneyes
 			// 
@@ -118,9 +123,10 @@ namespace CESIProject {
 			this->btneyes->FlatAppearance->BorderSize = 0;
 			this->btneyes->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btneyes->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btneyes.Image")));
-			this->btneyes->Location = System::Drawing::Point(992, 327);
+			this->btneyes->Location = System::Drawing::Point(1323, 402);
+			this->btneyes->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btneyes->Name = L"btneyes";
-			this->btneyes->Size = System::Drawing::Size(40, 33);
+			this->btneyes->Size = System::Drawing::Size(53, 41);
 			this->btneyes->TabIndex = 14;
 			this->btneyes->UseVisualStyleBackColor = false;
 			this->btneyes->Click += gcnew System::EventHandler(this, &LoginPage::btneyes_Click);
@@ -131,9 +137,10 @@ namespace CESIProject {
 			this->label4->BackColor = System::Drawing::Color::Transparent;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(948, 651);
+			this->label4->Location = System::Drawing::Point(1264, 801);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(127, 27);
+			this->label4->Size = System::Drawing::Size(160, 33);
 			this->label4->TabIndex = 12;
 			this->label4->Text = L"Designed by";
 			// 
@@ -141,9 +148,10 @@ namespace CESIProject {
 			// 
 			this->panel3->BackColor = System::Drawing::Color::AliceBlue;
 			this->panel3->Controls->Add(this->textBox2);
-			this->panel3->Location = System::Drawing::Point(522, 315);
+			this->panel3->Location = System::Drawing::Point(696, 388);
+			this->panel3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(452, 58);
+			this->panel3->Size = System::Drawing::Size(603, 71);
 			this->panel3->TabIndex = 11;
 			// 
 			// textBox2
@@ -151,10 +159,11 @@ namespace CESIProject {
 			this->textBox2->BackColor = System::Drawing::Color::AliceBlue;
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->textBox2->Location = System::Drawing::Point(22, 19);
+			this->textBox2->Location = System::Drawing::Point(29, 23);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->textBox2->Size = System::Drawing::Size(404, 19);
+			this->textBox2->Size = System::Drawing::Size(539, 24);
 			this->textBox2->TabIndex = 0;
 			this->textBox2->Text = L"Password";
 			this->textBox2->UseSystemPasswordChar = true;
@@ -165,9 +174,10 @@ namespace CESIProject {
 			// 
 			this->panel2->BackColor = System::Drawing::Color::AliceBlue;
 			this->panel2->Controls->Add(this->textBox1);
-			this->panel2->Location = System::Drawing::Point(522, 237);
+			this->panel2->Location = System::Drawing::Point(696, 292);
+			this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(452, 58);
+			this->panel2->Size = System::Drawing::Size(603, 71);
 			this->panel2->TabIndex = 10;
 			// 
 			// textBox1
@@ -175,9 +185,10 @@ namespace CESIProject {
 			this->textBox1->BackColor = System::Drawing::Color::AliceBlue;
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->textBox1->Location = System::Drawing::Point(22, 19);
+			this->textBox1->Location = System::Drawing::Point(29, 23);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(404, 19);
+			this->textBox1->Size = System::Drawing::Size(539, 24);
 			this->textBox1->TabIndex = 0;
 			this->textBox1->Text = L"Username";
 			this->textBox1->Click += gcnew System::EventHandler(this, &LoginPage::textBox1_Click);
@@ -189,9 +200,10 @@ namespace CESIProject {
 			this->checkBox1->BackColor = System::Drawing::Color::Transparent;
 			this->checkBox1->Checked = true;
 			this->checkBox1->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox1->Location = System::Drawing::Point(666, 401);
+			this->checkBox1->Location = System::Drawing::Point(888, 494);
+			this->checkBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(185, 17);
+			this->checkBox1->Size = System::Drawing::Size(231, 20);
 			this->checkBox1->TabIndex = 8;
 			this->checkBox1->Text = L"J\'accepte les termes et conditions";
 			this->checkBox1->UseVisualStyleBackColor = false;
@@ -206,9 +218,10 @@ namespace CESIProject {
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->button2->ForeColor = System::Drawing::Color::Black;
-			this->button2->Location = System::Drawing::Point(522, 437);
+			this->button2->Location = System::Drawing::Point(696, 538);
+			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(452, 46);
+			this->button2->Size = System::Drawing::Size(603, 57);
 			this->button2->TabIndex = 9;
 			this->button2->Text = L"Connexion";
 			this->button2->UseVisualStyleBackColor = false;
@@ -219,9 +232,10 @@ namespace CESIProject {
 			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 12.25F));
 			this->label3->ImageAlign = System::Drawing::ContentAlignment::TopLeft;
-			this->label3->Location = System::Drawing::Point(487, 146);
+			this->label3->Location = System::Drawing::Point(649, 180);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(564, 68);
+			this->label3->Size = System::Drawing::Size(752, 84);
 			this->label3->TabIndex = 5;
 			this->label3->Text = L"Connectez-vous à votre compte afin que nous puissions importer les paramètres et "
 				L"les préférences et ajuster votre expérience";
@@ -234,9 +248,10 @@ namespace CESIProject {
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 33, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(512, 88);
+			this->label2->Location = System::Drawing::Point(683, 108);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(248, 58);
+			this->label2->Size = System::Drawing::Size(310, 73);
 			this->label2->TabIndex = 4;
 			this->label2->Text = L"Connexion";
 			this->label2->Click += gcnew System::EventHandler(this, &LoginPage::otherclick);
@@ -246,9 +261,10 @@ namespace CESIProject {
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 13.25F));
-			this->label1->Location = System::Drawing::Point(172, 475);
+			this->label1->Location = System::Drawing::Point(229, 585);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(130, 24);
+			this->label1->Size = System::Drawing::Size(165, 31);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"Besoin d\'aide \? ";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -261,9 +277,10 @@ namespace CESIProject {
 			this->button1->FlatAppearance->BorderSize = 0;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
-			this->button1->Location = System::Drawing::Point(176, 502);
+			this->button1->Location = System::Drawing::Point(235, 618);
+			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(123, 46);
+			this->button1->Size = System::Drawing::Size(164, 57);
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Support";
 			this->button1->UseVisualStyleBackColor = false;
@@ -273,9 +290,10 @@ namespace CESIProject {
 			// 
 			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(46, 27);
+			this->pictureBox1->Location = System::Drawing::Point(61, 33);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(420, 249);
+			this->pictureBox1->Size = System::Drawing::Size(560, 306);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
@@ -285,22 +303,24 @@ namespace CESIProject {
 			this->pictureBox3->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.BackgroundImage")));
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(935, 617);
+			this->pictureBox3->Location = System::Drawing::Point(1247, 759);
+			this->pictureBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(367, 99);
+			this->pictureBox3->Size = System::Drawing::Size(489, 122);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox3->TabIndex = 13;
 			this->pictureBox3->TabStop = false;
 			// 
 			// LoginPage
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1186, 687);
+			this->ClientSize = System::Drawing::Size(1579, 836);
 			this->Controls->Add(this->panel1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->MaximumSize = System::Drawing::Size(1202, 726);
-			this->MinimumSize = System::Drawing::Size(1202, 726);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->MaximumSize = System::Drawing::Size(1597, 883);
+			this->MinimumSize = System::Drawing::Size(1597, 883);
 			this->Name = L"LoginPage";
 			this->Text = L"Connexion";
 			this->panel1->ResumeLayout(false);
@@ -318,100 +338,103 @@ namespace CESIProject {
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 
-private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
+	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
 
-private: System::Void textBox1_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (textBox1->Text == "Username")
-	{
-		textBox1->Text = "";
-	}
-	if (textBox2->Text == "")
-	{
-		textBox2->Text = "Password";
-	}
-}
-
-private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-
-private: System::Void textBox2_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (textBox2->Text == "Password")
-	{
-		textBox2->Text = "";
-	}
-	if (textBox1->Text == "")
-	{
-		textBox1->Text = "Username";
-	}
-}
-
-private: System::Void otherclick(System::Object^ sender, System::EventArgs^ e) {
-	if (textBox1->Text == "")
-	{
-		textBox1->Text = "Username";
-	}
-	if (textBox2->Text == "")
-	{
-		textBox2->Text = "Password";
-	}
-}
-private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	if (checkBox1->Checked)
-	{
-		button2->Enabled = true;
-	}
-	else
-	{
-		button2->Enabled = false;
-	}
-}
-
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (textBox1->Text == "")
-	{
-		textBox1->Text = "Username";
-	}
-	if (textBox2->Text == "")
-	{
-		textBox2->Text = "Password";
-	}
-	System::Diagnostics::Process::Start("https://github.com/jebril92");
-}
-
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (textBox1->Text == "admin")
-	{
-		if (textBox2->Text == "root")
+	private: System::Void textBox1_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (textBox1->Text == "Username")
 		{
-			Form2^ frm2 = gcnew Form2;
-			frm2->Show();
+			textBox1->Text = "";
+		}
+		if (textBox2->Text == "")
+		{
+			textBox2->Text = "Password";
 		}
 	}
-	else
-	{
-		MessageBox::Show("Identifiant ou Mot de passe Incorrect !");
+
+	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
 
-	if (textBox1->Text == "")
-	{
-		textBox1->Text = "Username";
+	private: System::Void textBox2_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (textBox2->Text == "Password")
+		{
+			textBox2->Text = "";
+		}
+		if (textBox1->Text == "")
+		{
+			textBox1->Text = "Username";
+		}
 	}
-	if (textBox2->Text == "")
-	{
-		textBox2->Text = "Password";
-	}
-}
 
-private: System::Void btneyes_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (textBox2->UseSystemPasswordChar == true) 
-	{
-		textBox2->UseSystemPasswordChar = false;
+	private: System::Void otherclick(System::Object^ sender, System::EventArgs^ e) {
+		if (textBox1->Text == "")
+		{
+			textBox1->Text = "Username";
+		}
+		if (textBox2->Text == "")
+		{
+			textBox2->Text = "Password";
+		}
 	}
-	else
-	{
-		textBox2->UseSystemPasswordChar = true;
+	private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (checkBox1->Checked)
+		{
+			button2->Enabled = true;
+		}
+		else
+		{
+			button2->Enabled = false;
+		}
 	}
-}
-};
+
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (textBox1->Text == "")
+		{
+			textBox1->Text = "Username";
+		}
+		if (textBox2->Text == "")
+		{
+			textBox2->Text = "Password";
+		}
+		System::Diagnostics::Process::Start("https://github.com/jebril92");
+	}
+
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (textBox1->Text == "admin")
+		{
+			if (textBox2->Text == "root")
+			{
+				Form2^ frm2 = gcnew Form2;
+				frm2->Show();
+				this->Hide();
+			}
+		}
+		else
+		{
+			MessageBox::Show("Identifiant ou Mot de passe Incorrect !");
+		}
+
+		if (textBox1->Text == "")
+		{
+			textBox1->Text = "Username";
+		}
+		if (textBox2->Text == "")
+		{
+			textBox2->Text = "Password";
+		}
+	}
+
+	private: System::Void btneyes_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (textBox2->UseSystemPasswordChar == true)
+		{
+			textBox2->UseSystemPasswordChar = false;
+		}
+		else
+		{
+			textBox2->UseSystemPasswordChar = true;
+		}
+	}
+	private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	}
+	};
 }

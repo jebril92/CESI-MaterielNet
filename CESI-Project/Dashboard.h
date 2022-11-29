@@ -72,19 +72,19 @@ namespace CESIProject {
 	private: System::Windows::Forms::Button^ btnNouveau;
 	private: System::Windows::Forms::Button^ btnEnregistrer;
 
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Label^ labeladressemail;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::Label^ labelnumero;
-	private: System::Windows::Forms::TextBox^ prenomtextbox;
-	private: System::Windows::Forms::Label^ labelprenom;
-	private: System::Windows::Forms::TextBox^ nomtextbox;
-	private: System::Windows::Forms::Label^ labelnom;
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Button^ btnchargerbdd;
-	private: System::Windows::Forms::TextBox^ personneltextbox;
-	private: System::Windows::Forms::Label^ labelpersonnel;
-	private: System::Windows::Forms::TextBox^ etudianttextbox;
-	private: System::Windows::Forms::Label^ labelidetudiant;
+
+
+
+
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	protected:
 
@@ -126,22 +126,10 @@ namespace CESIProject {
 			this->panelCustomers = (gcnew System::Windows::Forms::Panel());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->btnchargerbdd = (gcnew System::Windows::Forms::Button());
-			this->personneltextbox = (gcnew System::Windows::Forms::TextBox());
-			this->labelpersonnel = (gcnew System::Windows::Forms::Label());
-			this->etudianttextbox = (gcnew System::Windows::Forms::TextBox());
-			this->labelidetudiant = (gcnew System::Windows::Forms::Label());
 			this->btnSupprimer = (gcnew System::Windows::Forms::Button());
 			this->btnModifier = (gcnew System::Windows::Forms::Button());
 			this->btnNouveau = (gcnew System::Windows::Forms::Button());
 			this->btnEnregistrer = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->labeladressemail = (gcnew System::Windows::Forms::Label());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->labelnumero = (gcnew System::Windows::Forms::Label());
-			this->prenomtextbox = (gcnew System::Windows::Forms::TextBox());
-			this->labelprenom = (gcnew System::Windows::Forms::Label());
-			this->nomtextbox = (gcnew System::Windows::Forms::TextBox());
-			this->labelnom = (gcnew System::Windows::Forms::Label());
 			this->labelCustomers = (gcnew System::Windows::Forms::Label());
 			this->panelMarketing = (gcnew System::Windows::Forms::Panel());
 			this->labelMarketing = (gcnew System::Windows::Forms::Label());
@@ -420,22 +408,10 @@ namespace CESIProject {
 				static_cast<System::Int32>(static_cast<System::Byte>(70)));
 			this->panelCustomers->Controls->Add(this->dataGridView1);
 			this->panelCustomers->Controls->Add(this->btnchargerbdd);
-			this->panelCustomers->Controls->Add(this->personneltextbox);
-			this->panelCustomers->Controls->Add(this->labelpersonnel);
-			this->panelCustomers->Controls->Add(this->etudianttextbox);
-			this->panelCustomers->Controls->Add(this->labelidetudiant);
 			this->panelCustomers->Controls->Add(this->btnSupprimer);
 			this->panelCustomers->Controls->Add(this->btnModifier);
 			this->panelCustomers->Controls->Add(this->btnNouveau);
 			this->panelCustomers->Controls->Add(this->btnEnregistrer);
-			this->panelCustomers->Controls->Add(this->textBox1);
-			this->panelCustomers->Controls->Add(this->labeladressemail);
-			this->panelCustomers->Controls->Add(this->textBox2);
-			this->panelCustomers->Controls->Add(this->labelnumero);
-			this->panelCustomers->Controls->Add(this->prenomtextbox);
-			this->panelCustomers->Controls->Add(this->labelprenom);
-			this->panelCustomers->Controls->Add(this->nomtextbox);
-			this->panelCustomers->Controls->Add(this->labelnom);
 			this->panelCustomers->Controls->Add(this->labelCustomers);
 			this->panelCustomers->Location = System::Drawing::Point(220, 76);
 			this->panelCustomers->Margin = System::Windows::Forms::Padding(4);
@@ -447,11 +423,11 @@ namespace CESIProject {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(365, 79);
+			this->dataGridView1->Location = System::Drawing::Point(194, 91);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(526, 251);
+			this->dataGridView1->Size = System::Drawing::Size(586, 273);
 			this->dataGridView1->TabIndex = 19;
 			// 
 			// btnchargerbdd
@@ -466,49 +442,11 @@ namespace CESIProject {
 			this->btnchargerbdd->Text = L"Charger BDD";
 			this->btnchargerbdd->UseVisualStyleBackColor = true;
 			// 
-			// personneltextbox
-			// 
-			this->personneltextbox->Location = System::Drawing::Point(197, 190);
-			this->personneltextbox->Margin = System::Windows::Forms::Padding(4);
-			this->personneltextbox->Name = L"personneltextbox";
-			this->personneltextbox->Size = System::Drawing::Size(132, 22);
-			this->personneltextbox->TabIndex = 17;
-			// 
-			// labelpersonnel
-			// 
-			this->labelpersonnel->AutoSize = true;
-			this->labelpersonnel->ForeColor = System::Drawing::Color::White;
-			this->labelpersonnel->Location = System::Drawing::Point(193, 169);
-			this->labelpersonnel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->labelpersonnel->Name = L"labelpersonnel";
-			this->labelpersonnel->Size = System::Drawing::Size(84, 16);
-			this->labelpersonnel->TabIndex = 16;
-			this->labelpersonnel->Text = L"ID Personnel";
-			// 
-			// etudianttextbox
-			// 
-			this->etudianttextbox->Location = System::Drawing::Point(195, 129);
-			this->etudianttextbox->Margin = System::Windows::Forms::Padding(4);
-			this->etudianttextbox->Name = L"etudianttextbox";
-			this->etudianttextbox->Size = System::Drawing::Size(132, 22);
-			this->etudianttextbox->TabIndex = 15;
-			// 
-			// labelidetudiant
-			// 
-			this->labelidetudiant->AutoSize = true;
-			this->labelidetudiant->ForeColor = System::Drawing::Color::White;
-			this->labelidetudiant->Location = System::Drawing::Point(191, 108);
-			this->labelidetudiant->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->labelidetudiant->Name = L"labelidetudiant";
-			this->labelidetudiant->Size = System::Drawing::Size(71, 16);
-			this->labelidetudiant->TabIndex = 14;
-			this->labelidetudiant->Text = L"ID Etudiant";
-			// 
 			// btnSupprimer
 			// 
 			this->btnSupprimer->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnSupprimer.Image")));
 			this->btnSupprimer->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnSupprimer->Location = System::Drawing::Point(779, 366);
+			this->btnSupprimer->Location = System::Drawing::Point(636, 416);
 			this->btnSupprimer->Margin = System::Windows::Forms::Padding(4);
 			this->btnSupprimer->Name = L"btnSupprimer";
 			this->btnSupprimer->Size = System::Drawing::Size(135, 36);
@@ -521,7 +459,7 @@ namespace CESIProject {
 			// 
 			this->btnModifier->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnModifier.Image")));
 			this->btnModifier->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnModifier->Location = System::Drawing::Point(493, 366);
+			this->btnModifier->Location = System::Drawing::Point(350, 416);
 			this->btnModifier->Margin = System::Windows::Forms::Padding(4);
 			this->btnModifier->Name = L"btnModifier";
 			this->btnModifier->Size = System::Drawing::Size(135, 36);
@@ -533,7 +471,7 @@ namespace CESIProject {
 			// 
 			this->btnNouveau->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnNouveau.Image")));
 			this->btnNouveau->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnNouveau->Location = System::Drawing::Point(351, 366);
+			this->btnNouveau->Location = System::Drawing::Point(208, 416);
 			this->btnNouveau->Margin = System::Windows::Forms::Padding(4);
 			this->btnNouveau->Name = L"btnNouveau";
 			this->btnNouveau->Size = System::Drawing::Size(135, 36);
@@ -545,89 +483,13 @@ namespace CESIProject {
 			// 
 			this->btnEnregistrer->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnEnregistrer.Image")));
 			this->btnEnregistrer->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnEnregistrer->Location = System::Drawing::Point(636, 366);
+			this->btnEnregistrer->Location = System::Drawing::Point(493, 416);
 			this->btnEnregistrer->Margin = System::Windows::Forms::Padding(4);
 			this->btnEnregistrer->Name = L"btnEnregistrer";
 			this->btnEnregistrer->Size = System::Drawing::Size(135, 36);
 			this->btnEnregistrer->TabIndex = 10;
 			this->btnEnregistrer->Text = L"   Enregistrer";
 			this->btnEnregistrer->UseVisualStyleBackColor = true;
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(36, 305);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(132, 22);
-			this->textBox1->TabIndex = 8;
-			// 
-			// labeladressemail
-			// 
-			this->labeladressemail->AutoSize = true;
-			this->labeladressemail->ForeColor = System::Drawing::Color::White;
-			this->labeladressemail->Location = System::Drawing::Point(32, 284);
-			this->labeladressemail->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->labeladressemail->Name = L"labeladressemail";
-			this->labeladressemail->Size = System::Drawing::Size(86, 16);
-			this->labeladressemail->TabIndex = 7;
-			this->labeladressemail->Text = L"Adresse mail";
-			// 
-			// textBox2
-			// 
-			this->textBox2->Location = System::Drawing::Point(36, 246);
-			this->textBox2->Margin = System::Windows::Forms::Padding(4);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(132, 22);
-			this->textBox2->TabIndex = 6;
-			// 
-			// labelnumero
-			// 
-			this->labelnumero->AutoSize = true;
-			this->labelnumero->ForeColor = System::Drawing::Color::White;
-			this->labelnumero->Location = System::Drawing::Point(32, 225);
-			this->labelnumero->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->labelnumero->Name = L"labelnumero";
-			this->labelnumero->Size = System::Drawing::Size(137, 16);
-			this->labelnumero->TabIndex = 5;
-			this->labelnumero->Text = L"Numéro de téléphone";
-			// 
-			// prenomtextbox
-			// 
-			this->prenomtextbox->Location = System::Drawing::Point(36, 190);
-			this->prenomtextbox->Margin = System::Windows::Forms::Padding(4);
-			this->prenomtextbox->Name = L"prenomtextbox";
-			this->prenomtextbox->Size = System::Drawing::Size(132, 22);
-			this->prenomtextbox->TabIndex = 4;
-			// 
-			// labelprenom
-			// 
-			this->labelprenom->AutoSize = true;
-			this->labelprenom->ForeColor = System::Drawing::Color::White;
-			this->labelprenom->Location = System::Drawing::Point(32, 169);
-			this->labelprenom->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->labelprenom->Name = L"labelprenom";
-			this->labelprenom->Size = System::Drawing::Size(54, 16);
-			this->labelprenom->TabIndex = 3;
-			this->labelprenom->Text = L"Prénom";
-			// 
-			// nomtextbox
-			// 
-			this->nomtextbox->Location = System::Drawing::Point(36, 130);
-			this->nomtextbox->Margin = System::Windows::Forms::Padding(4);
-			this->nomtextbox->Name = L"nomtextbox";
-			this->nomtextbox->Size = System::Drawing::Size(132, 22);
-			this->nomtextbox->TabIndex = 2;
-			// 
-			// labelnom
-			// 
-			this->labelnom->AutoSize = true;
-			this->labelnom->ForeColor = System::Drawing::Color::White;
-			this->labelnom->Location = System::Drawing::Point(32, 110);
-			this->labelnom->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->labelnom->Name = L"labelnom";
-			this->labelnom->Size = System::Drawing::Size(36, 16);
-			this->labelnom->TabIndex = 1;
-			this->labelnom->Text = L"Nom";
 			// 
 			// labelCustomers
 			// 

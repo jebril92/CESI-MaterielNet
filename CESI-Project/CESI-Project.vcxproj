@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClCompile Include="BaseModel.cpp" />
     <ClCompile Include="Dashboard.cpp" />
+    <ClCompile Include="InterfacePersonnel.cpp" />
     <ClCompile Include="LoginPage.cpp" />
     <ClCompile Include="SQLModel.cpp" />
     <ClCompile Include="StaffMapping.cpp" />
@@ -131,6 +132,9 @@
   <ItemGroup>
     <ClInclude Include="BaseModel.h" />
     <ClInclude Include="Dashboard.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="InterfacePersonnel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="LoginPage.h">

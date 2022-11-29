@@ -1,5 +1,5 @@
 #include "LoginPage.h"
-#include "Form2.h"
+#include "Dashboard.h"
 
 using namespace System;
 using namespace System::Windows::Forms;

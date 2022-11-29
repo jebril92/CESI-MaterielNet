@@ -1,5 +1,5 @@
 #pragma once
-#include "Form2.h"
+#include "Dashboard.h"
 
 namespace CESIProject {
 
@@ -404,7 +404,7 @@ namespace CESIProject {
 		{
 			if (textBox2->Text == "root")
 			{
-				Form2^ frm2 = gcnew Form2;
+				Dashboard^ frm2 = gcnew Dashboard;
 				frm2->Show();
 				this->Hide();
 			}

@@ -10,12 +10,12 @@ namespace CESIProject {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de Form2
+	/// Description résumée de Dashboard
 	/// </summary>
-	public ref class Form2 : public System::Windows::Forms::Form
+	public ref class Dashboard : public System::Windows::Forms::Form
 	{
 	public:
-		Form2(void)
+		Dashboard(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace CESIProject {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~Form2()
+		~Dashboard()
 		{
 			if (components)
 			{
@@ -109,7 +109,7 @@ namespace CESIProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Form2::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Dashboard::typeid));
 			this->panelMenu = (gcnew System::Windows::Forms::Panel());
 			this->pnlNav = (gcnew System::Windows::Forms::Panel());
 			this->button6 = (gcnew System::Windows::Forms::Button());
@@ -212,8 +212,8 @@ namespace CESIProject {
 			this->button6->TabIndex = 5;
 			this->button6->Text = L"Settings";
 			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Click += gcnew System::EventHandler(this, &Form2::button6_Click);
-			this->button6->Leave += gcnew System::EventHandler(this, &Form2::button6_Leave);
+			this->button6->Click += gcnew System::EventHandler(this, &Dashboard::button6_Click);
+			this->button6->Leave += gcnew System::EventHandler(this, &Dashboard::button6_Leave);
 			// 
 			// button5
 			// 
@@ -233,8 +233,8 @@ namespace CESIProject {
 			this->button5->TabIndex = 4;
 			this->button5->Text = L"Marketing";
 			this->button5->UseVisualStyleBackColor = true;
-			this->button5->Click += gcnew System::EventHandler(this, &Form2::button5_Click);
-			this->button5->Leave += gcnew System::EventHandler(this, &Form2::button5_Leave);
+			this->button5->Click += gcnew System::EventHandler(this, &Dashboard::button5_Click);
+			this->button5->Leave += gcnew System::EventHandler(this, &Dashboard::button5_Leave);
 			// 
 			// button4
 			// 
@@ -254,8 +254,8 @@ namespace CESIProject {
 			this->button4->TabIndex = 3;
 			this->button4->Text = L"Customers";
 			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &Form2::button4_Click);
-			this->button4->Leave += gcnew System::EventHandler(this, &Form2::button4_Leave);
+			this->button4->Click += gcnew System::EventHandler(this, &Dashboard::button4_Click);
+			this->button4->Leave += gcnew System::EventHandler(this, &Dashboard::button4_Leave);
 			// 
 			// button3
 			// 
@@ -275,8 +275,8 @@ namespace CESIProject {
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Products";
 			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &Form2::button3_Click);
-			this->button3->Leave += gcnew System::EventHandler(this, &Form2::button3_Leave);
+			this->button3->Click += gcnew System::EventHandler(this, &Dashboard::button3_Click);
+			this->button3->Leave += gcnew System::EventHandler(this, &Dashboard::button3_Leave);
 			// 
 			// button2
 			// 
@@ -296,8 +296,8 @@ namespace CESIProject {
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"Orders";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &Form2::button2_Click);
-			this->button2->Leave += gcnew System::EventHandler(this, &Form2::button2_Leave);
+			this->button2->Click += gcnew System::EventHandler(this, &Dashboard::button2_Click);
+			this->button2->Leave += gcnew System::EventHandler(this, &Dashboard::button2_Leave);
 			// 
 			// button1
 			// 
@@ -317,8 +317,8 @@ namespace CESIProject {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Dashboard";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &Form2::button1_Click);
-			this->button1->Leave += gcnew System::EventHandler(this, &Form2::button1_Leave);
+			this->button1->Click += gcnew System::EventHandler(this, &Dashboard::button1_Click);
+			this->button1->Leave += gcnew System::EventHandler(this, &Dashboard::button1_Leave);
 			// 
 			// panelLogo
 			// 
@@ -340,7 +340,7 @@ namespace CESIProject {
 			this->btnHome->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->btnHome->TabIndex = 0;
 			this->btnHome->TabStop = false;
-			this->btnHome->Click += gcnew System::EventHandler(this, &Form2::btnHome_Click);
+			this->btnHome->Click += gcnew System::EventHandler(this, &Dashboard::btnHome_Click);
 			// 
 			// panelTitleBar
 			// 
@@ -495,7 +495,7 @@ namespace CESIProject {
 			this->btnSupprimer->TabIndex = 13;
 			this->btnSupprimer->Text = L"Supprimer";
 			this->btnSupprimer->UseVisualStyleBackColor = true;
-			this->btnSupprimer->Click += gcnew System::EventHandler(this, &Form2::button7_Click);
+			this->btnSupprimer->Click += gcnew System::EventHandler(this, &Dashboard::button7_Click);
 			// 
 			// btnModifier
 			// 
@@ -684,7 +684,7 @@ namespace CESIProject {
 			this->labelAdmin->TabIndex = 9;
 			this->labelAdmin->Text = L"Admin";
 			// 
-			// Form2
+			// Dashboard
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -703,7 +703,7 @@ namespace CESIProject {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximumSize = System::Drawing::Size(902, 586);
 			this->MinimumSize = System::Drawing::Size(902, 586);
-			this->Name = L"Form2";
+			this->Name = L"Dashboard";
 			this->Text = L"Matériel.Net - Accueil";
 			this->panelMenu->ResumeLayout(false);
 			this->panelLogo->ResumeLayout(false);

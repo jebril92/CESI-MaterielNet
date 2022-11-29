@@ -121,11 +121,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Form2.cpp" />
+    <ClCompile Include="Dashboard.cpp" />
     <ClCompile Include="LoginPage.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Form2.h">
+    <ClInclude Include="Dashboard.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="LoginPage.h">
@@ -133,8 +133,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.h</DependentUpon>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.h</DependentUpon>

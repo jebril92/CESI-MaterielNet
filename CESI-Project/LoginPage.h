@@ -200,7 +200,7 @@ namespace CESIProject {
 			this->btneyes->FlatAppearance->BorderSize = 0;
 			this->btneyes->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btneyes->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btneyes.Image")));
-			this->btneyes->Location = System::Drawing::Point(1127, 300);
+			this->btneyes->Location = System::Drawing::Point(1129, 300);
 			this->btneyes->Name = L"btneyes";
 			this->btneyes->Size = System::Drawing::Size(40, 33);
 			this->btneyes->TabIndex = 14;

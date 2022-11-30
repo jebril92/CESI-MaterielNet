@@ -1276,6 +1276,16 @@
         vkyewaAm4DbeCr43FvehY+f3FpZSWj/WejQIk8sWEwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnModifier.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACuSURBVDhP1dE9
+        CsJAEMXx9RO10dN4BrH1KrmBYCF6BDsL7cRCtLfRPr0H8AB2+n/gwBLc7G7pg18TeDOTxGVmhBMemOhB
+        Tga44/31whRJGaKHNWyAPBGNztbmM6pDNqiNNt9ghQv6WGCPNoKxzVY2dkkTwVQ3+3ao3fzH5V8fTLZo
+        IZgOujgiu6zMsISGHGDl6H+2rKCCPyS5rFxhW+fQkOjZfkro/QuM0UBinPsASl1MwrVGGccAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
   <data name="btnNouveau.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
@@ -1285,7 +1295,7 @@
         RK5CYII=
 </value>
   </data>
-  <data name="btnModifier.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnEnregistrer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
         cAAAAHABznhikwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACmSURBVDhPzZPB
@@ -1294,9 +1304,6 @@
         kRcYHMRK2AAU3oHCTySg/ZlQeAcKv+PQjYYto7z5DOK9LaV0LxQhuMmd1+1pAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEA+voAAAEAIAD47wMAFgAAACgAAAD6AAAA9AEAAAEAIAAAAAAAkNADAAAAAAAAAAAAAAAAAAAA

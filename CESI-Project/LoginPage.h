@@ -110,7 +110,7 @@ namespace CESIProject {
 			this->panel1->Controls->Add(this->pictureBox1);
 			this->panel1->Controls->Add(this->pictureBox3);
 			this->panel1->Location = System::Drawing::Point(-4, -5);
-			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel1->Margin = System::Windows::Forms::Padding(4);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(1584, 839);
 			this->panel1->TabIndex = 0;
@@ -124,7 +124,7 @@ namespace CESIProject {
 			this->btneyes->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btneyes->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btneyes.Image")));
 			this->btneyes->Location = System::Drawing::Point(1323, 402);
-			this->btneyes->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btneyes->Margin = System::Windows::Forms::Padding(4);
 			this->btneyes->Name = L"btneyes";
 			this->btneyes->Size = System::Drawing::Size(53, 41);
 			this->btneyes->TabIndex = 14;
@@ -149,7 +149,7 @@ namespace CESIProject {
 			this->panel3->BackColor = System::Drawing::Color::AliceBlue;
 			this->panel3->Controls->Add(this->textBox2);
 			this->panel3->Location = System::Drawing::Point(696, 388);
-			this->panel3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel3->Margin = System::Windows::Forms::Padding(4);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(603, 71);
 			this->panel3->TabIndex = 11;
@@ -160,7 +160,7 @@ namespace CESIProject {
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->textBox2->Location = System::Drawing::Point(29, 23);
-			this->textBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->textBox2->Size = System::Drawing::Size(539, 24);
@@ -169,13 +169,14 @@ namespace CESIProject {
 			this->textBox2->UseSystemPasswordChar = true;
 			this->textBox2->Click += gcnew System::EventHandler(this, &LoginPage::textBox2_Click);
 			this->textBox2->TextChanged += gcnew System::EventHandler(this, &LoginPage::textBox2_TextChanged);
+			this->textBox2->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &LoginPage::textBox2_KeyDown);
 			// 
 			// panel2
 			// 
 			this->panel2->BackColor = System::Drawing::Color::AliceBlue;
 			this->panel2->Controls->Add(this->textBox1);
 			this->panel2->Location = System::Drawing::Point(696, 292);
-			this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel2->Margin = System::Windows::Forms::Padding(4);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(603, 71);
 			this->panel2->TabIndex = 10;
@@ -186,13 +187,14 @@ namespace CESIProject {
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
 			this->textBox1->Location = System::Drawing::Point(29, 23);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(539, 24);
 			this->textBox1->TabIndex = 0;
 			this->textBox1->Text = L"Username";
 			this->textBox1->Click += gcnew System::EventHandler(this, &LoginPage::textBox1_Click);
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &LoginPage::textBox1_TextChanged);
+			this->textBox1->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &LoginPage::textBox1_KeyDown);
 			// 
 			// checkBox1
 			// 
@@ -201,7 +203,7 @@ namespace CESIProject {
 			this->checkBox1->Checked = true;
 			this->checkBox1->CheckState = System::Windows::Forms::CheckState::Checked;
 			this->checkBox1->Location = System::Drawing::Point(888, 494);
-			this->checkBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->checkBox1->Margin = System::Windows::Forms::Padding(4);
 			this->checkBox1->Name = L"checkBox1";
 			this->checkBox1->Size = System::Drawing::Size(231, 20);
 			this->checkBox1->TabIndex = 8;
@@ -219,7 +221,7 @@ namespace CESIProject {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->button2->ForeColor = System::Drawing::Color::Black;
 			this->button2->Location = System::Drawing::Point(696, 538);
-			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(603, 57);
 			this->button2->TabIndex = 9;
@@ -278,7 +280,7 @@ namespace CESIProject {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
 			this->button1->Location = System::Drawing::Point(235, 618);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(164, 57);
 			this->button1->TabIndex = 2;
@@ -291,7 +293,7 @@ namespace CESIProject {
 			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(61, 33);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(560, 306);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -304,7 +306,7 @@ namespace CESIProject {
 			this->pictureBox3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.BackgroundImage")));
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
 			this->pictureBox3->Location = System::Drawing::Point(1247, 759);
-			this->pictureBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox3->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(489, 122);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -318,7 +320,7 @@ namespace CESIProject {
 			this->ClientSize = System::Drawing::Size(1579, 836);
 			this->Controls->Add(this->panel1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->MaximumSize = System::Drawing::Size(1597, 883);
 			this->MinimumSize = System::Drawing::Size(1597, 883);
 			this->Name = L"LoginPage";
@@ -435,6 +437,16 @@ namespace CESIProject {
 		}
 	}
 	private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	}
+	private: System::Void textBox1_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+		if (e->KeyValue == (int)Keys::Enter) {
+			textBox2->Focus();
+		}
+	}
+	private: System::Void textBox2_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+		if (e->KeyValue == (int)Keys::Enter) {
+			button2->PerformClick();
+		}
 	}
 	};
 }

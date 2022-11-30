@@ -2,6 +2,8 @@
 //using namespace System::Data::SqlClient;
 //using namespace System::Xml;
 //using namespace System;
+//using namespace MySql::Data::MySqlClient;
+//
 //
 //namespace SQLModel
 //{

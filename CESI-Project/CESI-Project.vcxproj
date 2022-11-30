@@ -124,16 +124,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BaseModel.cpp" />
     <ClCompile Include="Dashboard.cpp" />
     <ClCompile Include="InterfacePersonnel.cpp" />
     <ClCompile Include="LoginPage.cpp" />
-    <ClCompile Include="SQLModel.cpp" />
-    <ClCompile Include="StaffMapping.cpp" />
-    <ClCompile Include="StaffService.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BaseModel.h" />
     <ClInclude Include="Dashboard.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -143,9 +138,6 @@
     <ClInclude Include="LoginPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="SQLModel.h" />
-    <ClInclude Include="StaffMapping.h" />
-    <ClInclude Include="StaffService.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">

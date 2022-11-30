@@ -113,9 +113,10 @@ namespace CESIProject {
 			this->panel1->Controls->Add(this->termsCheck);
 			this->panel1->Controls->Add(this->connexionButton);
 			this->panel1->Controls->Add(this->label2);
+			this->panel1->Controls->Add(this->btneyes);
 			this->panel1->Location = System::Drawing::Point(-3, -4);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1188, 682);
+			this->panel1->Size = System::Drawing::Size(1206, 682);
 			this->panel1->TabIndex = 0;
 			this->panel1->Click += gcnew System::EventHandler(this, &LoginPage::otherclick);
 			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &LoginPage::panel1_Paint);
@@ -171,7 +172,6 @@ namespace CESIProject {
 			// 
 			this->panel3->BackColor = System::Drawing::Color::AliceBlue;
 			this->panel3->Controls->Add(this->passwordTextBox);
-			this->panel3->Controls->Add(this->btneyes);
 			this->panel3->Location = System::Drawing::Point(764, 288);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(363, 58);
@@ -200,7 +200,7 @@ namespace CESIProject {
 			this->btneyes->FlatAppearance->BorderSize = 0;
 			this->btneyes->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btneyes->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btneyes.Image")));
-			this->btneyes->Location = System::Drawing::Point(386, 14);
+			this->btneyes->Location = System::Drawing::Point(1127, 300);
 			this->btneyes->Name = L"btneyes";
 			this->btneyes->Size = System::Drawing::Size(40, 33);
 			this->btneyes->TabIndex = 14;
@@ -281,11 +281,12 @@ namespace CESIProject {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1155, 626);
+			this->ClientSize = System::Drawing::Size(1173, 626);
 			this->Controls->Add(this->panel1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(1354, 983);
+			this->MaximumSize = System::Drawing::Size(1189, 665);
+			this->MinimumSize = System::Drawing::Size(1189, 665);
 			this->Name = L"LoginPage";
 			this->Text = L"Connexion";
 			this->panel1->ResumeLayout(false);

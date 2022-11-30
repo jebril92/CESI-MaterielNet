@@ -9,19 +9,26 @@ namespace CESIProject {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Runtime::InteropServices;
+
 
 	/// <summary>
 	/// Description résumée de LoginPage
 	/// </summary>
 	public ref class LoginPage : public System::Windows::Forms::Form
 	{
+
 	public:
+
 		LoginPage(void)
 		{
 			InitializeComponent();
 			//
 			//TODO: ajoutez ici le code du constructeur
 			//
+			
+			/*this->Text = String::Empty;
+			this->ControlBox = false;*/
 		}
 
 	protected:
@@ -227,11 +234,11 @@ namespace CESIProject {
 			this->connexionButton->TabIndex = 9;
 			this->connexionButton->Text = L"Connexion";
 			this->connexionButton->UseVisualStyleBackColor = false;
-			this->connexionButton->Click += gcnew System::EventHandler(this, &LoginPage::connexionButton_Click);
-			// 
-			// label3
-			// 
-			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->connexionButton->Click += gcnew System::EventHandler(this, &LoginPage::connexionButton_Click); 
+				// 
+				// label3
+				// 
+				this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 12.25F));
 			this->label3->ImageAlign = System::Drawing::ContentAlignment::TopLeft;
 			this->label3->Location = System::Drawing::Point(649, 180);
@@ -334,6 +341,7 @@ namespace CESIProject {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->ResumeLayout(false);
+			
 
 		}
 #pragma endregion

@@ -602,6 +602,7 @@ namespace CESIProject {
 			this->MinimumSize = System::Drawing::Size(1197, 710);
 			this->Name = L"Dashboard";
 			this->Text = L"Matériel.Net - Accueil";
+			this->Load += gcnew System::EventHandler(this, &Dashboard::Dashboard_Load);
 			this->panelMenu->ResumeLayout(false);
 			this->panelLogo->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->btnHome))->EndInit();
@@ -753,6 +754,8 @@ namespace CESIProject {
 private: System::Void btnNouveau_Click(System::Object^ sender, System::EventArgs^ e) {
 	InterfacePersonnel^ frm3 = gcnew InterfacePersonnel;
 	frm3->Show();
+}
+private: System::Void Dashboard_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

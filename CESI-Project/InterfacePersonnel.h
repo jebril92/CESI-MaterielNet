@@ -103,7 +103,7 @@ namespace CESIProject {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->ForeColor = System::Drawing::Color::Gray;
+			this->label1->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->label1->Location = System::Drawing::Point(67, 75);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(36, 16);
@@ -112,16 +112,17 @@ namespace CESIProject {
 			// 
 			// textBoxNom
 			// 
-			this->textBoxNom->BackColor = System::Drawing::SystemColors::WindowFrame;
+			this->textBoxNom->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxNom->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBoxNom->Location = System::Drawing::Point(121, 76);
 			this->textBoxNom->Name = L"textBoxNom";
 			this->textBoxNom->Size = System::Drawing::Size(234, 15);
 			this->textBoxNom->TabIndex = 1;
+			this->textBoxNom->TextChanged += gcnew System::EventHandler(this, &InterfacePersonnel::textBoxNom_TextChanged);
 			// 
 			// textBoxPrenom
 			// 
-			this->textBoxPrenom->BackColor = System::Drawing::SystemColors::WindowFrame;
+			this->textBoxPrenom->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxPrenom->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBoxPrenom->Location = System::Drawing::Point(121, 109);
 			this->textBoxPrenom->Name = L"textBoxPrenom";
@@ -131,7 +132,7 @@ namespace CESIProject {
 			// labelPrenom
 			// 
 			this->labelPrenom->AutoSize = true;
-			this->labelPrenom->ForeColor = System::Drawing::Color::Gray;
+			this->labelPrenom->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->labelPrenom->Location = System::Drawing::Point(52, 108);
 			this->labelPrenom->Name = L"labelPrenom";
 			this->labelPrenom->Size = System::Drawing::Size(54, 16);
@@ -141,7 +142,7 @@ namespace CESIProject {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->ForeColor = System::Drawing::Color::Gray;
+			this->label2->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->label2->Location = System::Drawing::Point(32, 142);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(117, 16);
@@ -158,7 +159,7 @@ namespace CESIProject {
 			// labelPays
 			// 
 			this->labelPays->AutoSize = true;
-			this->labelPays->ForeColor = System::Drawing::Color::Gray;
+			this->labelPays->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->labelPays->Location = System::Drawing::Point(459, 74);
 			this->labelPays->Name = L"labelPays";
 			this->labelPays->Size = System::Drawing::Size(38, 16);
@@ -167,16 +168,17 @@ namespace CESIProject {
 			// 
 			// textBoxPays
 			// 
-			this->textBoxPays->BackColor = System::Drawing::SystemColors::WindowFrame;
+			this->textBoxPays->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxPays->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBoxPays->Location = System::Drawing::Point(503, 76);
 			this->textBoxPays->Name = L"textBoxPays";
 			this->textBoxPays->Size = System::Drawing::Size(234, 15);
 			this->textBoxPays->TabIndex = 7;
+			this->textBoxPays->TextChanged += gcnew System::EventHandler(this, &InterfacePersonnel::textBoxPays_TextChanged);
 			// 
 			// textBoxVille
 			// 
-			this->textBoxVille->BackColor = System::Drawing::SystemColors::WindowFrame;
+			this->textBoxVille->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxVille->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBoxVille->Location = System::Drawing::Point(503, 109);
 			this->textBoxVille->Name = L"textBoxVille";
@@ -186,7 +188,7 @@ namespace CESIProject {
 			// labelVille
 			// 
 			this->labelVille->AutoSize = true;
-			this->labelVille->ForeColor = System::Drawing::Color::Gray;
+			this->labelVille->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->labelVille->Location = System::Drawing::Point(459, 107);
 			this->labelVille->Name = L"labelVille";
 			this->labelVille->Size = System::Drawing::Size(33, 16);
@@ -195,7 +197,7 @@ namespace CESIProject {
 			// 
 			// textBoxCP
 			// 
-			this->textBoxCP->BackColor = System::Drawing::SystemColors::WindowFrame;
+			this->textBoxCP->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxCP->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBoxCP->Location = System::Drawing::Point(679, 109);
 			this->textBoxCP->Name = L"textBoxCP";
@@ -205,7 +207,7 @@ namespace CESIProject {
 			// labelCodePostal
 			// 
 			this->labelCodePostal->AutoSize = true;
-			this->labelCodePostal->ForeColor = System::Drawing::Color::Gray;
+			this->labelCodePostal->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->labelCodePostal->Location = System::Drawing::Point(644, 107);
 			this->labelCodePostal->Name = L"labelCodePostal";
 			this->labelCodePostal->Size = System::Drawing::Size(25, 16);
@@ -214,7 +216,7 @@ namespace CESIProject {
 			// 
 			// textBoxRue
 			// 
-			this->textBoxRue->BackColor = System::Drawing::SystemColors::WindowFrame;
+			this->textBoxRue->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxRue->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBoxRue->Location = System::Drawing::Point(623, 142);
 			this->textBoxRue->Name = L"textBoxRue";
@@ -224,7 +226,7 @@ namespace CESIProject {
 			// labelRue
 			// 
 			this->labelRue->AutoSize = true;
-			this->labelRue->ForeColor = System::Drawing::Color::Gray;
+			this->labelRue->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->labelRue->Location = System::Drawing::Point(585, 140);
 			this->labelRue->Name = L"labelRue";
 			this->labelRue->Size = System::Drawing::Size(32, 16);
@@ -233,7 +235,7 @@ namespace CESIProject {
 			// 
 			// textBoxNumRue
 			// 
-			this->textBoxNumRue->BackColor = System::Drawing::SystemColors::WindowFrame;
+			this->textBoxNumRue->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxNumRue->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBoxNumRue->Location = System::Drawing::Point(503, 142);
 			this->textBoxNumRue->Name = L"textBoxNumRue";
@@ -244,7 +246,7 @@ namespace CESIProject {
 			// labelNumRue
 			// 
 			this->labelNumRue->AutoSize = true;
-			this->labelNumRue->ForeColor = System::Drawing::Color::Gray;
+			this->labelNumRue->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->labelNumRue->Location = System::Drawing::Point(447, 140);
 			this->labelNumRue->Name = L"labelNumRue";
 			this->labelNumRue->Size = System::Drawing::Size(49, 16);
@@ -253,7 +255,7 @@ namespace CESIProject {
 			// 
 			// textBox1
 			// 
-			this->textBox1->BackColor = System::Drawing::SystemColors::WindowFrame;
+			this->textBox1->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox1->Location = System::Drawing::Point(623, 177);
 			this->textBox1->Name = L"textBox1";
@@ -263,7 +265,7 @@ namespace CESIProject {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->ForeColor = System::Drawing::Color::Gray;
+			this->label3->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->label3->Location = System::Drawing::Point(550, 175);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(73, 16);
@@ -272,7 +274,7 @@ namespace CESIProject {
 			// 
 			// textBox2
 			// 
-			this->textBox2->BackColor = System::Drawing::SystemColors::WindowFrame;
+			this->textBox2->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox2->Location = System::Drawing::Point(500, 177);
 			this->textBox2->Name = L"textBox2";
@@ -282,7 +284,7 @@ namespace CESIProject {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->ForeColor = System::Drawing::Color::Gray;
+			this->label4->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->label4->Location = System::Drawing::Point(444, 175);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(43, 16);
@@ -294,7 +296,7 @@ namespace CESIProject {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->ForeColor = System::Drawing::Color::Gray;
+			this->label5->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->label5->Location = System::Drawing::Point(130, 25);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(213, 25);
@@ -306,7 +308,7 @@ namespace CESIProject {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->ForeColor = System::Drawing::Color::Gray;
+			this->label6->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->label6->Location = System::Drawing::Point(515, 26);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(209, 25);
@@ -379,6 +381,10 @@ namespace CESIProject {
 	private: System::Void InterfacePersonnel_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void textBoxNumRue_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBoxNom_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void textBoxPays_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

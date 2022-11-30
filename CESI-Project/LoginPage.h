@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#include <iostream>
 #include "Dashboard.h"
 
 namespace CESIProject {
@@ -11,7 +11,7 @@ namespace CESIProject {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de LoginPage
+	/// Description rÃ©sumÃ©e de LoginPage
 	/// </summary>
 	public ref class LoginPage : public System::Windows::Forms::Form
 	{
@@ -26,7 +26,7 @@ namespace CESIProject {
 
 	protected:
 		/// <summary>
-		/// Nettoyage des ressources utilisées.
+		/// Nettoyage des ressources utilisÃ©es.
 		/// </summary>
 		~LoginPage()
 		{
@@ -45,12 +45,12 @@ namespace CESIProject {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::CheckBox^ checkBox1;
+	private: System::Windows::Forms::Button^ connexionButton;
+	private: System::Windows::Forms::CheckBox^ termsCheck;
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Panel^ panel3;
-	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::TextBox^ passwordTextBox;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
@@ -59,14 +59,14 @@ namespace CESIProject {
 
 	private:
 		/// <summary>
-		/// Variable nécessaire au concepteur.
+		/// Variable nÃ©cessaire au concepteur.
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-		/// le contenu de cette méthode avec l'éditeur de code.
+		/// MÃ©thode requise pour la prise en charge du concepteur - ne modifiez pas
+		/// le contenu de cette mÃ©thode avec l'Ã©diteur de code.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -75,11 +75,11 @@ namespace CESIProject {
 			this->btneyes = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->passwordTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->termsCheck = (gcnew System::Windows::Forms::CheckBox());
+			this->connexionButton = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -101,8 +101,8 @@ namespace CESIProject {
 			this->panel1->Controls->Add(this->label4);
 			this->panel1->Controls->Add(this->panel3);
 			this->panel1->Controls->Add(this->panel2);
-			this->panel1->Controls->Add(this->checkBox1);
-			this->panel1->Controls->Add(this->button2);
+			this->panel1->Controls->Add(this->termsCheck);
+			this->panel1->Controls->Add(this->connexionButton);
 			this->panel1->Controls->Add(this->label3);
 			this->panel1->Controls->Add(this->label2);
 			this->panel1->Controls->Add(this->label1);
@@ -147,29 +147,29 @@ namespace CESIProject {
 			// panel3
 			// 
 			this->panel3->BackColor = System::Drawing::Color::AliceBlue;
-			this->panel3->Controls->Add(this->textBox2);
+			this->panel3->Controls->Add(this->passwordTextBox);
 			this->panel3->Location = System::Drawing::Point(696, 388);
 			this->panel3->Margin = System::Windows::Forms::Padding(4);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(603, 71);
 			this->panel3->TabIndex = 11;
 			// 
-			// textBox2
+			// passwordTextBox
 			// 
-			this->textBox2->BackColor = System::Drawing::Color::AliceBlue;
-			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
-			this->textBox2->Location = System::Drawing::Point(29, 23);
-			this->textBox2->Margin = System::Windows::Forms::Padding(4);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->textBox2->Size = System::Drawing::Size(539, 24);
-			this->textBox2->TabIndex = 0;
-			this->textBox2->Text = L"Password";
-			this->textBox2->UseSystemPasswordChar = true;
-			this->textBox2->Click += gcnew System::EventHandler(this, &LoginPage::textBox2_Click);
-			this->textBox2->TextChanged += gcnew System::EventHandler(this, &LoginPage::textBox2_TextChanged);
-			this->textBox2->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &LoginPage::textBox2_KeyDown);
+			this->passwordTextBox->BackColor = System::Drawing::Color::AliceBlue;
+			this->passwordTextBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->passwordTextBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.25F));
+			this->passwordTextBox->Location = System::Drawing::Point(29, 23);
+			this->passwordTextBox->Margin = System::Windows::Forms::Padding(4);
+			this->passwordTextBox->Name = L"passwordTextBox";
+			this->passwordTextBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->passwordTextBox->Size = System::Drawing::Size(539, 24);
+			this->passwordTextBox->TabIndex = 0;
+			this->passwordTextBox->Text = L"Password";
+			this->passwordTextBox->UseSystemPasswordChar = true;
+			this->passwordTextBox->Click += gcnew System::EventHandler(this, &LoginPage::passwordTextBox_Click);
+			this->passwordTextBox->TextChanged += gcnew System::EventHandler(this, &LoginPage::passwordTextBox_TextChanged);
+			this->passwordTextBox->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &LoginPage::passwordTextBox_KeyDown);
 			// 
 			// panel2
 			// 
@@ -196,38 +196,38 @@ namespace CESIProject {
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &LoginPage::textBox1_TextChanged);
 			this->textBox1->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &LoginPage::textBox1_KeyDown);
 			// 
-			// checkBox1
+			// termsCheck
 			// 
-			this->checkBox1->AutoSize = true;
-			this->checkBox1->BackColor = System::Drawing::Color::Transparent;
-			this->checkBox1->Checked = true;
-			this->checkBox1->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox1->Location = System::Drawing::Point(888, 494);
-			this->checkBox1->Margin = System::Windows::Forms::Padding(4);
-			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(231, 20);
-			this->checkBox1->TabIndex = 8;
-			this->checkBox1->Text = L"J\'accepte les termes et conditions";
-			this->checkBox1->UseVisualStyleBackColor = false;
-			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &LoginPage::checkBox1_CheckedChanged);
-			this->checkBox1->Click += gcnew System::EventHandler(this, &LoginPage::otherclick);
+			this->termsCheck->AutoSize = true;
+			this->termsCheck->BackColor = System::Drawing::Color::Transparent;
+			this->termsCheck->Checked = false;
+			this->termsCheck->CheckState = System::Windows::Forms::CheckState::Checked;
+			this->termsCheck->Location = System::Drawing::Point(888, 494);
+			this->termsCheck->Margin = System::Windows::Forms::Padding(4);
+			this->termsCheck->Name = L"termsCheck";
+			this->termsCheck->Size = System::Drawing::Size(231, 20);
+			this->termsCheck->TabIndex = 8;
+			this->termsCheck->Text = L"J\'accepte les termes et conditions";
+			this->termsCheck->UseVisualStyleBackColor = false;
+			this->termsCheck->CheckedChanged += gcnew System::EventHandler(this, &LoginPage::termsCheck_CheckedChanged);
+			this->termsCheck->Click += gcnew System::EventHandler(this, &LoginPage::otherclick);
 			// 
-			// button2
+			// connexionButton
 			// 
-			this->button2->AutoSize = true;
-			this->button2->BackColor = System::Drawing::Color::Orange;
-			this->button2->FlatAppearance->BorderSize = 0;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
-			this->button2->ForeColor = System::Drawing::Color::Black;
-			this->button2->Location = System::Drawing::Point(696, 538);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(603, 57);
-			this->button2->TabIndex = 9;
-			this->button2->Text = L"Connexion";
-			this->button2->UseVisualStyleBackColor = false;
-			this->button2->Click += gcnew System::EventHandler(this, &LoginPage::button2_Click);
+			this->connexionButton->AutoSize = true;
+			this->connexionButton->BackColor = System::Drawing::Color::Orange;
+			this->connexionButton->FlatAppearance->BorderSize = 0;
+			this->connexionButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->connexionButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
+			this->connexionButton->ForeColor = System::Drawing::Color::Black;
+			this->connexionButton->Location = System::Drawing::Point(696, 538);
+			this->connexionButton->Margin = System::Windows::Forms::Padding(4);
+			this->connexionButton->Name = L"connexionButton";
+			this->connexionButton->Size = System::Drawing::Size(603, 57);
+			this->connexionButton->TabIndex = 9;
+			this->connexionButton->Text = L"Connexion";
+			this->connexionButton->UseVisualStyleBackColor = false;
+			this->connexionButton->Click += gcnew System::EventHandler(this, &LoginPage::connexionButton_Click);
 			// 
 			// label3
 			// 
@@ -239,8 +239,8 @@ namespace CESIProject {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(752, 84);
 			this->label3->TabIndex = 5;
-			this->label3->Text = L"Connectez-vous à votre compte afin que nous puissions importer les paramètres et "
-				L"les préférences et ajuster votre expérience";
+			this->label3->Text = L"Connectez-vous Ã  votre compte afin que nous puissions importer les paramÃ¨tres et "
+				L"les prÃ©fÃ©rences et ajuster votre expÃ©rience";
 			this->label3->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->label3->Click += gcnew System::EventHandler(this, &LoginPage::otherclick);
 			// 
@@ -250,7 +250,7 @@ namespace CESIProject {
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Segoe UI Variable Display", 33, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(683, 108);
+			this->label2->Location = System::Drawing::Point(853, 107);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(310, 73);
@@ -348,19 +348,19 @@ namespace CESIProject {
 		{
 			textBox1->Text = "";
 		}
-		if (textBox2->Text == "")
+		if (passwordTextBox->Text == "")
 		{
-			textBox2->Text = "Password";
+			passwordTextBox->Text = "Password";
 		}
 	}
 
-	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void passwordTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
 
-	private: System::Void textBox2_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (textBox2->Text == "Password")
+	private: System::Void passwordTextBox_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (passwordTextBox->Text == "Password")
 		{
-			textBox2->Text = "";
+			passwordTextBox->Text = "";
 		}
 		if (textBox1->Text == "")
 		{
@@ -373,19 +373,19 @@ namespace CESIProject {
 		{
 			textBox1->Text = "Username";
 		}
-		if (textBox2->Text == "")
+		if (passwordTextBox->Text == "")
 		{
-			textBox2->Text = "Password";
+			passwordTextBox->Text = "Password";
 		}
 	}
-	private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (checkBox1->Checked)
+	private: System::Void termsCheck_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (termsCheck->Checked)
 		{
-			button2->Enabled = true;
+			connexionButton->Enabled = true;
 		}
 		else
 		{
-			button2->Enabled = false;
+			connexionButton->Enabled = false;
 		}
 	}
 
@@ -394,17 +394,18 @@ namespace CESIProject {
 		{
 			textBox1->Text = "Username";
 		}
-		if (textBox2->Text == "")
+		if (passwordTextBox->Text == "")
 		{
-			textBox2->Text = "Password";
+			passwordTextBox->Text = "Password";
 		}
-		System::Diagnostics::Process::Start("https://github.com/jebril92");
+
+		System::Diagnostics::Process::Start("mailto:servicesupport@materiel.net?subject=Service Issue | ");
 	}
 
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void connexionButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (textBox1->Text == "admin")
 		{
-			if (textBox2->Text == "root")
+			if (passwordTextBox->Text == "root")
 			{
 				Dashboard^ frm2 = gcnew Dashboard;
 				frm2->Show();
@@ -420,32 +421,32 @@ namespace CESIProject {
 		{
 			textBox1->Text = "Username";
 		}
-		if (textBox2->Text == "")
+		if (passwordTextBox->Text == "")
 		{
-			textBox2->Text = "Password";
+			passwordTextBox->Text = "Password";
 		}
 	}
 
 	private: System::Void btneyes_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (textBox2->UseSystemPasswordChar == true)
+		if (passwordTextBox->UseSystemPasswordChar == true)
 		{
-			textBox2->UseSystemPasswordChar = false;
+			passwordTextBox->UseSystemPasswordChar = false;
 		}
 		else
 		{
-			textBox2->UseSystemPasswordChar = true;
+			passwordTextBox->UseSystemPasswordChar = true;
 		}
 	}
 	private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 	}
 	private: System::Void textBox1_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
 		if (e->KeyValue == (int)Keys::Enter) {
-			textBox2->Focus();
+			passwordTextBox->Focus();
 		}
 	}
-	private: System::Void textBox2_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+	private: System::Void passwordTextBox_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
 		if (e->KeyValue == (int)Keys::Enter) {
-			button2->PerformClick();
+			connexionButton->PerformClick();
 		}
 	}
 	};

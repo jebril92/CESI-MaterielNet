@@ -740,26 +740,28 @@ namespace CESIProject {
 		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
 		MySqlConnection^ con = gcnew MySqlConnection(constr);
 		con->Open();
+
+		// Selection de chaque ligne dans la base de données 
 		String^ selected_eid = dataGridView1->CurrentRow->Cells["id_personnel"]->Value->ToString();
-		//String^ superieur = dataGridView1->CurrentRow->Cells["superieur"]->Value->ToString();
-		//String^ nom = dataGridView1->CurrentRow->Cells["nom"]->Value->ToString();
-		//String^ prenom = dataGridView1->CurrentRow->Cells["prenom"]->Value->ToString();
-		//String^ numero_telephone = dataGridView1->CurrentRow->Cells["numero_telephone"]->Value->ToString();
-		//String^ adresse_mail = dataGridView1->CurrentRow->Cells["adresse_mail"]->Value->ToString();
-		//String^ sexe = dataGridView1->CurrentRow->Cells["sexe"]->Value->ToString();
-		//String^ date_embauche = dataGridView1->CurrentRow->Cells["date_embauche"]->Value->ToString();
-		//String^ pays = dataGridView1->CurrentRow->Cells["pays"]->Value->ToString();
-		//String^ ville = dataGridView1->CurrentRow->Cells["ville"]->Value->ToString();
-		//String^ codepostal = dataGridView1->CurrentRow->Cells["codepostal"]->Value->ToString();
-		//String^ n_rue = dataGridView1->CurrentRow->Cells["n_rue"]->Value->ToString();
-		//String^ rue = dataGridView1->CurrentRow->Cells["rue"]->Value->ToString();
-		//String^ etage = dataGridView1->CurrentRow->Cells["etage"]->Value->ToString();
-		//String^ Residence = dataGridView1->CurrentRow->Cells["Residence"]->Value->ToString();
-		MySqlCommand ^ cmd = gcnew MySqlCommand("update from projet.personnel where id_personnel = '" + selected_eid + "'", con);
-		//MySqlCommand^ cmd = gcnew MySqlCommand("update projet.personnel where superieur = '" + superieur + "', nom='" + nom + "', prenom='" + prenom + "', numero_telephone='" + numero_telephone + "', adresse_mail='" + adresse_mail + "', sexe='" + sexe + "', date_embauche='" + date_embauche + "', pays='" + pays + "', ville='" + ville + "', codepostal='" + codepostal + "', n_rue='" + n_rue + "', rue='" + rue + "', etage='" + etage + "', Residence ='" + Residence + "'", con); +
+		String^ superieur = dataGridView1->CurrentRow->Cells["superieur"]->Value->ToString();
+		String^ nom = dataGridView1->CurrentRow->Cells["nom"]->Value->ToString();
+		String^ prenom = dataGridView1->CurrentRow->Cells["prenom"]->Value->ToString();
+		String^ numero_telephone = dataGridView1->CurrentRow->Cells["numero_telephone"]->Value->ToString();
+		String^ adresse_mail = dataGridView1->CurrentRow->Cells["adresse_mail"]->Value->ToString();
+		String^ sexe = dataGridView1->CurrentRow->Cells["sexe"]->Value->ToString();
+		String^ date_embauche = dataGridView1->CurrentRow->Cells["date_embauche"]->Value->ToString();
+		String^ pays = dataGridView1->CurrentRow->Cells["pays"]->Value->ToString();
+		String^ ville = dataGridView1->CurrentRow->Cells["ville"]->Value->ToString();
+		String^ codepostal = dataGridView1->CurrentRow->Cells["codepostal"]->Value->ToString();
+		String^ n_rue = dataGridView1->CurrentRow->Cells["n_rue"]->Value->ToString();
+		String^ rue = dataGridView1->CurrentRow->Cells["rue"]->Value->ToString();
+		String^ etage = dataGridView1->CurrentRow->Cells["etage"]->Value->ToString();
+		String^ Residence = dataGridView1->CurrentRow->Cells["Residence"]->Value->ToString();
+
+		//id_personnel = '" + selected_eid + "',
+		MySqlCommand^ cmd = gcnew MySqlCommand("update projet.personnel set superieur = '" + superieur + "', nom = '" + nom + "', prenom = '" + prenom + "', numero_telephone = '" + numero_telephone + "', adresse_mail = '" + adresse_mail + "', sexe = '" + sexe + "', date_embauche = '" + date_embauche + "', pays = '" + pays + "', ville = '" + ville + "', codepostal = '" + codepostal + "', n_rue = '" + n_rue + "', rue = '" + rue + "', etage = '" + etage + "', Residence = '" + Residence + "' where id_personnel = '" + selected_eid + "'", con);
 		cmd->ExecuteReader();
 		con->Close();
-
 	}
 	};
 }

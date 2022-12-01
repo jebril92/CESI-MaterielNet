@@ -126,6 +126,7 @@
   <ItemGroup>
     <ClCompile Include="Dashboard.cpp" />
     <ClCompile Include="InterfacePersonnel.cpp" />
+    <ClCompile Include="InterfaceProduit.cpp" />
     <ClCompile Include="LoginPage.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +134,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="InterfacePersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="InterfaceProduit.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="LoginPage.h">
@@ -146,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacePersonnel.resx">
       <DependentUpon>InterfacePersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceProduit.resx">
+      <DependentUpon>InterfaceProduit.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.h</DependentUpon>

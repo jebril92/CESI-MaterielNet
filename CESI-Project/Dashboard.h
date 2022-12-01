@@ -606,7 +606,6 @@ namespace CESIProject {
 		button3->BackColor = Color::FromArgb(31, 30, 68);
 		button4->BackColor = Color::FromArgb(31, 30, 68);
 		button5->BackColor = Color::FromArgb(31, 30, 68);
-		button6->BackColor = Color::FromArgb(31, 30, 68);
 		panelDashboard->Visible = false;
 		panelOrders->Visible = false;
 		panelProducts->Visible = false;
@@ -627,7 +626,7 @@ namespace CESIProject {
 			panelProducts->Visible = false;
 			panelPersonnels->Visible = false;
 			panelMarketing->Visible = false;
-			panelSettings->Visible = false;
+
 		}
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -642,7 +641,7 @@ namespace CESIProject {
 			panelProducts->Visible = false;
 			panelPersonnels->Visible = false;
 			panelMarketing->Visible = false;
-			panelSettings->Visible = false;
+
 		}
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -657,7 +656,7 @@ namespace CESIProject {
 			panelDashboard->Visible = false;
 			panelPersonnels->Visible = false;
 			panelMarketing->Visible = false;
-			panelSettings->Visible = false;
+
 		}
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -672,7 +671,7 @@ namespace CESIProject {
 			panelDashboard->Visible = false;
 			panelProducts->Visible = false;
 			panelMarketing->Visible = false;
-			panelSettings->Visible = false;
+
 		}
 	}
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -687,22 +686,7 @@ namespace CESIProject {
 			panelDashboard->Visible = false;
 			panelProducts->Visible = false;
 			panelPersonnels->Visible = false;
-			panelSettings->Visible = false;
-		}
-	}
-	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-		pnlNav->Height = button6->Height;
-		pnlNav->Top = button6->Top;
-		pnlNav->Left = button6->Left;
-		button6->BackColor = Color::FromArgb(46, 51, 73);
-		if (panelSettings->Visible == false)
-		{
-			panelSettings->Visible = true;
-			panelOrders->Visible = false;
-			panelDashboard->Visible = false;
-			panelProducts->Visible = false;
-			panelPersonnels->Visible = false;
-			panelMarketing->Visible = false;
+
 		}
 	}
 	private: System::Void button1_Leave(System::Object^ sender, System::EventArgs^ e) {
@@ -719,9 +703,6 @@ namespace CESIProject {
 	}
 	private: System::Void button5_Leave(System::Object^ sender, System::EventArgs^ e) {
 		button5->BackColor = Color::FromArgb(31, 30, 68);
-	}
-	private: System::Void button6_Leave(System::Object^ sender, System::EventArgs^ e) {
-		button6->BackColor = Color::FromArgb(31, 30, 68);
 	}
 		   // SUPPRIMER PERSONNEL
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -755,6 +736,30 @@ namespace CESIProject {
 		dataGridView1->DataSource = bindingSource1;
 	}
 	private: System::Void btnModifier_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+		MySqlConnection^ con = gcnew MySqlConnection(constr);
+		con->Open();
+		String^ selected_eid = dataGridView1->CurrentRow->Cells["id_personnel"]->Value->ToString();
+		//String^ superieur = dataGridView1->CurrentRow->Cells["superieur"]->Value->ToString();
+		//String^ nom = dataGridView1->CurrentRow->Cells["nom"]->Value->ToString();
+		//String^ prenom = dataGridView1->CurrentRow->Cells["prenom"]->Value->ToString();
+		//String^ numero_telephone = dataGridView1->CurrentRow->Cells["numero_telephone"]->Value->ToString();
+		//String^ adresse_mail = dataGridView1->CurrentRow->Cells["adresse_mail"]->Value->ToString();
+		//String^ sexe = dataGridView1->CurrentRow->Cells["sexe"]->Value->ToString();
+		//String^ date_embauche = dataGridView1->CurrentRow->Cells["date_embauche"]->Value->ToString();
+		//String^ pays = dataGridView1->CurrentRow->Cells["pays"]->Value->ToString();
+		//String^ ville = dataGridView1->CurrentRow->Cells["ville"]->Value->ToString();
+		//String^ codepostal = dataGridView1->CurrentRow->Cells["codepostal"]->Value->ToString();
+		//String^ n_rue = dataGridView1->CurrentRow->Cells["n_rue"]->Value->ToString();
+		//String^ rue = dataGridView1->CurrentRow->Cells["rue"]->Value->ToString();
+		//String^ etage = dataGridView1->CurrentRow->Cells["etage"]->Value->ToString();
+		//String^ Residence = dataGridView1->CurrentRow->Cells["Residence"]->Value->ToString();
+		MySqlCommand ^ cmd = gcnew MySqlCommand("update from projet.personnel where id_personnel = '" + selected_eid + "'", con);
+		//MySqlCommand^ cmd = gcnew MySqlCommand("update projet.personnel where superieur = '" + superieur + "', nom='" + nom + "', prenom='" + prenom + "', numero_telephone='" + numero_telephone + "', adresse_mail='" + adresse_mail + "', sexe='" + sexe + "', date_embauche='" + date_embauche + "', pays='" + pays + "', ville='" + ville + "', codepostal='" + codepostal + "', n_rue='" + n_rue + "', rue='" + rue + "', etage='" + etage + "', Residence ='" + Residence + "'", con); +
+		cmd->ExecuteReader();
+		con->Close();
+
 	}
 	};
 }

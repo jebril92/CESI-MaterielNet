@@ -11,7 +11,6 @@ namespace CESIProject {
 	using namespace System::Drawing;
 	using namespace System::Runtime::InteropServices;
 
-
 	/// <summary>
 	/// Description résumée de LoginPage
 	/// </summary>
@@ -30,6 +29,8 @@ namespace CESIProject {
 			/*this->Text = String::Empty;
 			this->ControlBox = false;*/
 		}
+
+
 
 	protected:
 		/// <summary>

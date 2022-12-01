@@ -65,8 +65,10 @@ namespace CESIProject {
 	private: System::Windows::Forms::Panel^ panelMarketing;
 
 	private: System::Windows::Forms::Label^ labelMarketing;
-	private: System::Windows::Forms::Panel^ panelSettings;
-	private: System::Windows::Forms::Label^ labelSettings;
+	private: System::Windows::Forms::Panel^ panelCommandes;
+	private: System::Windows::Forms::Label^ labelCommandes;
+
+
 	private: System::Windows::Forms::Panel^ panelLogo;
 	private: System::Windows::Forms::PictureBox^ btnHome;
 	private: System::Windows::Forms::Label^ labelBienvenue;
@@ -99,6 +101,11 @@ namespace CESIProject {
 	private: System::Windows::Forms::Button^ button8;
 	private: System::Windows::Forms::Button^ button9;
 	private: System::Windows::Forms::BindingSource^ bindingSource2;
+	private: System::Windows::Forms::DataGridView^ dataGridView3;
+	private: System::Windows::Forms::Button^ button10;
+	private: System::Windows::Forms::Button^ button11;
+	private: System::Windows::Forms::Button^ button12;
+	private: System::Windows::Forms::Button^ button13;
 
 	private: System::ComponentModel::IContainer^ components;
 	protected:
@@ -152,12 +159,17 @@ namespace CESIProject {
 			this->labelPersonnels = (gcnew System::Windows::Forms::Label());
 			this->panelMarketing = (gcnew System::Windows::Forms::Panel());
 			this->labelMarketing = (gcnew System::Windows::Forms::Label());
-			this->panelSettings = (gcnew System::Windows::Forms::Panel());
-			this->labelSettings = (gcnew System::Windows::Forms::Label());
+			this->panelCommandes = (gcnew System::Windows::Forms::Panel());
+			this->labelCommandes = (gcnew System::Windows::Forms::Label());
 			this->labelBienvenue = (gcnew System::Windows::Forms::Label());
 			this->labelAdmin = (gcnew System::Windows::Forms::Label());
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->bindingSource2 = (gcnew System::Windows::Forms::BindingSource(this->components));
+			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
+			this->button10 = (gcnew System::Windows::Forms::Button());
+			this->button11 = (gcnew System::Windows::Forms::Button());
+			this->button12 = (gcnew System::Windows::Forms::Button());
+			this->button13 = (gcnew System::Windows::Forms::Button());
 			this->panelMenu->SuspendLayout();
 			this->panelLogo->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->btnHome))->BeginInit();
@@ -168,9 +180,10 @@ namespace CESIProject {
 			this->panelPersonnels->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->panelMarketing->SuspendLayout();
-			this->panelSettings->SuspendLayout();
+			this->panelCommandes->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panelMenu
@@ -573,23 +586,35 @@ namespace CESIProject {
 			this->labelMarketing->TabIndex = 0;
 			this->labelMarketing->Text = L"Marketing";
 			// 
-			// panelSettings
+			// panelCommandes
 			// 
-			this->panelSettings->Controls->Add(this->labelSettings);
-			this->panelSettings->Location = System::Drawing::Point(170, 230);
-			this->panelSettings->Name = L"panelSettings";
-			this->panelSettings->Size = System::Drawing::Size(200, 100);
-			this->panelSettings->TabIndex = 7;
-			this->panelSettings->Visible = false;
+			this->panelCommandes->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
+				static_cast<System::Int32>(static_cast<System::Byte>(70)));
+			this->panelCommandes->Controls->Add(this->dataGridView3);
+			this->panelCommandes->Controls->Add(this->button10);
+			this->panelCommandes->Controls->Add(this->button11);
+			this->panelCommandes->Controls->Add(this->button12);
+			this->panelCommandes->Controls->Add(this->button13);
+			this->panelCommandes->Controls->Add(this->labelCommandes);
+			this->panelCommandes->Location = System::Drawing::Point(165, 62);
+			this->panelCommandes->Name = L"panelCommandes";
+			this->panelCommandes->Size = System::Drawing::Size(721, 485);
+			this->panelCommandes->TabIndex = 7;
+			this->panelCommandes->Visible = false;
 			// 
-			// labelSettings
+			// labelCommandes
 			// 
-			this->labelSettings->AutoSize = true;
-			this->labelSettings->Location = System::Drawing::Point(19, 15);
-			this->labelSettings->Name = L"labelSettings";
-			this->labelSettings->Size = System::Drawing::Size(45, 13);
-			this->labelSettings->TabIndex = 0;
-			this->labelSettings->Text = L"Settings";
+			this->labelCommandes->AutoSize = true;
+			this->labelCommandes->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
+				static_cast<System::Int32>(static_cast<System::Byte>(70)));
+			this->labelCommandes->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21));
+			this->labelCommandes->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(158)), static_cast<System::Int32>(static_cast<System::Byte>(161)),
+				static_cast<System::Int32>(static_cast<System::Byte>(176)));
+			this->labelCommandes->Location = System::Drawing::Point(10, 12);
+			this->labelCommandes->Name = L"labelCommandes";
+			this->labelCommandes->Size = System::Drawing::Size(174, 32);
+			this->labelCommandes->TabIndex = 0;
+			this->labelCommandes->Text = L"Commandes";
 			// 
 			// labelBienvenue
 			// 
@@ -620,6 +645,61 @@ namespace CESIProject {
 			this->labelAdmin->TabIndex = 9;
 			this->labelAdmin->Text = L"Admin";
 			// 
+			// dataGridView3
+			// 
+			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView3->Location = System::Drawing::Point(146, 65);
+			this->dataGridView3->Margin = System::Windows::Forms::Padding(2);
+			this->dataGridView3->Name = L"dataGridView3";
+			this->dataGridView3->RowHeadersWidth = 51;
+			this->dataGridView3->RowTemplate->Height = 24;
+			this->dataGridView3->Size = System::Drawing::Size(440, 222);
+			this->dataGridView3->TabIndex = 29;
+			// 
+			// button10
+			// 
+			this->button10->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button10.Image")));
+			this->button10->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button10->Location = System::Drawing::Point(584, 425);
+			this->button10->Name = L"button10";
+			this->button10->Size = System::Drawing::Size(125, 39);
+			this->button10->TabIndex = 28;
+			this->button10->Text = L"Charger BDD";
+			this->button10->UseVisualStyleBackColor = true;
+			// 
+			// button11
+			// 
+			this->button11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button11.Image")));
+			this->button11->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button11->Location = System::Drawing::Point(460, 329);
+			this->button11->Name = L"button11";
+			this->button11->Size = System::Drawing::Size(126, 39);
+			this->button11->TabIndex = 27;
+			this->button11->Text = L"Supprimer";
+			this->button11->UseVisualStyleBackColor = true;
+			// 
+			// button12
+			// 
+			this->button12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button12.Image")));
+			this->button12->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button12->Location = System::Drawing::Point(156, 329);
+			this->button12->Name = L"button12";
+			this->button12->Size = System::Drawing::Size(127, 39);
+			this->button12->TabIndex = 26;
+			this->button12->Text = L"Nouveau";
+			this->button12->UseVisualStyleBackColor = true;
+			// 
+			// button13
+			// 
+			this->button13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button13.Image")));
+			this->button13->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button13->Location = System::Drawing::Point(310, 329);
+			this->button13->Name = L"button13";
+			this->button13->Size = System::Drawing::Size(121, 39);
+			this->button13->TabIndex = 25;
+			this->button13->Text = L"   Modifier";
+			this->button13->UseVisualStyleBackColor = true;
+			// 
 			// Dashboard
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -630,12 +710,12 @@ namespace CESIProject {
 			this->Controls->Add(this->labelAdmin);
 			this->Controls->Add(this->panelTitleBar);
 			this->Controls->Add(this->panelMenu);
-			this->Controls->Add(this->panelProducts);
-			this->Controls->Add(this->panelSettings);
+			this->Controls->Add(this->panelCommandes);
 			this->Controls->Add(this->panelDashboard);
 			this->Controls->Add(this->panelMarketing);
 			this->Controls->Add(this->panelOrders);
 			this->Controls->Add(this->panelPersonnels);
+			this->Controls->Add(this->panelProducts);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximumSize = System::Drawing::Size(902, 583);
 			this->MinimumSize = System::Drawing::Size(902, 583);
@@ -657,10 +737,11 @@ namespace CESIProject {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->panelMarketing->ResumeLayout(false);
 			this->panelMarketing->PerformLayout();
-			this->panelSettings->ResumeLayout(false);
-			this->panelSettings->PerformLayout();
+			this->panelCommandes->ResumeLayout(false);
+			this->panelCommandes->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

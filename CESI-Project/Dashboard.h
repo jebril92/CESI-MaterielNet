@@ -112,6 +112,8 @@ namespace CESIProject {
 	private: System::Windows::Forms::Button^ button16;
 	private: System::Windows::Forms::Button^ button17;
 	private: System::Windows::Forms::BindingSource^ bindingSource3;
+	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
+
 
 	private: System::ComponentModel::IContainer^ components;
 	protected:
@@ -135,6 +137,10 @@ namespace CESIProject {
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Dashboard::typeid));
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Title^ title1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
 			this->panelMenu = (gcnew System::Windows::Forms::Panel());
 			this->pnlNav = (gcnew System::Windows::Forms::Panel());
 			this->button5 = (gcnew System::Windows::Forms::Button());
@@ -146,6 +152,7 @@ namespace CESIProject {
 			this->btnHome = (gcnew System::Windows::Forms::PictureBox());
 			this->panelTitleBar = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->panelDashboard = (gcnew System::Windows::Forms::Panel());
+			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->labelDashboard = (gcnew System::Windows::Forms::Label());
 			this->panelProducts = (gcnew System::Windows::Forms::Panel());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
@@ -186,6 +193,7 @@ namespace CESIProject {
 			this->panelLogo->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->btnHome))->BeginInit();
 			this->panelDashboard->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			this->panelProducts->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->panelOrders->SuspendLayout();
@@ -368,15 +376,61 @@ namespace CESIProject {
 			// 
 			// panelDashboard
 			// 
+			this->panelDashboard->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
+				static_cast<System::Int32>(static_cast<System::Byte>(70)));
+			this->panelDashboard->Controls->Add(this->chart1);
 			this->panelDashboard->Controls->Add(this->labelDashboard);
 			this->panelDashboard->ForeColor = System::Drawing::Color::Black;
-			this->panelDashboard->Location = System::Drawing::Point(596, 119);
+			this->panelDashboard->Location = System::Drawing::Point(220, 76);
 			this->panelDashboard->Margin = System::Windows::Forms::Padding(4);
 			this->panelDashboard->Name = L"panelDashboard";
 			this->panelDashboard->Size = System::Drawing::Size(961, 597);
 			this->panelDashboard->TabIndex = 2;
 			this->panelDashboard->Visible = false;
 			this->panelDashboard->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Dashboard::panelDashboard_Paint);
+			// 
+			// chart1
+			// 
+			this->chart1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(46)),
+				static_cast<System::Int32>(static_cast<System::Byte>(70)));
+			this->chart1->BorderlineColor = System::Drawing::Color::Black;
+			chartArea1->Area3DStyle->LightStyle = System::Windows::Forms::DataVisualization::Charting::LightStyle::None;
+			chartArea1->AxisX->LineColor = System::Drawing::Color::Silver;
+			chartArea1->AxisX->MajorGrid->LineColor = System::Drawing::Color::Transparent;
+			chartArea1->AxisX->TitleForeColor = System::Drawing::SystemColors::ButtonShadow;
+			chartArea1->AxisX2->LineColor = System::Drawing::Color::IndianRed;
+			chartArea1->AxisX2->TitleForeColor = System::Drawing::Color::Gray;
+			chartArea1->AxisY->LineColor = System::Drawing::Color::DarkGray;
+			chartArea1->AxisY->MajorGrid->LineColor = System::Drawing::Color::Transparent;
+			chartArea1->AxisY->TitleForeColor = System::Drawing::SystemColors::ButtonShadow;
+			chartArea1->AxisY2->LineColor = System::Drawing::Color::Silver;
+			chartArea1->AxisY2->TitleForeColor = System::Drawing::SystemColors::ButtonShadow;
+			chartArea1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(46)),
+				static_cast<System::Int32>(static_cast<System::Byte>(70)));
+			chartArea1->BorderColor = System::Drawing::Color::Transparent;
+			chartArea1->Name = L"ChartArea1";
+			this->chart1->ChartAreas->Add(chartArea1);
+			legend1->Enabled = false;
+			legend1->Name = L"Legend1";
+			this->chart1->Legends->Add(legend1);
+			this->chart1->Location = System::Drawing::Point(20, 80);
+			this->chart1->Name = L"chart1";
+			this->chart1->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::Fire;
+			series1->ChartArea = L"ChartArea1";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Area;
+			series1->LabelForeColor = System::Drawing::Color::Transparent;
+			series1->Legend = L"Legend1";
+			series1->Name = L"Series1";
+			series1->YValuesPerPoint = 6;
+			this->chart1->Series->Add(series1);
+			this->chart1->Size = System::Drawing::Size(568, 392);
+			this->chart1->TabIndex = 1;
+			this->chart1->Text = L"chart1";
+			title1->ForeColor = System::Drawing::SystemColors::ControlDark;
+			title1->Name = L"Title1";
+			title1->Text = L"Produits vendus (ce mois)";
+			this->chart1->Titles->Add(title1);
+			this->chart1->Click += gcnew System::EventHandler(this, &Dashboard::chart1_Click);
 			// 
 			// labelDashboard
 			// 
@@ -824,12 +878,12 @@ namespace CESIProject {
 			this->Controls->Add(this->labelAdmin);
 			this->Controls->Add(this->panelTitleBar);
 			this->Controls->Add(this->panelMenu);
+			this->Controls->Add(this->panelDashboard);
+			this->Controls->Add(this->panelMarketing);
 			this->Controls->Add(this->panelOrders);
 			this->Controls->Add(this->panelCommandes);
 			this->Controls->Add(this->panelPersonnels);
 			this->Controls->Add(this->panelProducts);
-			this->Controls->Add(this->panelDashboard);
-			this->Controls->Add(this->panelMarketing);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->MaximumSize = System::Drawing::Size(1197, 707);
@@ -842,6 +896,7 @@ namespace CESIProject {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->btnHome))->EndInit();
 			this->panelDashboard->ResumeLayout(false);
 			this->panelDashboard->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			this->panelProducts->ResumeLayout(false);
 			this->panelProducts->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
@@ -910,6 +965,7 @@ namespace CESIProject {
 		chargerCommandes();
 
 	}
+
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		pnlNav->Height = button3->Height;
 		pnlNav->Top = button3->Top;
@@ -1178,5 +1234,10 @@ namespace CESIProject {
 		chargerCommandes();
 
 	}
-	};
+	private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
+	}
+private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+}
+};
 }

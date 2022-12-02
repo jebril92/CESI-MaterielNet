@@ -114,6 +114,14 @@ namespace CESIProject {
 	private: System::Windows::Forms::Button^ button17;
 	private: System::Windows::Forms::BindingSource^ bindingSource3;
 	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
+	private: System::Windows::Forms::Button^ buttonValeurAchat;
+	private: System::Windows::Forms::Button^ buttonValeurCommerciale;
+	private: System::Windows::Forms::Button^ buttonPlusVendus;
+	private: System::Windows::Forms::Button^ buttonArticlesMoins;
+	private: System::Windows::Forms::Button^ buttonMontantTotal;
+	private: System::Windows::Forms::Button^ buttonSousSeuil;
+	private: System::Windows::Forms::Button^ buttonChiffreAffaire;
+	private: System::Windows::Forms::Button^ buttonPanierMoyen;
 
 
 	private: System::ComponentModel::IContainer^ components;
@@ -190,6 +198,14 @@ namespace CESIProject {
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->bindingSource2 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->bindingSource3 = (gcnew System::Windows::Forms::BindingSource(this->components));
+			this->buttonPanierMoyen = (gcnew System::Windows::Forms::Button());
+			this->buttonChiffreAffaire = (gcnew System::Windows::Forms::Button());
+			this->buttonSousSeuil = (gcnew System::Windows::Forms::Button());
+			this->buttonMontantTotal = (gcnew System::Windows::Forms::Button());
+			this->buttonArticlesMoins = (gcnew System::Windows::Forms::Button());
+			this->buttonPlusVendus = (gcnew System::Windows::Forms::Button());
+			this->buttonValeurCommerciale = (gcnew System::Windows::Forms::Button());
+			this->buttonValeurAchat = (gcnew System::Windows::Forms::Button());
 			this->panelMenu->SuspendLayout();
 			this->panelLogo->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->btnHome))->BeginInit();
@@ -731,21 +747,35 @@ namespace CESIProject {
 			// 
 			// panelMarketing
 			// 
+			this->panelMarketing->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
+				static_cast<System::Int32>(static_cast<System::Byte>(70)));
+			this->panelMarketing->Controls->Add(this->buttonValeurAchat);
+			this->panelMarketing->Controls->Add(this->buttonValeurCommerciale);
+			this->panelMarketing->Controls->Add(this->buttonPlusVendus);
+			this->panelMarketing->Controls->Add(this->buttonArticlesMoins);
+			this->panelMarketing->Controls->Add(this->buttonMontantTotal);
+			this->panelMarketing->Controls->Add(this->buttonSousSeuil);
+			this->panelMarketing->Controls->Add(this->buttonChiffreAffaire);
+			this->panelMarketing->Controls->Add(this->buttonPanierMoyen);
 			this->panelMarketing->Controls->Add(this->labelMarketing);
-			this->panelMarketing->Location = System::Drawing::Point(316, 485);
+			this->panelMarketing->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->panelMarketing->Location = System::Drawing::Point(220, 76);
 			this->panelMarketing->Margin = System::Windows::Forms::Padding(4);
 			this->panelMarketing->Name = L"panelMarketing";
-			this->panelMarketing->Size = System::Drawing::Size(267, 123);
+			this->panelMarketing->Size = System::Drawing::Size(961, 597);
 			this->panelMarketing->TabIndex = 6;
 			this->panelMarketing->Visible = false;
 			// 
 			// labelMarketing
 			// 
 			this->labelMarketing->AutoSize = true;
+			this->labelMarketing->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21));
+			this->labelMarketing->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(158)), static_cast<System::Int32>(static_cast<System::Byte>(161)),
+				static_cast<System::Int32>(static_cast<System::Byte>(176)));
 			this->labelMarketing->Location = System::Drawing::Point(28, 17);
 			this->labelMarketing->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelMarketing->Name = L"labelMarketing";
-			this->labelMarketing->Size = System::Drawing::Size(66, 16);
+			this->labelMarketing->Size = System::Drawing::Size(170, 39);
 			this->labelMarketing->TabIndex = 0;
 			this->labelMarketing->Text = L"Marketing";
 			// 
@@ -871,6 +901,78 @@ namespace CESIProject {
 			this->labelAdmin->TabIndex = 9;
 			this->labelAdmin->Text = L"Admin";
 			// 
+			// buttonPanierMoyen
+			// 
+			this->buttonPanierMoyen->Location = System::Drawing::Point(35, 100);
+			this->buttonPanierMoyen->Name = L"buttonPanierMoyen";
+			this->buttonPanierMoyen->Size = System::Drawing::Size(153, 36);
+			this->buttonPanierMoyen->TabIndex = 1;
+			this->buttonPanierMoyen->Text = L"Panier Moyen";
+			this->buttonPanierMoyen->UseVisualStyleBackColor = true;
+			// 
+			// buttonChiffreAffaire
+			// 
+			this->buttonChiffreAffaire->Location = System::Drawing::Point(35, 163);
+			this->buttonChiffreAffaire->Name = L"buttonChiffreAffaire";
+			this->buttonChiffreAffaire->Size = System::Drawing::Size(153, 36);
+			this->buttonChiffreAffaire->TabIndex = 2;
+			this->buttonChiffreAffaire->Text = L"Chiffre d\'affaire ";
+			this->buttonChiffreAffaire->UseVisualStyleBackColor = true;
+			// 
+			// buttonSousSeuil
+			// 
+			this->buttonSousSeuil->Location = System::Drawing::Point(35, 231);
+			this->buttonSousSeuil->Name = L"buttonSousSeuil";
+			this->buttonSousSeuil->Size = System::Drawing::Size(153, 36);
+			this->buttonSousSeuil->TabIndex = 3;
+			this->buttonSousSeuil->Text = L"Produit sous Seuil";
+			this->buttonSousSeuil->UseVisualStyleBackColor = true;
+			// 
+			// buttonMontantTotal
+			// 
+			this->buttonMontantTotal->Location = System::Drawing::Point(35, 304);
+			this->buttonMontantTotal->Name = L"buttonMontantTotal";
+			this->buttonMontantTotal->Size = System::Drawing::Size(153, 36);
+			this->buttonMontantTotal->TabIndex = 4;
+			this->buttonMontantTotal->Text = L"Montant Total (Client)";
+			this->buttonMontantTotal->UseVisualStyleBackColor = true;
+			// 
+			// buttonArticlesMoins
+			// 
+			this->buttonArticlesMoins->Location = System::Drawing::Point(35, 381);
+			this->buttonArticlesMoins->Name = L"buttonArticlesMoins";
+			this->buttonArticlesMoins->Size = System::Drawing::Size(153, 36);
+			this->buttonArticlesMoins->TabIndex = 5;
+			this->buttonArticlesMoins->Text = L"Les Moins Vendus";
+			this->buttonArticlesMoins->UseVisualStyleBackColor = true;
+			// 
+			// buttonPlusVendus
+			// 
+			this->buttonPlusVendus->Location = System::Drawing::Point(35, 456);
+			this->buttonPlusVendus->Name = L"buttonPlusVendus";
+			this->buttonPlusVendus->Size = System::Drawing::Size(153, 36);
+			this->buttonPlusVendus->TabIndex = 6;
+			this->buttonPlusVendus->Text = L"Les Plus Vendus";
+			this->buttonPlusVendus->UseVisualStyleBackColor = true;
+			// 
+			// buttonValeurCommerciale
+			// 
+			this->buttonValeurCommerciale->Location = System::Drawing::Point(224, 100);
+			this->buttonValeurCommerciale->Name = L"buttonValeurCommerciale";
+			this->buttonValeurCommerciale->Size = System::Drawing::Size(183, 36);
+			this->buttonValeurCommerciale->TabIndex = 7;
+			this->buttonValeurCommerciale->Text = L"Valeur Commerciale Stock";
+			this->buttonValeurCommerciale->UseVisualStyleBackColor = true;
+			// 
+			// buttonValeurAchat
+			// 
+			this->buttonValeurAchat->Location = System::Drawing::Point(224, 163);
+			this->buttonValeurAchat->Name = L"buttonValeurAchat";
+			this->buttonValeurAchat->Size = System::Drawing::Size(183, 36);
+			this->buttonValeurAchat->TabIndex = 8;
+			this->buttonValeurAchat->Text = L"Valeur Achat Stock";
+			this->buttonValeurAchat->UseVisualStyleBackColor = true;
+			// 
 			// Dashboard
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -881,12 +983,12 @@ namespace CESIProject {
 			this->Controls->Add(this->labelAdmin);
 			this->Controls->Add(this->panelTitleBar);
 			this->Controls->Add(this->panelMenu);
-			this->Controls->Add(this->panelDashboard);
 			this->Controls->Add(this->panelMarketing);
 			this->Controls->Add(this->panelOrders);
 			this->Controls->Add(this->panelCommandes);
 			this->Controls->Add(this->panelPersonnels);
 			this->Controls->Add(this->panelProducts);
+			this->Controls->Add(this->panelDashboard);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->MaximumSize = System::Drawing::Size(1197, 707);

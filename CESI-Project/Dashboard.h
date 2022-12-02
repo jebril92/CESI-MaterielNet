@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "InterfacePersonnel.h"
 #include "InterfaceProduit.h"
+#include "InterfaceCommande.h"
 
 namespace CESIProject {
 
@@ -567,6 +568,7 @@ namespace CESIProject {
 			this->dataGridView4->RowTemplate->Height = 24;
 			this->dataGridView4->Size = System::Drawing::Size(587, 273);
 			this->dataGridView4->TabIndex = 29;
+			this->dataGridView4->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Dashboard::dataGridView4_CellContentClick);
 			// 
 			// button14
 			// 
@@ -605,6 +607,7 @@ namespace CESIProject {
 			this->button16->TabIndex = 26;
 			this->button16->Text = L"Nouveau";
 			this->button16->UseVisualStyleBackColor = true;
+			this->button16->Click += gcnew System::EventHandler(this, &Dashboard::button16_Click);
 			// 
 			// button17
 			// 
@@ -1184,7 +1187,7 @@ namespace CESIProject {
 	private: System::Void chargerCommandes() {
 		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
 		MySqlConnection^ con = gcnew MySqlConnection(constr);
-		MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select * from commande", con);
+		MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select id_client,nom2,prenom2,Produit,Prix,id_commande from clients, commande where id_client=id_commande", con);
 		DataTable^ dt = gcnew DataTable();
 		sda->Fill(dt);
 		bindingSource3->DataSource = dt;
@@ -1218,22 +1221,29 @@ namespace CESIProject {
 		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
 		MySqlConnection^ con = gcnew MySqlConnection(constr);
 		con->Open();
-
+		
 		// Selection de chaque ligne dans la base de données 
 		String^ id_commande = dataGridView4->CurrentRow->Cells["id_commande"]->Value->ToString();
-		String^ montant_ht = dataGridView4->CurrentRow->Cells["montant_ht"]->Value->ToString();
-		String^ montant_tva = dataGridView4->CurrentRow->Cells["montant_tva"]->Value->ToString();
-		String^ montant_ttc = dataGridView4->CurrentRow->Cells["montant_ttc"]->Value->ToString();
-		String^ remise = dataGridView4->CurrentRow->Cells["remise"]->Value->ToString();
-		String^ total_articles = dataGridView4->CurrentRow->Cells["total_articles"]->Value->ToString();
-
-		MySqlCommand^ cmd = gcnew MySqlCommand("update projet.commande set montant_ht = '" + montant_ht + "', montant_tva = '" + montant_tva + "', montant_ttc = '" + montant_ttc + "', remise = '" + remise + "', total_articles = '" + total_articles + "' where id_commande = '" + id_commande + "'", con);
+		String^ nom2 = dataGridView4->CurrentRow->Cells["nom2"]->Value->ToString();
+		String^ prenom2 = dataGridView4->CurrentRow->Cells["prenom2"]->Value->ToString();
+		String^ Produit = dataGridView4->CurrentRow->Cells["Produit"]->Value->ToString();
+		String^ Prix = dataGridView4->CurrentRow->Cells["Prix"]->Value->ToString();
+		
+		MySqlCommand^ cmd = gcnew MySqlCommand("update projet.commande set nom2 = '" + nom2 + "', prenom2 = '" + prenom2 + "', Produit = '" + Produit + "', Prix = '" + Prix +"' where id_commande = '" + id_commande + "'", con);
 		cmd->ExecuteReader();
 		con->Close();
 
 		chargerCommandes();
 
 	}
+	private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
+		InterfaceCommande^ form5 = gcnew InterfaceCommande();
+		form5->Show();
+		
+	}
+private: System::Void dataGridView4_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+};
 	private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
 	}
 private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e) {

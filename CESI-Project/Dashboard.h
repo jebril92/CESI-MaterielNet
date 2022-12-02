@@ -122,6 +122,8 @@ namespace CESIProject {
 	private: System::Windows::Forms::Button^ buttonSousSeuil;
 	private: System::Windows::Forms::Button^ buttonChiffreAffaire;
 	private: System::Windows::Forms::Button^ buttonPanierMoyen;
+private: System::Windows::Forms::DataGridView^ dataGridView5;
+private: System::Windows::Forms::BindingSource^ bindingSource4;
 
 
 	private: System::ComponentModel::IContainer^ components;
@@ -185,6 +187,15 @@ namespace CESIProject {
 			this->btnModifier = (gcnew System::Windows::Forms::Button());
 			this->labelPersonnels = (gcnew System::Windows::Forms::Label());
 			this->panelMarketing = (gcnew System::Windows::Forms::Panel());
+			this->dataGridView5 = (gcnew System::Windows::Forms::DataGridView());
+			this->buttonValeurAchat = (gcnew System::Windows::Forms::Button());
+			this->buttonValeurCommerciale = (gcnew System::Windows::Forms::Button());
+			this->buttonPlusVendus = (gcnew System::Windows::Forms::Button());
+			this->buttonArticlesMoins = (gcnew System::Windows::Forms::Button());
+			this->buttonMontantTotal = (gcnew System::Windows::Forms::Button());
+			this->buttonSousSeuil = (gcnew System::Windows::Forms::Button());
+			this->buttonChiffreAffaire = (gcnew System::Windows::Forms::Button());
+			this->buttonPanierMoyen = (gcnew System::Windows::Forms::Button());
 			this->labelMarketing = (gcnew System::Windows::Forms::Label());
 			this->panelCommandes = (gcnew System::Windows::Forms::Panel());
 			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
@@ -198,14 +209,7 @@ namespace CESIProject {
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->bindingSource2 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->bindingSource3 = (gcnew System::Windows::Forms::BindingSource(this->components));
-			this->buttonPanierMoyen = (gcnew System::Windows::Forms::Button());
-			this->buttonChiffreAffaire = (gcnew System::Windows::Forms::Button());
-			this->buttonSousSeuil = (gcnew System::Windows::Forms::Button());
-			this->buttonMontantTotal = (gcnew System::Windows::Forms::Button());
-			this->buttonArticlesMoins = (gcnew System::Windows::Forms::Button());
-			this->buttonPlusVendus = (gcnew System::Windows::Forms::Button());
-			this->buttonValeurCommerciale = (gcnew System::Windows::Forms::Button());
-			this->buttonValeurAchat = (gcnew System::Windows::Forms::Button());
+			this->bindingSource4 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->panelMenu->SuspendLayout();
 			this->panelLogo->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->btnHome))->BeginInit();
@@ -218,11 +222,13 @@ namespace CESIProject {
 			this->panelPersonnels->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->panelMarketing->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->BeginInit();
 			this->panelCommandes->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource4))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panelMenu
@@ -749,6 +755,7 @@ namespace CESIProject {
 			// 
 			this->panelMarketing->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
 				static_cast<System::Int32>(static_cast<System::Byte>(70)));
+			this->panelMarketing->Controls->Add(this->dataGridView5);
 			this->panelMarketing->Controls->Add(this->buttonValeurAchat);
 			this->panelMarketing->Controls->Add(this->buttonValeurCommerciale);
 			this->panelMarketing->Controls->Add(this->buttonPlusVendus);
@@ -765,6 +772,96 @@ namespace CESIProject {
 			this->panelMarketing->Size = System::Drawing::Size(961, 597);
 			this->panelMarketing->TabIndex = 6;
 			this->panelMarketing->Visible = false;
+			// 
+			// dataGridView5
+			// 
+			this->dataGridView5->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView5->Location = System::Drawing::Point(540, 100);
+			this->dataGridView5->Name = L"dataGridView5";
+			this->dataGridView5->RowHeadersWidth = 51;
+			this->dataGridView5->RowTemplate->Height = 24;
+			this->dataGridView5->Size = System::Drawing::Size(390, 416);
+			this->dataGridView5->TabIndex = 9;
+			// 
+			// buttonValeurAchat
+			// 
+			this->buttonValeurAchat->Location = System::Drawing::Point(224, 163);
+			this->buttonValeurAchat->Name = L"buttonValeurAchat";
+			this->buttonValeurAchat->Size = System::Drawing::Size(183, 36);
+			this->buttonValeurAchat->TabIndex = 8;
+			this->buttonValeurAchat->Text = L"Valeur Achat Stock";
+			this->buttonValeurAchat->UseVisualStyleBackColor = true;
+			this->buttonValeurAchat->Click += gcnew System::EventHandler(this, &Dashboard::buttonValeurAchat_Click);
+			// 
+			// buttonValeurCommerciale
+			// 
+			this->buttonValeurCommerciale->Location = System::Drawing::Point(224, 100);
+			this->buttonValeurCommerciale->Name = L"buttonValeurCommerciale";
+			this->buttonValeurCommerciale->Size = System::Drawing::Size(183, 36);
+			this->buttonValeurCommerciale->TabIndex = 7;
+			this->buttonValeurCommerciale->Text = L"Valeur Commerciale Stock";
+			this->buttonValeurCommerciale->UseVisualStyleBackColor = true;
+			this->buttonValeurCommerciale->Click += gcnew System::EventHandler(this, &Dashboard::buttonValeurCommerciale_Click);
+			// 
+			// buttonPlusVendus
+			// 
+			this->buttonPlusVendus->Location = System::Drawing::Point(35, 456);
+			this->buttonPlusVendus->Name = L"buttonPlusVendus";
+			this->buttonPlusVendus->Size = System::Drawing::Size(153, 36);
+			this->buttonPlusVendus->TabIndex = 6;
+			this->buttonPlusVendus->Text = L"Les Plus Vendus";
+			this->buttonPlusVendus->UseVisualStyleBackColor = true;
+			this->buttonPlusVendus->Click += gcnew System::EventHandler(this, &Dashboard::buttonPlusVendus_Click);
+			// 
+			// buttonArticlesMoins
+			// 
+			this->buttonArticlesMoins->Location = System::Drawing::Point(35, 381);
+			this->buttonArticlesMoins->Name = L"buttonArticlesMoins";
+			this->buttonArticlesMoins->Size = System::Drawing::Size(153, 36);
+			this->buttonArticlesMoins->TabIndex = 5;
+			this->buttonArticlesMoins->Text = L"Les Moins Vendus";
+			this->buttonArticlesMoins->UseVisualStyleBackColor = true;
+			this->buttonArticlesMoins->Click += gcnew System::EventHandler(this, &Dashboard::buttonArticlesMoins_Click);
+			// 
+			// buttonMontantTotal
+			// 
+			this->buttonMontantTotal->Location = System::Drawing::Point(35, 304);
+			this->buttonMontantTotal->Name = L"buttonMontantTotal";
+			this->buttonMontantTotal->Size = System::Drawing::Size(153, 36);
+			this->buttonMontantTotal->TabIndex = 4;
+			this->buttonMontantTotal->Text = L"Montant Total (Client)";
+			this->buttonMontantTotal->UseVisualStyleBackColor = true;
+			this->buttonMontantTotal->Click += gcnew System::EventHandler(this, &Dashboard::buttonMontantTotal_Click);
+			// 
+			// buttonSousSeuil
+			// 
+			this->buttonSousSeuil->Location = System::Drawing::Point(35, 231);
+			this->buttonSousSeuil->Name = L"buttonSousSeuil";
+			this->buttonSousSeuil->Size = System::Drawing::Size(153, 36);
+			this->buttonSousSeuil->TabIndex = 3;
+			this->buttonSousSeuil->Text = L"Produit sous Seuil";
+			this->buttonSousSeuil->UseVisualStyleBackColor = true;
+			this->buttonSousSeuil->Click += gcnew System::EventHandler(this, &Dashboard::buttonSousSeuil_Click);
+			// 
+			// buttonChiffreAffaire
+			// 
+			this->buttonChiffreAffaire->Location = System::Drawing::Point(35, 163);
+			this->buttonChiffreAffaire->Name = L"buttonChiffreAffaire";
+			this->buttonChiffreAffaire->Size = System::Drawing::Size(153, 36);
+			this->buttonChiffreAffaire->TabIndex = 2;
+			this->buttonChiffreAffaire->Text = L"Chiffre d\'affaire ";
+			this->buttonChiffreAffaire->UseVisualStyleBackColor = true;
+			this->buttonChiffreAffaire->Click += gcnew System::EventHandler(this, &Dashboard::buttonChiffreAffaire_Click);
+			// 
+			// buttonPanierMoyen
+			// 
+			this->buttonPanierMoyen->Location = System::Drawing::Point(35, 100);
+			this->buttonPanierMoyen->Name = L"buttonPanierMoyen";
+			this->buttonPanierMoyen->Size = System::Drawing::Size(153, 36);
+			this->buttonPanierMoyen->TabIndex = 1;
+			this->buttonPanierMoyen->Text = L"Panier Moyen";
+			this->buttonPanierMoyen->UseVisualStyleBackColor = true;
+			this->buttonPanierMoyen->Click += gcnew System::EventHandler(this, &Dashboard::buttonPanierMoyen_Click);
 			// 
 			// labelMarketing
 			// 
@@ -901,78 +998,6 @@ namespace CESIProject {
 			this->labelAdmin->TabIndex = 9;
 			this->labelAdmin->Text = L"Admin";
 			// 
-			// buttonPanierMoyen
-			// 
-			this->buttonPanierMoyen->Location = System::Drawing::Point(35, 100);
-			this->buttonPanierMoyen->Name = L"buttonPanierMoyen";
-			this->buttonPanierMoyen->Size = System::Drawing::Size(153, 36);
-			this->buttonPanierMoyen->TabIndex = 1;
-			this->buttonPanierMoyen->Text = L"Panier Moyen";
-			this->buttonPanierMoyen->UseVisualStyleBackColor = true;
-			// 
-			// buttonChiffreAffaire
-			// 
-			this->buttonChiffreAffaire->Location = System::Drawing::Point(35, 163);
-			this->buttonChiffreAffaire->Name = L"buttonChiffreAffaire";
-			this->buttonChiffreAffaire->Size = System::Drawing::Size(153, 36);
-			this->buttonChiffreAffaire->TabIndex = 2;
-			this->buttonChiffreAffaire->Text = L"Chiffre d\'affaire ";
-			this->buttonChiffreAffaire->UseVisualStyleBackColor = true;
-			// 
-			// buttonSousSeuil
-			// 
-			this->buttonSousSeuil->Location = System::Drawing::Point(35, 231);
-			this->buttonSousSeuil->Name = L"buttonSousSeuil";
-			this->buttonSousSeuil->Size = System::Drawing::Size(153, 36);
-			this->buttonSousSeuil->TabIndex = 3;
-			this->buttonSousSeuil->Text = L"Produit sous Seuil";
-			this->buttonSousSeuil->UseVisualStyleBackColor = true;
-			// 
-			// buttonMontantTotal
-			// 
-			this->buttonMontantTotal->Location = System::Drawing::Point(35, 304);
-			this->buttonMontantTotal->Name = L"buttonMontantTotal";
-			this->buttonMontantTotal->Size = System::Drawing::Size(153, 36);
-			this->buttonMontantTotal->TabIndex = 4;
-			this->buttonMontantTotal->Text = L"Montant Total (Client)";
-			this->buttonMontantTotal->UseVisualStyleBackColor = true;
-			// 
-			// buttonArticlesMoins
-			// 
-			this->buttonArticlesMoins->Location = System::Drawing::Point(35, 381);
-			this->buttonArticlesMoins->Name = L"buttonArticlesMoins";
-			this->buttonArticlesMoins->Size = System::Drawing::Size(153, 36);
-			this->buttonArticlesMoins->TabIndex = 5;
-			this->buttonArticlesMoins->Text = L"Les Moins Vendus";
-			this->buttonArticlesMoins->UseVisualStyleBackColor = true;
-			// 
-			// buttonPlusVendus
-			// 
-			this->buttonPlusVendus->Location = System::Drawing::Point(35, 456);
-			this->buttonPlusVendus->Name = L"buttonPlusVendus";
-			this->buttonPlusVendus->Size = System::Drawing::Size(153, 36);
-			this->buttonPlusVendus->TabIndex = 6;
-			this->buttonPlusVendus->Text = L"Les Plus Vendus";
-			this->buttonPlusVendus->UseVisualStyleBackColor = true;
-			// 
-			// buttonValeurCommerciale
-			// 
-			this->buttonValeurCommerciale->Location = System::Drawing::Point(224, 100);
-			this->buttonValeurCommerciale->Name = L"buttonValeurCommerciale";
-			this->buttonValeurCommerciale->Size = System::Drawing::Size(183, 36);
-			this->buttonValeurCommerciale->TabIndex = 7;
-			this->buttonValeurCommerciale->Text = L"Valeur Commerciale Stock";
-			this->buttonValeurCommerciale->UseVisualStyleBackColor = true;
-			// 
-			// buttonValeurAchat
-			// 
-			this->buttonValeurAchat->Location = System::Drawing::Point(224, 163);
-			this->buttonValeurAchat->Name = L"buttonValeurAchat";
-			this->buttonValeurAchat->Size = System::Drawing::Size(183, 36);
-			this->buttonValeurAchat->TabIndex = 8;
-			this->buttonValeurAchat->Text = L"Valeur Achat Stock";
-			this->buttonValeurAchat->UseVisualStyleBackColor = true;
-			// 
 			// Dashboard
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1013,12 +1038,14 @@ namespace CESIProject {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->panelMarketing->ResumeLayout(false);
 			this->panelMarketing->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView5))->EndInit();
 			this->panelCommandes->ResumeLayout(false);
 			this->panelCommandes->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource4))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1352,5 +1379,65 @@ namespace CESIProject {
 	private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	}
-	};
+	private: System::Void buttonPanierMoyen_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+		MySqlConnection^ con = gcnew MySqlConnection(constr);
+		MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select AVG(Prix) from clients, commande where clients.id_client = commande.id_commande;", con);
+		DataTable^ dt = gcnew DataTable();
+		sda->Fill(dt);
+		bindingSource4->DataSource = dt;
+		dataGridView5->DataSource = bindingSource4;
+	}
+private: System::Void buttonChiffreAffaire_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void buttonSousSeuil_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT id_article, quantite_dispo, type_article, seuil FROM article WHERE quantite_dispo < seuil;", con);
+	DataTable^ dt = gcnew DataTable();
+	sda->Fill(dt);
+	bindingSource4->DataSource = dt;
+	dataGridView5->DataSource = bindingSource4;
+}
+private: System::Void buttonMontantTotal_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT id_client, nom, prenom, sum(Prix) as montant_total FROM clients,commande where clients.id_client = commande.id_commande GROUP BY id_client;", con);
+	DataTable^ dt = gcnew DataTable();
+	sda->Fill(dt);
+	bindingSource4->DataSource = dt;
+	dataGridView5->DataSource = bindingSource4;
+	
+}
+private: System::Void buttonArticlesMoins_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select article.type_article, count(article.type_article) AS nombre_commande from facture INNER JOIN article ON facture.id_article = article.id_article GROUP BY article.id_article ORDER BY count(*) ASC LIMIT 10 ;", con);
+	DataTable^ dt = gcnew DataTable();
+	sda->Fill(dt);
+	bindingSource4->DataSource = dt;
+	dataGridView5->DataSource = bindingSource4;
+
+}
+private: System::Void buttonPlusVendus_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("	select article.type_article, count(article.type_article) AS nombre_commande from facture INNER JOIN article ON facture.id_article = article.id_article GROUP BY article.id_article ORDER BY count(*) DESC LIMIT 10;", con);
+	DataTable^ dt = gcnew DataTable();
+	sda->Fill(dt);
+	bindingSource4->DataSource = dt;
+	dataGridView5->DataSource = bindingSource4;
+}
+private: System::Void buttonValeurCommerciale_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT SUM(prix_ht + prix_tva) AS Valeur_Commerciale_Stock FROM article;", con);
+	DataTable^ dt = gcnew DataTable();
+	sda->Fill(dt);
+	bindingSource4->DataSource = dt;
+	dataGridView5->DataSource = bindingSource4;
+}
+private: System::Void buttonValeurAchat_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+};
 };

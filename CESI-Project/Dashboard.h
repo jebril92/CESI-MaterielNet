@@ -106,6 +106,12 @@ namespace CESIProject {
 	private: System::Windows::Forms::Button^ button11;
 	private: System::Windows::Forms::Button^ button12;
 	private: System::Windows::Forms::Button^ button13;
+	private: System::Windows::Forms::DataGridView^ dataGridView4;
+	private: System::Windows::Forms::Button^ button14;
+	private: System::Windows::Forms::Button^ button15;
+	private: System::Windows::Forms::Button^ button16;
+	private: System::Windows::Forms::Button^ button17;
+	private: System::Windows::Forms::BindingSource^ bindingSource3;
 
 	private: System::ComponentModel::IContainer^ components;
 	protected:
@@ -149,6 +155,11 @@ namespace CESIProject {
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->labelProducts = (gcnew System::Windows::Forms::Label());
 			this->panelOrders = (gcnew System::Windows::Forms::Panel());
+			this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
+			this->button14 = (gcnew System::Windows::Forms::Button());
+			this->button15 = (gcnew System::Windows::Forms::Button());
+			this->button16 = (gcnew System::Windows::Forms::Button());
+			this->button17 = (gcnew System::Windows::Forms::Button());
 			this->labelOrders = (gcnew System::Windows::Forms::Label());
 			this->panelPersonnels = (gcnew System::Windows::Forms::Panel());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
@@ -170,6 +181,7 @@ namespace CESIProject {
 			this->labelAdmin = (gcnew System::Windows::Forms::Label());
 			this->bindingSource1 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->bindingSource2 = (gcnew System::Windows::Forms::BindingSource(this->components));
+			this->bindingSource3 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->panelMenu->SuspendLayout();
 			this->panelLogo->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->btnHome))->BeginInit();
@@ -177,6 +189,7 @@ namespace CESIProject {
 			this->panelProducts->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->panelOrders->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->BeginInit();
 			this->panelPersonnels->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->panelMarketing->SuspendLayout();
@@ -184,6 +197,7 @@ namespace CESIProject {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panelMenu
@@ -356,12 +370,13 @@ namespace CESIProject {
 			// 
 			this->panelDashboard->Controls->Add(this->labelDashboard);
 			this->panelDashboard->ForeColor = System::Drawing::Color::Black;
-			this->panelDashboard->Location = System::Drawing::Point(501, 119);
-			this->panelDashboard->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panelDashboard->Location = System::Drawing::Point(596, 119);
+			this->panelDashboard->Margin = System::Windows::Forms::Padding(4);
 			this->panelDashboard->Name = L"panelDashboard";
 			this->panelDashboard->Size = System::Drawing::Size(961, 597);
 			this->panelDashboard->TabIndex = 2;
 			this->panelDashboard->Visible = false;
+			this->panelDashboard->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Dashboard::panelDashboard_Paint);
 			// 
 			// labelDashboard
 			// 
@@ -388,7 +403,7 @@ namespace CESIProject {
 			this->panelProducts->Controls->Add(this->button9);
 			this->panelProducts->Controls->Add(this->labelProducts);
 			this->panelProducts->Location = System::Drawing::Point(220, 76);
-			this->panelProducts->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panelProducts->Margin = System::Windows::Forms::Padding(4);
 			this->panelProducts->Name = L"panelProducts";
 			this->panelProducts->Size = System::Drawing::Size(961, 597);
 			this->panelProducts->TabIndex = 4;
@@ -410,7 +425,7 @@ namespace CESIProject {
 			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
 			this->button6->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button6->Location = System::Drawing::Point(779, 523);
-			this->button6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button6->Margin = System::Windows::Forms::Padding(4);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(167, 48);
 			this->button6->TabIndex = 23;
@@ -423,7 +438,7 @@ namespace CESIProject {
 			this->button7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button7.Image")));
 			this->button7->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button7->Location = System::Drawing::Point(613, 405);
-			this->button7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button7->Margin = System::Windows::Forms::Padding(4);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(168, 48);
 			this->button7->TabIndex = 22;
@@ -436,7 +451,7 @@ namespace CESIProject {
 			this->button8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button8.Image")));
 			this->button8->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button8->Location = System::Drawing::Point(208, 405);
-			this->button8->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button8->Margin = System::Windows::Forms::Padding(4);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(169, 48);
 			this->button8->TabIndex = 21;
@@ -449,7 +464,7 @@ namespace CESIProject {
 			this->button9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button9.Image")));
 			this->button9->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button9->Location = System::Drawing::Point(413, 405);
-			this->button9->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button9->Margin = System::Windows::Forms::Padding(4);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(161, 48);
 			this->button9->TabIndex = 20;
@@ -472,23 +487,96 @@ namespace CESIProject {
 			// 
 			// panelOrders
 			// 
+			this->panelOrders->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
+				static_cast<System::Int32>(static_cast<System::Byte>(70)));
+			this->panelOrders->Controls->Add(this->dataGridView4);
+			this->panelOrders->Controls->Add(this->button14);
+			this->panelOrders->Controls->Add(this->button15);
+			this->panelOrders->Controls->Add(this->button16);
+			this->panelOrders->Controls->Add(this->button17);
 			this->panelOrders->Controls->Add(this->labelOrders);
-			this->panelOrders->Location = System::Drawing::Point(528, 283);
-			this->panelOrders->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panelOrders->ForeColor = System::Drawing::Color::Black;
+			this->panelOrders->Location = System::Drawing::Point(220, 76);
+			this->panelOrders->Margin = System::Windows::Forms::Padding(4);
 			this->panelOrders->Name = L"panelOrders";
-			this->panelOrders->Size = System::Drawing::Size(267, 123);
+			this->panelOrders->Size = System::Drawing::Size(961, 597);
 			this->panelOrders->TabIndex = 3;
 			this->panelOrders->Visible = false;
+			// 
+			// dataGridView4
+			// 
+			this->dataGridView4->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView4->Location = System::Drawing::Point(194, 80);
+			this->dataGridView4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->dataGridView4->Name = L"dataGridView4";
+			this->dataGridView4->RowHeadersWidth = 51;
+			this->dataGridView4->RowTemplate->Height = 24;
+			this->dataGridView4->Size = System::Drawing::Size(587, 273);
+			this->dataGridView4->TabIndex = 29;
+			// 
+			// button14
+			// 
+			this->button14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button14.Image")));
+			this->button14->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button14->Location = System::Drawing::Point(778, 523);
+			this->button14->Margin = System::Windows::Forms::Padding(4);
+			this->button14->Name = L"button14";
+			this->button14->Size = System::Drawing::Size(167, 48);
+			this->button14->TabIndex = 28;
+			this->button14->Text = L"Charger BDD";
+			this->button14->UseVisualStyleBackColor = true;
+			this->button14->Click += gcnew System::EventHandler(this, &Dashboard::button14_Click);
+			// 
+			// button15
+			// 
+			this->button15->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button15.Image")));
+			this->button15->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button15->Location = System::Drawing::Point(612, 405);
+			this->button15->Margin = System::Windows::Forms::Padding(4);
+			this->button15->Name = L"button15";
+			this->button15->Size = System::Drawing::Size(168, 48);
+			this->button15->TabIndex = 27;
+			this->button15->Text = L"Supprimer";
+			this->button15->UseVisualStyleBackColor = true;
+			this->button15->Click += gcnew System::EventHandler(this, &Dashboard::button15_Click);
+			// 
+			// button16
+			// 
+			this->button16->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button16.Image")));
+			this->button16->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button16->Location = System::Drawing::Point(207, 405);
+			this->button16->Margin = System::Windows::Forms::Padding(4);
+			this->button16->Name = L"button16";
+			this->button16->Size = System::Drawing::Size(169, 48);
+			this->button16->TabIndex = 26;
+			this->button16->Text = L"Nouveau";
+			this->button16->UseVisualStyleBackColor = true;
+			// 
+			// button17
+			// 
+			this->button17->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button17.Image")));
+			this->button17->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button17->Location = System::Drawing::Point(412, 405);
+			this->button17->Margin = System::Windows::Forms::Padding(4);
+			this->button17->Name = L"button17";
+			this->button17->Size = System::Drawing::Size(161, 48);
+			this->button17->TabIndex = 25;
+			this->button17->Text = L"   Modifier";
+			this->button17->UseVisualStyleBackColor = true;
+			this->button17->Click += gcnew System::EventHandler(this, &Dashboard::button17_Click);
 			// 
 			// labelOrders
 			// 
 			this->labelOrders->AutoSize = true;
+			this->labelOrders->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21));
+			this->labelOrders->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(158)), static_cast<System::Int32>(static_cast<System::Byte>(161)),
+				static_cast<System::Int32>(static_cast<System::Byte>(176)));
 			this->labelOrders->Location = System::Drawing::Point(19, 22);
 			this->labelOrders->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelOrders->Name = L"labelOrders";
-			this->labelOrders->Size = System::Drawing::Size(48, 16);
+			this->labelOrders->Size = System::Drawing::Size(215, 39);
 			this->labelOrders->TabIndex = 0;
-			this->labelOrders->Text = L"Orders";
+			this->labelOrders->Text = L"Commandes";
 			// 
 			// panelPersonnels
 			// 
@@ -501,7 +589,7 @@ namespace CESIProject {
 			this->panelPersonnels->Controls->Add(this->btnModifier);
 			this->panelPersonnels->Controls->Add(this->labelPersonnels);
 			this->panelPersonnels->Location = System::Drawing::Point(220, 76);
-			this->panelPersonnels->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panelPersonnels->Margin = System::Windows::Forms::Padding(4);
 			this->panelPersonnels->Name = L"panelPersonnels";
 			this->panelPersonnels->Size = System::Drawing::Size(961, 597);
 			this->panelPersonnels->TabIndex = 5;
@@ -523,7 +611,7 @@ namespace CESIProject {
 			this->btnchargerbdd->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnchargerbdd.Image")));
 			this->btnchargerbdd->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnchargerbdd->Location = System::Drawing::Point(779, 534);
-			this->btnchargerbdd->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnchargerbdd->Margin = System::Windows::Forms::Padding(4);
 			this->btnchargerbdd->Name = L"btnchargerbdd";
 			this->btnchargerbdd->Size = System::Drawing::Size(167, 48);
 			this->btnchargerbdd->TabIndex = 18;
@@ -536,7 +624,7 @@ namespace CESIProject {
 			this->btnSupprimer->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnSupprimer.Image")));
 			this->btnSupprimer->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnSupprimer->Location = System::Drawing::Point(613, 416);
-			this->btnSupprimer->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnSupprimer->Margin = System::Windows::Forms::Padding(4);
 			this->btnSupprimer->Name = L"btnSupprimer";
 			this->btnSupprimer->Size = System::Drawing::Size(168, 48);
 			this->btnSupprimer->TabIndex = 13;
@@ -549,7 +637,7 @@ namespace CESIProject {
 			this->btnNouveau->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnNouveau.Image")));
 			this->btnNouveau->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnNouveau->Location = System::Drawing::Point(208, 416);
-			this->btnNouveau->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnNouveau->Margin = System::Windows::Forms::Padding(4);
 			this->btnNouveau->Name = L"btnNouveau";
 			this->btnNouveau->Size = System::Drawing::Size(169, 48);
 			this->btnNouveau->TabIndex = 11;
@@ -562,7 +650,7 @@ namespace CESIProject {
 			this->btnModifier->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnModifier.Image")));
 			this->btnModifier->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnModifier->Location = System::Drawing::Point(413, 416);
-			this->btnModifier->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnModifier->Margin = System::Windows::Forms::Padding(4);
 			this->btnModifier->Name = L"btnModifier";
 			this->btnModifier->Size = System::Drawing::Size(161, 48);
 			this->btnModifier->TabIndex = 10;
@@ -588,7 +676,7 @@ namespace CESIProject {
 			// 
 			this->panelMarketing->Controls->Add(this->labelMarketing);
 			this->panelMarketing->Location = System::Drawing::Point(316, 485);
-			this->panelMarketing->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panelMarketing->Margin = System::Windows::Forms::Padding(4);
 			this->panelMarketing->Name = L"panelMarketing";
 			this->panelMarketing->Size = System::Drawing::Size(267, 123);
 			this->panelMarketing->TabIndex = 6;
@@ -615,7 +703,7 @@ namespace CESIProject {
 			this->panelCommandes->Controls->Add(this->button13);
 			this->panelCommandes->Controls->Add(this->labelCommandes);
 			this->panelCommandes->Location = System::Drawing::Point(220, 76);
-			this->panelCommandes->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panelCommandes->Margin = System::Windows::Forms::Padding(4);
 			this->panelCommandes->Name = L"panelCommandes";
 			this->panelCommandes->Size = System::Drawing::Size(961, 597);
 			this->panelCommandes->TabIndex = 7;
@@ -637,7 +725,7 @@ namespace CESIProject {
 			this->button10->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button10.Image")));
 			this->button10->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button10->Location = System::Drawing::Point(779, 523);
-			this->button10->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button10->Margin = System::Windows::Forms::Padding(4);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(167, 48);
 			this->button10->TabIndex = 28;
@@ -649,7 +737,7 @@ namespace CESIProject {
 			this->button11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button11.Image")));
 			this->button11->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button11->Location = System::Drawing::Point(613, 405);
-			this->button11->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button11->Margin = System::Windows::Forms::Padding(4);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(168, 48);
 			this->button11->TabIndex = 27;
@@ -661,7 +749,7 @@ namespace CESIProject {
 			this->button12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button12.Image")));
 			this->button12->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button12->Location = System::Drawing::Point(208, 405);
-			this->button12->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button12->Margin = System::Windows::Forms::Padding(4);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(169, 48);
 			this->button12->TabIndex = 26;
@@ -673,7 +761,7 @@ namespace CESIProject {
 			this->button13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button13.Image")));
 			this->button13->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button13->Location = System::Drawing::Point(413, 405);
-			this->button13->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button13->Margin = System::Windows::Forms::Padding(4);
 			this->button13->Name = L"button13";
 			this->button13->Size = System::Drawing::Size(161, 48);
 			this->button13->TabIndex = 25;
@@ -736,14 +824,14 @@ namespace CESIProject {
 			this->Controls->Add(this->labelAdmin);
 			this->Controls->Add(this->panelTitleBar);
 			this->Controls->Add(this->panelMenu);
-			this->Controls->Add(this->panelDashboard);
-			this->Controls->Add(this->panelMarketing);
 			this->Controls->Add(this->panelOrders);
+			this->Controls->Add(this->panelCommandes);
 			this->Controls->Add(this->panelPersonnels);
 			this->Controls->Add(this->panelProducts);
-			this->Controls->Add(this->panelCommandes);
+			this->Controls->Add(this->panelDashboard);
+			this->Controls->Add(this->panelMarketing);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->MaximumSize = System::Drawing::Size(1197, 707);
 			this->MinimumSize = System::Drawing::Size(1197, 707);
 			this->Name = L"Dashboard";
@@ -759,6 +847,7 @@ namespace CESIProject {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->panelOrders->ResumeLayout(false);
 			this->panelOrders->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView4))->EndInit();
 			this->panelPersonnels->ResumeLayout(false);
 			this->panelPersonnels->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
@@ -769,6 +858,7 @@ namespace CESIProject {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource3))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -996,6 +1086,53 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 	sda->Fill(dt);
 	bindingSource2->DataSource = dt;
 	dataGridView2->DataSource = bindingSource2;
+}
+private: System::Void panelDashboard_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+	
+// CHARGER COMMANDES
+private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select * from commande", con);
+	DataTable^ dt = gcnew DataTable();
+	sda->Fill(dt);
+	bindingSource3->DataSource = dt;
+	dataGridView4->DataSource = bindingSource3;
+}
+	
+// SUPPRIMER UNE COMMANDE
+private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	con->Open();
+	String^ id_commande = dataGridView4->CurrentRow->Cells["id_commande"]->Value->ToString(); // R�cup�re l'Id de la personnes sur la ligne selectionn�e.
+	MySqlCommand^ cmd = gcnew MySqlCommand("delete from projet.article where id_commande = '" + id_commande + "'", con); // Prend l'id correspondant et supprime la ligne selectionn�e.
+	cmd->ExecuteReader();
+	con->Close();
+	
+}
+
+// MODIFIER UNE COMMANDE
+private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	con->Open();
+
+	// Selection de chaque ligne dans la base de données 
+	String^ id_commande = dataGridView4->CurrentRow->Cells["id_commande"]->Value->ToString();
+	String^ montant_ht = dataGridView4->CurrentRow->Cells["montant_ht"]->Value->ToString();
+	String^ montant_tva = dataGridView4->CurrentRow->Cells["montant_tva"]->Value->ToString();
+	String^ montant_ttc = dataGridView4->CurrentRow->Cells["montant_ttc"]->Value->ToString();
+	String^ remise = dataGridView4->CurrentRow->Cells["remise"]->Value->ToString();
+	String^ total_articles = dataGridView4->CurrentRow->Cells["total_articles"]->Value->ToString();
+
+	MySqlCommand^ cmd = gcnew MySqlCommand("update projet.commande set montant_ht = '" + montant_ht + "', montant_tva = '" + montant_tva + "', montant_ttc = '" + montant_ttc + "', remise = '" + remise + "', total_articles = '" + total_articles + "' where id_commande = '" + id_commande + "'", con);
+	cmd->ExecuteReader();
+	con->Close();
+	
 }
 };
 }

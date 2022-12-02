@@ -2,6 +2,7 @@
 #include "InterfacePersonnel.h"
 #include "InterfaceProduit.h"
 #include "InterfaceCommande.h"
+#include "InterfaceClient.h"
 
 namespace CESIProject {
 
@@ -113,7 +114,7 @@ namespace CESIProject {
 	private: System::Windows::Forms::Button^ button16;
 	private: System::Windows::Forms::Button^ button17;
 	private: System::Windows::Forms::BindingSource^ bindingSource3;
-	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
+
 	private: System::Windows::Forms::Button^ buttonValeurAchat;
 	private: System::Windows::Forms::Button^ buttonValeurCommerciale;
 	private: System::Windows::Forms::Button^ buttonPlusVendus;
@@ -124,6 +125,12 @@ namespace CESIProject {
 	private: System::Windows::Forms::Button^ buttonPanierMoyen;
 private: System::Windows::Forms::DataGridView^ dataGridView5;
 private: System::Windows::Forms::BindingSource^ bindingSource4;
+private: System::Windows::Forms::DataGridView^ dataGridView6;
+private: System::Windows::Forms::Button^ button18;
+private: System::Windows::Forms::Button^ button19;
+private: System::Windows::Forms::Button^ button20;
+private: System::Windows::Forms::Button^ button21;
+private: System::Windows::Forms::BindingSource^ bindingSource5;
 
 
 	private: System::ComponentModel::IContainer^ components;
@@ -148,10 +155,6 @@ private: System::Windows::Forms::BindingSource^ bindingSource4;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Dashboard::typeid));
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Title^ title1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
 			this->panelMenu = (gcnew System::Windows::Forms::Panel());
 			this->pnlNav = (gcnew System::Windows::Forms::Panel());
 			this->button5 = (gcnew System::Windows::Forms::Button());
@@ -163,7 +166,11 @@ private: System::Windows::Forms::BindingSource^ bindingSource4;
 			this->btnHome = (gcnew System::Windows::Forms::PictureBox());
 			this->panelTitleBar = (gcnew System::Windows::Forms::FlowLayoutPanel());
 			this->panelDashboard = (gcnew System::Windows::Forms::Panel());
-			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->dataGridView6 = (gcnew System::Windows::Forms::DataGridView());
+			this->button18 = (gcnew System::Windows::Forms::Button());
+			this->button19 = (gcnew System::Windows::Forms::Button());
+			this->button20 = (gcnew System::Windows::Forms::Button());
+			this->button21 = (gcnew System::Windows::Forms::Button());
 			this->labelDashboard = (gcnew System::Windows::Forms::Label());
 			this->panelProducts = (gcnew System::Windows::Forms::Panel());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
@@ -210,11 +217,12 @@ private: System::Windows::Forms::BindingSource^ bindingSource4;
 			this->bindingSource2 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->bindingSource3 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->bindingSource4 = (gcnew System::Windows::Forms::BindingSource(this->components));
+			this->bindingSource5 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->panelMenu->SuspendLayout();
 			this->panelLogo->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->btnHome))->BeginInit();
 			this->panelDashboard->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView6))->BeginInit();
 			this->panelProducts->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->panelOrders->SuspendLayout();
@@ -229,6 +237,7 @@ private: System::Windows::Forms::BindingSource^ bindingSource4;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource5))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panelMenu
@@ -359,7 +368,7 @@ private: System::Windows::Forms::BindingSource^ bindingSource4;
 			this->button1->Padding = System::Windows::Forms::Padding(11, 0, 20, 0);
 			this->button1->Size = System::Drawing::Size(220, 60);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"Dashboard";
+			this->button1->Text = L"Clients";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &Dashboard::button1_Click);
 			this->button1->Leave += gcnew System::EventHandler(this, &Dashboard::button1_Leave);
@@ -401,7 +410,11 @@ private: System::Windows::Forms::BindingSource^ bindingSource4;
 			// 
 			this->panelDashboard->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
 				static_cast<System::Int32>(static_cast<System::Byte>(70)));
-			this->panelDashboard->Controls->Add(this->chart1);
+			this->panelDashboard->Controls->Add(this->dataGridView6);
+			this->panelDashboard->Controls->Add(this->button18);
+			this->panelDashboard->Controls->Add(this->button19);
+			this->panelDashboard->Controls->Add(this->button20);
+			this->panelDashboard->Controls->Add(this->button21);
 			this->panelDashboard->Controls->Add(this->labelDashboard);
 			this->panelDashboard->ForeColor = System::Drawing::Color::Black;
 			this->panelDashboard->Location = System::Drawing::Point(220, 76);
@@ -412,48 +425,68 @@ private: System::Windows::Forms::BindingSource^ bindingSource4;
 			this->panelDashboard->Visible = false;
 			this->panelDashboard->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Dashboard::panelDashboard_Paint);
 			// 
-			// chart1
+			// dataGridView6
 			// 
-			this->chart1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(46)),
-				static_cast<System::Int32>(static_cast<System::Byte>(70)));
-			this->chart1->BorderlineColor = System::Drawing::Color::Black;
-			chartArea1->Area3DStyle->LightStyle = System::Windows::Forms::DataVisualization::Charting::LightStyle::None;
-			chartArea1->AxisX->LineColor = System::Drawing::Color::Silver;
-			chartArea1->AxisX->MajorGrid->LineColor = System::Drawing::Color::Transparent;
-			chartArea1->AxisX->TitleForeColor = System::Drawing::SystemColors::ButtonShadow;
-			chartArea1->AxisX2->LineColor = System::Drawing::Color::IndianRed;
-			chartArea1->AxisX2->TitleForeColor = System::Drawing::Color::Gray;
-			chartArea1->AxisY->LineColor = System::Drawing::Color::DarkGray;
-			chartArea1->AxisY->MajorGrid->LineColor = System::Drawing::Color::Transparent;
-			chartArea1->AxisY->TitleForeColor = System::Drawing::SystemColors::ButtonShadow;
-			chartArea1->AxisY2->LineColor = System::Drawing::Color::Silver;
-			chartArea1->AxisY2->TitleForeColor = System::Drawing::SystemColors::ButtonShadow;
-			chartArea1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(46)),
-				static_cast<System::Int32>(static_cast<System::Byte>(70)));
-			chartArea1->BorderColor = System::Drawing::Color::Transparent;
-			chartArea1->Name = L"ChartArea1";
-			this->chart1->ChartAreas->Add(chartArea1);
-			legend1->Enabled = false;
-			legend1->Name = L"Legend1";
-			this->chart1->Legends->Add(legend1);
-			this->chart1->Location = System::Drawing::Point(20, 80);
-			this->chart1->Name = L"chart1";
-			this->chart1->Palette = System::Windows::Forms::DataVisualization::Charting::ChartColorPalette::Fire;
-			series1->ChartArea = L"ChartArea1";
-			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Area;
-			series1->LabelForeColor = System::Drawing::Color::Transparent;
-			series1->Legend = L"Legend1";
-			series1->Name = L"Series1";
-			series1->YValuesPerPoint = 6;
-			this->chart1->Series->Add(series1);
-			this->chart1->Size = System::Drawing::Size(568, 392);
-			this->chart1->TabIndex = 1;
-			this->chart1->Text = L"chart1";
-			title1->ForeColor = System::Drawing::SystemColors::ControlDark;
-			title1->Name = L"Title1";
-			title1->Text = L"Produits vendus (ce mois)";
-			this->chart1->Titles->Add(title1);
-			this->chart1->Click += gcnew System::EventHandler(this, &Dashboard::chart1_Click);
+			this->dataGridView6->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView6->Location = System::Drawing::Point(193, 80);
+			this->dataGridView6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->dataGridView6->Name = L"dataGridView6";
+			this->dataGridView6->RowHeadersWidth = 51;
+			this->dataGridView6->RowTemplate->Height = 24;
+			this->dataGridView6->Size = System::Drawing::Size(587, 273);
+			this->dataGridView6->TabIndex = 34;
+			// 
+			// button18
+			// 
+			this->button18->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button18.Image")));
+			this->button18->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button18->Location = System::Drawing::Point(777, 523);
+			this->button18->Margin = System::Windows::Forms::Padding(4);
+			this->button18->Name = L"button18";
+			this->button18->Size = System::Drawing::Size(167, 48);
+			this->button18->TabIndex = 33;
+			this->button18->Text = L"Charger BDD";
+			this->button18->UseVisualStyleBackColor = true;
+			this->button18->Click += gcnew System::EventHandler(this, &Dashboard::button18_Click);
+			// 
+			// button19
+			// 
+			this->button19->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button19.Image")));
+			this->button19->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button19->Location = System::Drawing::Point(611, 405);
+			this->button19->Margin = System::Windows::Forms::Padding(4);
+			this->button19->Name = L"button19";
+			this->button19->Size = System::Drawing::Size(168, 48);
+			this->button19->TabIndex = 32;
+			this->button19->Text = L"Supprimer";
+			this->button19->UseVisualStyleBackColor = true;
+			this->button19->Click += gcnew System::EventHandler(this, &Dashboard::button19_Click);
+			// 
+			// button20
+			// 
+			this->button20->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button20.Image")));
+			this->button20->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button20->Location = System::Drawing::Point(206, 405);
+			this->button20->Margin = System::Windows::Forms::Padding(4);
+			this->button20->Name = L"button20";
+			this->button20->Size = System::Drawing::Size(169, 48);
+			this->button20->TabIndex = 31;
+			this->button20->Text = L"Nouveau";
+			this->button20->UseVisualStyleBackColor = true;
+			this->button20->Click += gcnew System::EventHandler(this, &Dashboard::button20_Click);
+			// 
+			// button21
+			// 
+			this->button21->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button21.Image")));
+			this->button21->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button21->Location = System::Drawing::Point(411, 405);
+			this->button21->Margin = System::Windows::Forms::Padding(4);
+			this->button21->Name = L"button21";
+			this->button21->Size = System::Drawing::Size(161, 48);
+			this->button21->TabIndex = 30;
+			this->button21->Text = L"   Modifier";
+			this->button21->UseVisualStyleBackColor = true;
+			this->button21->Click += gcnew System::EventHandler(this, &Dashboard::button21_Click);
 			// 
 			// labelDashboard
 			// 
@@ -465,9 +498,9 @@ private: System::Windows::Forms::BindingSource^ bindingSource4;
 			this->labelDashboard->Location = System::Drawing::Point(13, 15);
 			this->labelDashboard->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->labelDashboard->Name = L"labelDashboard";
-			this->labelDashboard->Size = System::Drawing::Size(186, 39);
+			this->labelDashboard->Size = System::Drawing::Size(124, 39);
 			this->labelDashboard->TabIndex = 0;
-			this->labelDashboard->Text = L"Dashboard";
+			this->labelDashboard->Text = L"Clients";
 			// 
 			// panelProducts
 			// 
@@ -1026,7 +1059,7 @@ private: System::Windows::Forms::BindingSource^ bindingSource4;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->btnHome))->EndInit();
 			this->panelDashboard->ResumeLayout(false);
 			this->panelDashboard->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView6))->EndInit();
 			this->panelProducts->ResumeLayout(false);
 			this->panelProducts->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
@@ -1046,6 +1079,7 @@ private: System::Windows::Forms::BindingSource^ bindingSource4;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource5))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1438,6 +1472,67 @@ private: System::Void buttonValeurCommerciale_Click(System::Object^ sender, Syst
 	dataGridView5->DataSource = bindingSource4;
 }
 private: System::Void buttonValeurAchat_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT SUM(val_achat) FROM article", con);
+	DataTable^ dt = gcnew DataTable();
+	sda->Fill(dt);
+	bindingSource4->DataSource = dt;
+	dataGridView5->DataSource = bindingSource4;
+}
+	
+// CHARGER CLIENT
+private: System::Void button18_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select * from clients", con);
+	DataTable^ dt = gcnew DataTable();
+	sda->Fill(dt);
+	bindingSource5->DataSource = dt;
+	dataGridView6->DataSource = bindingSource5;
+}
+	
+// SUPPRIMER CLIENT
+private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	con->Open();
+	String^ id_client = dataGridView6->CurrentRow->Cells["id_client"]->Value->ToString(); // R�cup�re l'Id de la personnes sur la ligne selectionn�e.
+	MySqlCommand^ cmd = gcnew MySqlCommand("delete ignore from projet.clients where id_client = '" + id_client + "'", con); // Prend l'id correspondant et supprime la ligne selectionn�e.
+	cmd->ExecuteReader();
+	con->Close();
+	
+}
+
+// MODIFIER CLIENT
+private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	con->Open();
+
+	// Selection de chaque ligne dans la base de données 
+	String^ id_client = dataGridView6->CurrentRow->Cells["id_client"]->Value->ToString();
+	String^ nom = dataGridView6->CurrentRow->Cells["nom"]->Value->ToString();
+	String^ prenom = dataGridView6->CurrentRow->Cells["prenom"]->Value->ToString();
+	String^ numero_telephone = dataGridView6->CurrentRow->Cells["numero_telephone"]->Value->ToString();
+	String^ adresse_mail = dataGridView6->CurrentRow->Cells["adresse_mail"]->Value->ToString();
+	String^ sexe = dataGridView6->CurrentRow->Cells["sexe"]->Value->ToString();
+	String^ id_date = dataGridView6->CurrentRow->Cells["id_date"]->Value->ToString();
+	String^ pays = dataGridView6->CurrentRow->Cells["pays"]->Value->ToString();
+	String^ ville = dataGridView6->CurrentRow->Cells["ville"]->Value->ToString();
+	String^ codepostal = dataGridView6->CurrentRow->Cells["codepostal"]->Value->ToString();
+	String^ n_rue = dataGridView6->CurrentRow->Cells["n_rue"]->Value->ToString();
+	String^ rue = dataGridView6->CurrentRow->Cells["rue"]->Value->ToString();
+	String^ etage = dataGridView6->CurrentRow->Cells["etage"]->Value->ToString();
+	String^ Residence = dataGridView6->CurrentRow->Cells["Residence"]->Value->ToString();
+
+	MySqlCommand^ cmd = gcnew MySqlCommand("update projet.clients set nom = '" + nom + "', prenom = '" + prenom + "', numero_telephone = '" + numero_telephone + "', adresse_mail = '" + adresse_mail + "', sexe = '" + sexe + "', id_date = '" + id_date + "', pays = '" + pays + "',ville = '" + ville + "', codepostal= '" + codepostal + "',n_rue ='" + n_rue + "',rue = '" + rue + "', etage = '" + etage + "', Residence ='" + Residence + " where id_client = '" + id_client + "'", con);
+	cmd->ExecuteReader();
+	con->Close();
+}
+private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
+	InterfaceClient^ form6 = gcnew InterfaceClient();
+	form6->Show();
 }
 };
 };

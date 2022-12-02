@@ -126,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dashboard.cpp" />
+    <ClCompile Include="InterfaceClient.cpp" />
     <ClCompile Include="InterfaceCommande.cpp" />
     <ClCompile Include="InterfacePersonnel.cpp" />
     <ClCompile Include="InterfaceProduit.cpp" />
@@ -133,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dashboard.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="InterfaceClient.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="InterfaceCommande.h">
@@ -152,6 +156,9 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.h</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceClient.resx">
+      <DependentUpon>InterfaceClient.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceCommande.resx">
       <DependentUpon>InterfaceCommande.h</DependentUpon>

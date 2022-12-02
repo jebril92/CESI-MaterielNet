@@ -906,6 +906,9 @@ namespace CESIProject {
 			panelMarketing->Visible = false;
 
 		}
+
+		chargerCommandes();
+
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		pnlNav->Height = button3->Height;
@@ -921,6 +924,8 @@ namespace CESIProject {
 			panelMarketing->Visible = false;
 
 		}
+
+		chargerProduit();
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		pnlNav->Height = button4->Height;
@@ -936,6 +941,8 @@ namespace CESIProject {
 			panelMarketing->Visible = false;
 
 		}
+		chargerPersonnel();
+
 	}
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 		pnlNav->Height = button5->Height;
@@ -967,10 +974,23 @@ namespace CESIProject {
 	private: System::Void button5_Leave(System::Object^ sender, System::EventArgs^ e) {
 		button5->BackColor = Color::FromArgb(31, 30, 68);
 
-//////////
-//////////// BUTTONS PERSONNEL
-//////////
+		//////////
+		//////////// BUTTONS PERSONNEL
+		//////////
 	}
+
+	private: System::Void chargerPersonnel() {
+
+		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+		MySqlConnection^ con = gcnew MySqlConnection(constr);
+		MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select * from personnel", con);
+		DataTable^ dt = gcnew DataTable();
+		sda->Fill(dt);
+		bindingSource1->DataSource = dt;
+		dataGridView1->DataSource = bindingSource1;
+
+	}
+
 		   // SUPPRIMER PERSONNEL
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -982,11 +1002,13 @@ namespace CESIProject {
 		cmd->ExecuteReader();
 		con->Close();
 
+		chargerPersonnel();
+
 	}
 	private: System::Void panelTitleBar_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 	}
 
-	// CREER UN PERSONNEL
+		   // CREER UN PERSONNEL
 	private: System::Void btnNouveau_Click(System::Object^ sender, System::EventArgs^ e) {
 		InterfacePersonnel^ frm3 = gcnew InterfacePersonnel;
 		frm3->Show();
@@ -994,18 +1016,12 @@ namespace CESIProject {
 	private: System::Void Dashboard_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 
-	// CHARGER PERSONNEL
+		   // CHARGER PERSONNEL
 	private: System::Void btnchargerbdd_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
-		MySqlConnection^ con = gcnew MySqlConnection(constr);
-		MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select * from personnel", con);
-		DataTable^ dt = gcnew DataTable();
-		sda->Fill(dt);
-		bindingSource1->DataSource = dt;
-		dataGridView1->DataSource = bindingSource1;
+		chargerPersonnel();
 	}
 
-	// MODIFIER PERSONNEL
+		   // MODIFIER PERSONNEL
 	private: System::Void btnModifier_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
@@ -1032,107 +1048,135 @@ namespace CESIProject {
 		MySqlCommand^ cmd = gcnew MySqlCommand("update projet.personnel set superieur = '" + superieur + "', nom = '" + nom + "', prenom = '" + prenom + "', numero_telephone = '" + numero_telephone + "', adresse_mail = '" + adresse_mail + "', sexe = '" + sexe + "', date_embauche = '" + date_embauche + "', pays = '" + pays + "', ville = '" + ville + "', codepostal = '" + codepostal + "', n_rue = '" + n_rue + "', rue = '" + rue + "', etage = '" + etage + "', Residence = '" + Residence + "' where id_personnel = '" + selected_eid + "'", con);
 		cmd->ExecuteReader();
 		con->Close();
+
+		chargerPersonnel();
+
 	}
 
-//////////
-//////////// BUTTONS PRODUITS
-//////////
+		   //////////
+		   //////////// BUTTONS PRODUITS
+		   //////////
 
-// NOUVEAU PRODUIT
-private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
-	InterfaceProduit^ frm4 = gcnew InterfaceProduit;
-	frm4->Show();
-}
 
-// MODIFIER PRODUIT
-private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
-	MySqlConnection^ con = gcnew MySqlConnection(constr);
-	con->Open();
+	private: System::Void chargerProduit() {
 
-	// Selection de chaque ligne dans la base de données 
-	String^ id_article = dataGridView2->CurrentRow->Cells["id_article"]->Value->ToString();
-	String^ type_article = dataGridView2->CurrentRow->Cells["type_article"]->Value->ToString();
-	String^ nombre_articles = dataGridView2->CurrentRow->Cells["nombre_articles"]->Value->ToString();
-	String^ taux_tva = dataGridView2->CurrentRow->Cells["taux_tva"]->Value->ToString();
-	String^ prix_ht = dataGridView2->CurrentRow->Cells["prix_ht"]->Value->ToString();
-	String^ prix_tva = dataGridView2->CurrentRow->Cells["prix_tva"]->Value->ToString();
-	String^ quantite_dispo = dataGridView2->CurrentRow->Cells["quantite_dispo"]->Value->ToString();
+		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+		MySqlConnection^ con = gcnew MySqlConnection(constr);
+		MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select * from article", con);
+		DataTable^ dt = gcnew DataTable();
+		sda->Fill(dt);
+		bindingSource2->DataSource = dt;
+		dataGridView2->DataSource = bindingSource2;
+	}
 
-	MySqlCommand^ cmd = gcnew MySqlCommand("update projet.article set type_article = '" + type_article + "', nombre_articles = '" + nombre_articles + "', taux_tva = '" + taux_tva + "', prix_ht = '" + prix_ht + "', prix_tva = '" + prix_tva + "', quantite_dispo = '" + quantite_dispo + "' where id_article = '" + id_article + "'", con);
-	cmd->ExecuteReader();
-	con->Close();
-}
+		   // NOUVEAU PRODUIT
+	private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+		InterfaceProduit^ frm4 = gcnew InterfaceProduit;
+		frm4->Show();
+		chargerProduit();
+	}
 
-// SUPPRIMER PRODUIT
-private: System::Void button7_Click_1(System::Object^ sender, System::EventArgs^ e) {
+		   // MODIFIER PRODUIT
+	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
-	MySqlConnection^ con = gcnew MySqlConnection(constr);
-	con->Open();
-	String^ id_article = dataGridView2->CurrentRow->Cells["id_article"]->Value->ToString(); // R�cup�re l'Id de la personnes sur la ligne selectionn�e.
-	MySqlCommand^ cmd = gcnew MySqlCommand("delete from projet.article where id_article = '" + id_article + "'", con); // Prend l'id correspondant et supprime la ligne selectionn�e.
-	cmd->ExecuteReader();
-	con->Close();
-}
+		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+		MySqlConnection^ con = gcnew MySqlConnection(constr);
+		con->Open();
 
-// CHARGER PRODUIT
-private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
-	MySqlConnection^ con = gcnew MySqlConnection(constr);
-	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select * from article", con);
-	DataTable^ dt = gcnew DataTable();
-	sda->Fill(dt);
-	bindingSource2->DataSource = dt;
-	dataGridView2->DataSource = bindingSource2;
-}
-private: System::Void panelDashboard_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-	
-// CHARGER COMMANDES
-private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
-	MySqlConnection^ con = gcnew MySqlConnection(constr);
-	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select * from commande", con);
-	DataTable^ dt = gcnew DataTable();
-	sda->Fill(dt);
-	bindingSource3->DataSource = dt;
-	dataGridView4->DataSource = bindingSource3;
-}
-	
-// SUPPRIMER UNE COMMANDE
-private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
+		// Selection de chaque ligne dans la base de données 
+		String^ id_article = dataGridView2->CurrentRow->Cells["id_article"]->Value->ToString();
+		String^ type_article = dataGridView2->CurrentRow->Cells["type_article"]->Value->ToString();
+		String^ nombre_articles = dataGridView2->CurrentRow->Cells["nombre_articles"]->Value->ToString();
+		String^ taux_tva = dataGridView2->CurrentRow->Cells["taux_tva"]->Value->ToString();
+		String^ prix_ht = dataGridView2->CurrentRow->Cells["prix_ht"]->Value->ToString();
+		String^ prix_tva = dataGridView2->CurrentRow->Cells["prix_tva"]->Value->ToString();
+		String^ quantite_dispo = dataGridView2->CurrentRow->Cells["quantite_dispo"]->Value->ToString();
 
-	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
-	MySqlConnection^ con = gcnew MySqlConnection(constr);
-	con->Open();
-	String^ id_commande = dataGridView4->CurrentRow->Cells["id_commande"]->Value->ToString(); // R�cup�re l'Id de la personnes sur la ligne selectionn�e.
-	MySqlCommand^ cmd = gcnew MySqlCommand("delete from projet.article where id_commande = '" + id_commande + "'", con); // Prend l'id correspondant et supprime la ligne selectionn�e.
-	cmd->ExecuteReader();
-	con->Close();
-	
-}
+		MySqlCommand^ cmd = gcnew MySqlCommand("update projet.article set type_article = '" + type_article + "', nombre_articles = '" + nombre_articles + "', taux_tva = '" + taux_tva + "', prix_ht = '" + prix_ht + "', prix_tva = '" + prix_tva + "', quantite_dispo = '" + quantite_dispo + "' where id_article = '" + id_article + "'", con);
+		cmd->ExecuteReader();
+		con->Close();
 
-// MODIFIER UNE COMMANDE
-private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) {
-	
-	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
-	MySqlConnection^ con = gcnew MySqlConnection(constr);
-	con->Open();
+		chargerProduit();
 
-	// Selection de chaque ligne dans la base de données 
-	String^ id_commande = dataGridView4->CurrentRow->Cells["id_commande"]->Value->ToString();
-	String^ montant_ht = dataGridView4->CurrentRow->Cells["montant_ht"]->Value->ToString();
-	String^ montant_tva = dataGridView4->CurrentRow->Cells["montant_tva"]->Value->ToString();
-	String^ montant_ttc = dataGridView4->CurrentRow->Cells["montant_ttc"]->Value->ToString();
-	String^ remise = dataGridView4->CurrentRow->Cells["remise"]->Value->ToString();
-	String^ total_articles = dataGridView4->CurrentRow->Cells["total_articles"]->Value->ToString();
+	}
 
-	MySqlCommand^ cmd = gcnew MySqlCommand("update projet.commande set montant_ht = '" + montant_ht + "', montant_tva = '" + montant_tva + "', montant_ttc = '" + montant_ttc + "', remise = '" + remise + "', total_articles = '" + total_articles + "' where id_commande = '" + id_commande + "'", con);
-	cmd->ExecuteReader();
-	con->Close();
-	
-}
-};
+
+		   // SUPPRIMER PRODUIT
+	private: System::Void button7_Click_1(System::Object^ sender, System::EventArgs^ e) {
+
+		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+		MySqlConnection^ con = gcnew MySqlConnection(constr);
+		con->Open();
+		String^ id_article = dataGridView2->CurrentRow->Cells["id_article"]->Value->ToString(); // R�cup�re l'Id de la personnes sur la ligne selectionn�e.
+		MySqlCommand^ cmd = gcnew MySqlCommand("delete from projet.article where id_article = '" + id_article + "'", con); // Prend l'id correspondant et supprime la ligne selectionn�e.
+		cmd->ExecuteReader();
+		con->Close();
+
+		chargerProduit();
+	}
+
+		   // CHARGER PRODUIT
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+		chargerProduit();
+	}
+	private: System::Void panelDashboard_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	}
+		   //COMMANDES
+
+
+	private: System::Void chargerCommandes() {
+		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+		MySqlConnection^ con = gcnew MySqlConnection(constr);
+		MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select * from commande", con);
+		DataTable^ dt = gcnew DataTable();
+		sda->Fill(dt);
+		bindingSource3->DataSource = dt;
+		dataGridView4->DataSource = bindingSource3;
+	}
+
+		   // CHARGER COMMANDES
+	private: System::Void button14_Click(System::Object^ sender, System::EventArgs^ e) {
+		chargerCommandes();
+	}
+
+		   // SUPPRIMER UNE COMMANDE
+	private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+		MySqlConnection^ con = gcnew MySqlConnection(constr);
+		con->Open();
+		String^ id_commande = dataGridView4->CurrentRow->Cells["id_commande"]->Value->ToString(); // R�cup�re l'Id de la personnes sur la ligne selectionn�e.
+		MySqlCommand^ cmd = gcnew MySqlCommand("delete from projet.article where id_commande = '" + id_commande + "'", con); // Prend l'id correspondant et supprime la ligne selectionn�e.
+		cmd->ExecuteReader();
+		con->Close();
+
+		chargerCommandes();
+
+
+	}
+
+		   // MODIFIER UNE COMMANDE
+	private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+		MySqlConnection^ con = gcnew MySqlConnection(constr);
+		con->Open();
+
+		// Selection de chaque ligne dans la base de données 
+		String^ id_commande = dataGridView4->CurrentRow->Cells["id_commande"]->Value->ToString();
+		String^ montant_ht = dataGridView4->CurrentRow->Cells["montant_ht"]->Value->ToString();
+		String^ montant_tva = dataGridView4->CurrentRow->Cells["montant_tva"]->Value->ToString();
+		String^ montant_ttc = dataGridView4->CurrentRow->Cells["montant_ttc"]->Value->ToString();
+		String^ remise = dataGridView4->CurrentRow->Cells["remise"]->Value->ToString();
+		String^ total_articles = dataGridView4->CurrentRow->Cells["total_articles"]->Value->ToString();
+
+		MySqlCommand^ cmd = gcnew MySqlCommand("update projet.commande set montant_ht = '" + montant_ht + "', montant_tva = '" + montant_tva + "', montant_ttc = '" + montant_ttc + "', remise = '" + remise + "', total_articles = '" + total_articles + "' where id_commande = '" + id_commande + "'", con);
+		cmd->ExecuteReader();
+		con->Close();
+
+		chargerCommandes();
+
+	}
+	};
 }

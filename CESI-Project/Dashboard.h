@@ -1221,15 +1221,15 @@ namespace CESIProject {
 		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
 		MySqlConnection^ con = gcnew MySqlConnection(constr);
 		con->Open();
-		
+
 		// Selection de chaque ligne dans la base de données 
 		String^ id_commande = dataGridView4->CurrentRow->Cells["id_commande"]->Value->ToString();
 		String^ nom2 = dataGridView4->CurrentRow->Cells["nom2"]->Value->ToString();
 		String^ prenom2 = dataGridView4->CurrentRow->Cells["prenom2"]->Value->ToString();
 		String^ Produit = dataGridView4->CurrentRow->Cells["Produit"]->Value->ToString();
 		String^ Prix = dataGridView4->CurrentRow->Cells["Prix"]->Value->ToString();
-		
-		MySqlCommand^ cmd = gcnew MySqlCommand("update projet.commande set nom2 = '" + nom2 + "', prenom2 = '" + prenom2 + "', Produit = '" + Produit + "', Prix = '" + Prix +"' where id_commande = '" + id_commande + "'", con);
+
+		MySqlCommand^ cmd = gcnew MySqlCommand("update projet.commande set nom2 = '" + nom2 + "', prenom2 = '" + prenom2 + "', Produit = '" + Produit + "', Prix = '" + Prix + "' where id_commande = '" + id_commande + "'", con);
 		cmd->ExecuteReader();
 		con->Close();
 
@@ -1239,15 +1239,16 @@ namespace CESIProject {
 	private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
 		InterfaceCommande^ form5 = gcnew InterfaceCommande();
 		form5->Show();
-		
+
 	}
-private: System::Void dataGridView4_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-}
-};
+	private: System::Void dataGridView4_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	}
+
+
 	private: System::Void linkLabel1_LinkClicked(System::Object^ sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^ e) {
 	}
-private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-}
+	}
+	};
 };
-}

@@ -758,7 +758,6 @@ namespace CESIProject {
 		panelProducts->Visible = false;
 		panelPersonnels->Visible = false;
 		panelMarketing->Visible = false;
-		panelSettings->Visible = false;
 	}
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {

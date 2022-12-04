@@ -1016,12 +1016,12 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 			this->Controls->Add(this->labelAdmin);
 			this->Controls->Add(this->panelTitleBar);
 			this->Controls->Add(this->panelMenu);
-			this->Controls->Add(this->panelDashboard);
 			this->Controls->Add(this->panelMarketing);
 			this->Controls->Add(this->panelOrders);
 			this->Controls->Add(this->panelCommandes);
 			this->Controls->Add(this->panelPersonnels);
 			this->Controls->Add(this->panelProducts);
+			this->Controls->Add(this->panelDashboard);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximumSize = System::Drawing::Size(902, 582);
 			this->MinimumSize = System::Drawing::Size(902, 582);
@@ -1360,13 +1360,13 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 		con->Open();
 
 		// Selection de chaque ligne dans la base de données 
-		String^ id_commande = dataGridView4->CurrentRow->Cells["id_commande"]->Value->ToString();
+		String^ selecteedd_id = dataGridView4->CurrentRow->Cells["id_commande"]->Value->ToString();
 		String^ nom2 = dataGridView4->CurrentRow->Cells["nom2"]->Value->ToString();
 		String^ prenom2 = dataGridView4->CurrentRow->Cells["prenom2"]->Value->ToString();
 		String^ Produit = dataGridView4->CurrentRow->Cells["Produit"]->Value->ToString();
 		String^ Prix = dataGridView4->CurrentRow->Cells["Prix"]->Value->ToString();
 
-		MySqlCommand^ cmd = gcnew MySqlCommand("update projet.commande set nom2 = '" + nom2 + "', prenom2 = '" + prenom2 + "', Produit = '" + Produit + "', Prix = '" + Prix + "' where id_commande = '" + id_commande + "'", con);
+		MySqlCommand^ cmd = gcnew MySqlCommand("update projet.commande set nom2 = '" + nom2 + "', prenom2 = '" + prenom2 + "', Produit = '" + Produit + "', Prix = '" + Prix + "' where id_commande = '" + selecteedd_id + "'", con);
 		cmd->ExecuteReader();
 		con->Close();
 
@@ -1410,7 +1410,7 @@ private: System::Void buttonSousSeuil_Click(System::Object^ sender, System::Even
 private: System::Void buttonMontantTotal_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
 	MySqlConnection^ con = gcnew MySqlConnection(constr);
-	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT id_client, nom, prenom, sum(Prix) as montant_total FROM clients,commande where clients.id_client = commande.id_commande GROUP BY id_client;", con);
+	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("SELECT id_commande, nom2, prenom2, sum(Prix) as montant_total FROM commande GROUP BY id_commande", con);
 	DataTable^ dt = gcnew DataTable();
 	sda->Fill(dt);
 	bindingSource4->DataSource = dt;
@@ -1485,7 +1485,7 @@ private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ 
 	con->Open();
 
 	// Selection de chaque ligne dans la base de données 
-	String^ id_client = dataGridView6->CurrentRow->Cells["id_client"]->Value->ToString();
+	String^ selecteeed_id = dataGridView6->CurrentRow->Cells["id_client"]->Value->ToString();
 	String^ nom = dataGridView6->CurrentRow->Cells["nom"]->Value->ToString();
 	String^ prenom = dataGridView6->CurrentRow->Cells["prenom"]->Value->ToString();
 	String^ numero_telephone = dataGridView6->CurrentRow->Cells["numero_telephone"]->Value->ToString();
@@ -1497,9 +1497,9 @@ private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ 
 	String^ n_rue = dataGridView6->CurrentRow->Cells["n_rue"]->Value->ToString();
 	String^ rue = dataGridView6->CurrentRow->Cells["rue"]->Value->ToString();
 	String^ etage = dataGridView6->CurrentRow->Cells["etage"]->Value->ToString();
-	String^ Residence = dataGridView6->CurrentRow->Cells["Residence"]->Value->ToString();
+	String^ residence = dataGridView6->CurrentRow->Cells["residence"]->Value->ToString();
 
-	MySqlCommand^ cmd = gcnew MySqlCommand("update projet.clients set nom = '" + nom + "', prenom = '" + prenom + "', numero_telephone = '" + numero_telephone + "', adresse_mail = '" + adresse_mail + "', sexe = '" + sexe + "', pays = '" + pays + "',ville = '" + ville + "', codepostal= '" + codepostal + "',n_rue ='" + n_rue + "',rue = '" + rue + "', etage = '" + etage + "', Residence ='" + Residence + " where id_client = '" + id_client + "'", con);
+	MySqlCommand^ cmd = gcnew MySqlCommand("update projet.clients set nom = '" + nom + "', prenom = '" + prenom + "', numero_telephone = '" + numero_telephone + "', adresse_mail = '" + adresse_mail + "', sexe = '" + sexe + "', pays = '" + pays + "', ville = '" + ville + "', codepostal = '" + codepostal + "', n_rue = '" + n_rue + "', rue = '" + rue + "', etage = '" + etage + "', residence = '" + residence + "' where id_client = '" + selecteeed_id + "'", con);
 	cmd->ExecuteReader();
 	con->Close();
 }

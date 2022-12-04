@@ -329,7 +329,7 @@ namespace CESIProject {
 			this->Controls->Add(this->label1);
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"InterfaceProduit";
-			this->Text = L"Créer un Article";
+			this->Text = L"Créer un Produit";
 			this->Load += gcnew System::EventHandler(this, &InterfaceProduit::InterfaceProduit_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

@@ -170,9 +170,10 @@ namespace CESIProject {
 			// 
 			this->labelProduit->AutoSize = true;
 			this->labelProduit->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->labelProduit->Location = System::Drawing::Point(59, 140);
+			this->labelProduit->Location = System::Drawing::Point(44, 114);
+			this->labelProduit->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->labelProduit->Name = L"labelProduit";
-			this->labelProduit->Size = System::Drawing::Size(49, 16);
+			this->labelProduit->Size = System::Drawing::Size(40, 13);
 			this->labelProduit->TabIndex = 2;
 			this->labelProduit->Text = L"Produit";
 			// 
@@ -182,9 +183,10 @@ namespace CESIProject {
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->label5->Location = System::Drawing::Point(140, 26);
+			this->label5->Location = System::Drawing::Point(105, 21);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(213, 25);
+			this->label5->Size = System::Drawing::Size(176, 20);
 			this->label5->TabIndex = 20;
 			this->label5->Text = L"Informations Générales";
 			// 
@@ -193,10 +195,10 @@ namespace CESIProject {
 			this->button1->BackColor = System::Drawing::Color::Green;
 			this->button1->FlatAppearance->BorderSize = 0;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Location = System::Drawing::Point(485, 233);
-			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button1->Location = System::Drawing::Point(364, 189);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(131, 34);
+			this->button1->Size = System::Drawing::Size(98, 28);
 			this->button1->TabIndex = 22;
 			this->button1->Text = L"Valider";
 			this->button1->UseVisualStyleBackColor = false;
@@ -207,10 +209,10 @@ namespace CESIProject {
 			this->button2->BackColor = System::Drawing::Color::Red;
 			this->button2->FlatAppearance->BorderSize = 0;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Location = System::Drawing::Point(645, 233);
-			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button2->Location = System::Drawing::Point(484, 189);
+			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(131, 34);
+			this->button2->Size = System::Drawing::Size(98, 28);
 			this->button2->TabIndex = 23;
 			this->button2->Text = L"Annuler";
 			this->button2->UseVisualStyleBackColor = false;
@@ -252,10 +254,9 @@ namespace CESIProject {
 					L"Tunisie", L"Turkménistan", L"Turquie", L"Tuvalu", L"Ukraine", L"Union européenne", L"Uruguay", L"Vanuatu", L"Venezuela", L"Viêt Nam",
 					L"Wake Island", L"Wallis-et-Futuna", L"West Bank", L"Yémen", L"Zambie", L"Zimbabwe"
 			});
-			this->comboBoxPays2->Location = System::Drawing::Point(514, 66);
-			this->comboBoxPays2->Margin = System::Windows::Forms::Padding(4);
+			this->comboBoxPays2->Location = System::Drawing::Point(386, 54);
 			this->comboBoxPays2->Name = L"comboBoxPays2";
-			this->comboBoxPays2->Size = System::Drawing::Size(268, 24);
+			this->comboBoxPays2->Size = System::Drawing::Size(202, 21);
 			this->comboBoxPays2->TabIndex = 51;
 			// 
 			// label6
@@ -264,9 +265,10 @@ namespace CESIProject {
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->label6->Location = System::Drawing::Point(522, 26);
+			this->label6->Location = System::Drawing::Point(392, 21);
+			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(195, 25);
+			this->label6->Size = System::Drawing::Size(156, 20);
 			this->label6->TabIndex = 50;
 			this->label6->Text = L"Adresse de Livraison";
 			// 
@@ -274,19 +276,20 @@ namespace CESIProject {
 			// 
 			this->textBoxResidence2->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxResidence2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBoxResidence2->Location = System::Drawing::Point(630, 177);
-			this->textBoxResidence2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBoxResidence2->Location = System::Drawing::Point(472, 144);
+			this->textBoxResidence2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBoxResidence2->Name = L"textBoxResidence2";
-			this->textBoxResidence2->Size = System::Drawing::Size(155, 15);
+			this->textBoxResidence2->Size = System::Drawing::Size(116, 13);
 			this->textBoxResidence2->TabIndex = 49;
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
 			this->label3->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->label3->Location = System::Drawing::Point(556, 175);
+			this->label3->Location = System::Drawing::Point(417, 142);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(73, 16);
+			this->label3->Size = System::Drawing::Size(58, 13);
 			this->label3->TabIndex = 48;
 			this->label3->Text = L"Residence";
 			// 
@@ -294,19 +297,20 @@ namespace CESIProject {
 			// 
 			this->textBoxEtage2->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxEtage2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBoxEtage2->Location = System::Drawing::Point(507, 177);
-			this->textBoxEtage2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBoxEtage2->Location = System::Drawing::Point(380, 144);
+			this->textBoxEtage2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBoxEtage2->Name = L"textBoxEtage2";
-			this->textBoxEtage2->Size = System::Drawing::Size(45, 15);
+			this->textBoxEtage2->Size = System::Drawing::Size(34, 13);
 			this->textBoxEtage2->TabIndex = 47;
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
 			this->label4->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->label4->Location = System::Drawing::Point(451, 175);
+			this->label4->Location = System::Drawing::Point(338, 142);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(43, 16);
+			this->label4->Size = System::Drawing::Size(35, 13);
 			this->label4->TabIndex = 46;
 			this->label4->Text = L"Etage";
 			// 
@@ -314,19 +318,20 @@ namespace CESIProject {
 			// 
 			this->textBoxRue2->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxRue2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBoxRue2->Location = System::Drawing::Point(630, 142);
-			this->textBoxRue2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBoxRue2->Location = System::Drawing::Point(472, 115);
+			this->textBoxRue2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBoxRue2->Name = L"textBoxRue2";
-			this->textBoxRue2->Size = System::Drawing::Size(155, 15);
+			this->textBoxRue2->Size = System::Drawing::Size(116, 13);
 			this->textBoxRue2->TabIndex = 45;
 			// 
 			// labelRue
 			// 
 			this->labelRue->AutoSize = true;
 			this->labelRue->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->labelRue->Location = System::Drawing::Point(592, 140);
+			this->labelRue->Location = System::Drawing::Point(444, 114);
+			this->labelRue->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->labelRue->Name = L"labelRue";
-			this->labelRue->Size = System::Drawing::Size(32, 16);
+			this->labelRue->Size = System::Drawing::Size(27, 13);
 			this->labelRue->TabIndex = 44;
 			this->labelRue->Text = L"Rue";
 			// 
@@ -334,19 +339,20 @@ namespace CESIProject {
 			// 
 			this->textBoxNumRue2->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxNumRue2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBoxNumRue2->Location = System::Drawing::Point(510, 142);
-			this->textBoxNumRue2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBoxNumRue2->Location = System::Drawing::Point(382, 115);
+			this->textBoxNumRue2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBoxNumRue2->Name = L"textBoxNumRue2";
-			this->textBoxNumRue2->Size = System::Drawing::Size(45, 15);
+			this->textBoxNumRue2->Size = System::Drawing::Size(34, 13);
 			this->textBoxNumRue2->TabIndex = 43;
 			// 
 			// labelNumRue
 			// 
 			this->labelNumRue->AutoSize = true;
 			this->labelNumRue->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->labelNumRue->Location = System::Drawing::Point(454, 140);
+			this->labelNumRue->Location = System::Drawing::Point(340, 114);
+			this->labelNumRue->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->labelNumRue->Name = L"labelNumRue";
-			this->labelNumRue->Size = System::Drawing::Size(49, 16);
+			this->labelNumRue->Size = System::Drawing::Size(42, 13);
 			this->labelNumRue->TabIndex = 42;
 			this->labelNumRue->Text = L"N° Rue";
 			// 
@@ -354,19 +360,20 @@ namespace CESIProject {
 			// 
 			this->textBoxCP2->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxCP2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBoxCP2->Location = System::Drawing::Point(686, 110);
-			this->textBoxCP2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBoxCP2->Location = System::Drawing::Point(514, 89);
+			this->textBoxCP2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBoxCP2->Name = L"textBoxCP2";
-			this->textBoxCP2->Size = System::Drawing::Size(99, 15);
+			this->textBoxCP2->Size = System::Drawing::Size(74, 13);
 			this->textBoxCP2->TabIndex = 41;
 			// 
 			// labelCodePostal
 			// 
 			this->labelCodePostal->AutoSize = true;
 			this->labelCodePostal->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->labelCodePostal->Location = System::Drawing::Point(651, 107);
+			this->labelCodePostal->Location = System::Drawing::Point(488, 87);
+			this->labelCodePostal->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->labelCodePostal->Name = L"labelCodePostal";
-			this->labelCodePostal->Size = System::Drawing::Size(25, 16);
+			this->labelCodePostal->Size = System::Drawing::Size(21, 13);
 			this->labelCodePostal->TabIndex = 40;
 			this->labelCodePostal->Text = L"CP";
 			// 
@@ -374,19 +381,20 @@ namespace CESIProject {
 			// 
 			this->textBoxVille2->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxVille2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBoxVille2->Location = System::Drawing::Point(510, 110);
-			this->textBoxVille2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBoxVille2->Location = System::Drawing::Point(382, 89);
+			this->textBoxVille2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBoxVille2->Name = L"textBoxVille2";
-			this->textBoxVille2->Size = System::Drawing::Size(125, 15);
+			this->textBoxVille2->Size = System::Drawing::Size(94, 13);
 			this->textBoxVille2->TabIndex = 39;
 			// 
 			// labelVille
 			// 
 			this->labelVille->AutoSize = true;
 			this->labelVille->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->labelVille->Location = System::Drawing::Point(466, 107);
+			this->labelVille->Location = System::Drawing::Point(350, 87);
+			this->labelVille->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->labelVille->Name = L"labelVille";
-			this->labelVille->Size = System::Drawing::Size(33, 16);
+			this->labelVille->Size = System::Drawing::Size(26, 13);
 			this->labelVille->TabIndex = 38;
 			this->labelVille->Text = L"Ville";
 			// 
@@ -394,18 +402,20 @@ namespace CESIProject {
 			// 
 			this->labelPays->AutoSize = true;
 			this->labelPays->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->labelPays->Location = System::Drawing::Point(466, 74);
+			this->labelPays->Location = System::Drawing::Point(350, 60);
+			this->labelPays->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->labelPays->Name = L"labelPays";
-			this->labelPays->Size = System::Drawing::Size(38, 16);
+			this->labelPays->Size = System::Drawing::Size(30, 13);
 			this->labelPays->TabIndex = 37;
 			this->labelPays->Text = L"Pays";
 			// 
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(140, 136);
+			this->comboBox1->Location = System::Drawing::Point(105, 110);
+			this->comboBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(235, 24);
+			this->comboBox1->Size = System::Drawing::Size(177, 21);
 			this->comboBox1->TabIndex = 52;
 			this->comboBox1->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &InterfaceCommande::comboBox1_MouseClick);
 			// 
@@ -413,9 +423,10 @@ namespace CESIProject {
 			// 
 			this->NomCommande->AutoSize = true;
 			this->NomCommande->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->NomCommande->Location = System::Drawing::Point(59, 74);
+			this->NomCommande->Location = System::Drawing::Point(44, 60);
+			this->NomCommande->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->NomCommande->Name = L"NomCommande";
-			this->NomCommande->Size = System::Drawing::Size(36, 16);
+			this->NomCommande->Size = System::Drawing::Size(29, 13);
 			this->NomCommande->TabIndex = 53;
 			this->NomCommande->Text = L"Nom";
 			// 
@@ -423,9 +434,10 @@ namespace CESIProject {
 			// 
 			this->PrenomCommande->AutoSize = true;
 			this->PrenomCommande->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->PrenomCommande->Location = System::Drawing::Point(59, 107);
+			this->PrenomCommande->Location = System::Drawing::Point(44, 87);
+			this->PrenomCommande->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->PrenomCommande->Name = L"PrenomCommande";
-			this->PrenomCommande->Size = System::Drawing::Size(54, 16);
+			this->PrenomCommande->Size = System::Drawing::Size(43, 13);
 			this->PrenomCommande->TabIndex = 54;
 			this->PrenomCommande->Text = L"Prénom";
 			// 
@@ -433,10 +445,10 @@ namespace CESIProject {
 			// 
 			this->textBoxNomCommande->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxNomCommande->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBoxNomCommande->Location = System::Drawing::Point(140, 74);
-			this->textBoxNomCommande->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBoxNomCommande->Location = System::Drawing::Point(105, 60);
+			this->textBoxNomCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBoxNomCommande->Name = L"textBoxNomCommande";
-			this->textBoxNomCommande->Size = System::Drawing::Size(213, 15);
+			this->textBoxNomCommande->Size = System::Drawing::Size(160, 13);
 			this->textBoxNomCommande->TabIndex = 55;
 			this->textBoxNomCommande->TextChanged += gcnew System::EventHandler(this, &InterfaceCommande::textBoxNomCommande_TextChanged);
 			// 
@@ -444,39 +456,40 @@ namespace CESIProject {
 			// 
 			this->textBoxPrenomCommande->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxPrenomCommande->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBoxPrenomCommande->Location = System::Drawing::Point(140, 108);
-			this->textBoxPrenomCommande->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBoxPrenomCommande->Location = System::Drawing::Point(105, 88);
+			this->textBoxPrenomCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBoxPrenomCommande->Name = L"textBoxPrenomCommande";
-			this->textBoxPrenomCommande->Size = System::Drawing::Size(213, 15);
+			this->textBoxPrenomCommande->Size = System::Drawing::Size(160, 13);
 			this->textBoxPrenomCommande->TabIndex = 56;
 			// 
 			// textBoxPrixCommande
 			// 
 			this->textBoxPrixCommande->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->textBoxPrixCommande->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBoxPrixCommande->Location = System::Drawing::Point(140, 176);
-			this->textBoxPrixCommande->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBoxPrixCommande->Location = System::Drawing::Point(105, 143);
+			this->textBoxPrixCommande->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBoxPrixCommande->Name = L"textBoxPrixCommande";
-			this->textBoxPrixCommande->Size = System::Drawing::Size(213, 15);
+			this->textBoxPrixCommande->Size = System::Drawing::Size(160, 13);
 			this->textBoxPrixCommande->TabIndex = 58;
 			// 
 			// labelPrixCommande
 			// 
 			this->labelPrixCommande->AutoSize = true;
 			this->labelPrixCommande->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->labelPrixCommande->Location = System::Drawing::Point(59, 175);
+			this->labelPrixCommande->Location = System::Drawing::Point(44, 142);
+			this->labelPrixCommande->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->labelPrixCommande->Name = L"labelPrixCommande";
-			this->labelPrixCommande->Size = System::Drawing::Size(29, 16);
+			this->labelPrixCommande->Size = System::Drawing::Size(24, 13);
 			this->labelPrixCommande->TabIndex = 57;
 			this->labelPrixCommande->Text = L"Prix";
 			// 
 			// InterfaceCommande
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
 				static_cast<System::Int32>(static_cast<System::Byte>(70)));
-			this->ClientSize = System::Drawing::Size(800, 302);
+			this->ClientSize = System::Drawing::Size(600, 245);
 			this->Controls->Add(this->textBoxPrixCommande);
 			this->Controls->Add(this->labelPrixCommande);
 			this->Controls->Add(this->textBoxPrenomCommande);
@@ -503,9 +516,9 @@ namespace CESIProject {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->labelProduit);
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"InterfaceCommande";
-			this->Text = L"Créer un Article";
+			this->Text = L"Créer une Commande";
 			this->Load += gcnew System::EventHandler(this, &InterfaceCommande::InterfaceCommande_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

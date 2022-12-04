@@ -135,6 +135,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 private: System::Windows::Forms::PictureBox^ pictureBox2;
 private: System::Windows::Forms::Timer^ timer1;
 private: System::Windows::Forms::Label^ label1;
+private: System::Windows::Forms::PictureBox^ pictureBox3;
+private: System::Windows::Forms::Label^ label2;
+private: System::Windows::Forms::Button^ button22;
 
 
 
@@ -161,6 +164,7 @@ private: System::Windows::Forms::Label^ label1;
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Dashboard::typeid));
 			this->panelMenu = (gcnew System::Windows::Forms::Panel());
+			this->button22 = (gcnew System::Windows::Forms::Button());
 			this->pnlNav = (gcnew System::Windows::Forms::Panel());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
@@ -227,6 +231,8 @@ private: System::Windows::Forms::Label^ label1;
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panelMenu->SuspendLayout();
 			this->panelLogo->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->btnHome))->BeginInit();
@@ -249,12 +255,14 @@ private: System::Windows::Forms::Label^ label1;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panelMenu
 			// 
 			this->panelMenu->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
 				static_cast<System::Int32>(static_cast<System::Byte>(68)));
+			this->panelMenu->Controls->Add(this->button22);
 			this->panelMenu->Controls->Add(this->pnlNav);
 			this->panelMenu->Controls->Add(this->button5);
 			this->panelMenu->Controls->Add(this->button4);
@@ -268,6 +276,24 @@ private: System::Windows::Forms::Label^ label1;
 			this->panelMenu->Name = L"panelMenu";
 			this->panelMenu->Size = System::Drawing::Size(165, 543);
 			this->panelMenu->TabIndex = 0;
+			// 
+			// button22
+			// 
+			this->button22->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->button22->FlatAppearance->BorderSize = 0;
+			this->button22->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button22->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10.2F));
+			this->button22->ForeColor = System::Drawing::Color::White;
+			this->button22->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button22.Image")));
+			this->button22->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button22->Location = System::Drawing::Point(0, 494);
+			this->button22->Margin = System::Windows::Forms::Padding(2);
+			this->button22->Name = L"button22";
+			this->button22->Size = System::Drawing::Size(165, 49);
+			this->button22->TabIndex = 5;
+			this->button22->Text = L"Déconnexion";
+			this->button22->UseVisualStyleBackColor = true;
+			this->button22->Click += gcnew System::EventHandler(this, &Dashboard::button22_Click);
 			// 
 			// pnlNav
 			// 
@@ -497,13 +523,12 @@ private: System::Windows::Forms::Label^ label1;
 			// labelDashboard
 			// 
 			this->labelDashboard->AutoSize = true;
-			this->labelDashboard->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->labelDashboard->Font = (gcnew System::Drawing::Font(L"Century Gothic", 21));
 			this->labelDashboard->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(158)), static_cast<System::Int32>(static_cast<System::Byte>(161)),
 				static_cast<System::Int32>(static_cast<System::Byte>(176)));
 			this->labelDashboard->Location = System::Drawing::Point(10, 12);
 			this->labelDashboard->Name = L"labelDashboard";
-			this->labelDashboard->Size = System::Drawing::Size(102, 32);
+			this->labelDashboard->Size = System::Drawing::Size(107, 34);
 			this->labelDashboard->TabIndex = 0;
 			this->labelDashboard->Text = L"Clients";
 			// 
@@ -585,12 +610,12 @@ private: System::Windows::Forms::Label^ label1;
 			// labelProducts
 			// 
 			this->labelProducts->AutoSize = true;
-			this->labelProducts->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21));
+			this->labelProducts->Font = (gcnew System::Drawing::Font(L"Century Gothic", 21));
 			this->labelProducts->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(158)), static_cast<System::Int32>(static_cast<System::Byte>(161)),
 				static_cast<System::Int32>(static_cast<System::Byte>(176)));
 			this->labelProducts->Location = System::Drawing::Point(16, 12);
 			this->labelProducts->Name = L"labelProducts";
-			this->labelProducts->Size = System::Drawing::Size(119, 32);
+			this->labelProducts->Size = System::Drawing::Size(122, 34);
 			this->labelProducts->TabIndex = 0;
 			this->labelProducts->Text = L"Produits";
 			// 
@@ -674,12 +699,12 @@ private: System::Windows::Forms::Label^ label1;
 			// labelOrders
 			// 
 			this->labelOrders->AutoSize = true;
-			this->labelOrders->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21));
+			this->labelOrders->Font = (gcnew System::Drawing::Font(L"Century Gothic", 21));
 			this->labelOrders->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(158)), static_cast<System::Int32>(static_cast<System::Byte>(161)),
 				static_cast<System::Int32>(static_cast<System::Byte>(176)));
 			this->labelOrders->Location = System::Drawing::Point(14, 18);
 			this->labelOrders->Name = L"labelOrders";
-			this->labelOrders->Size = System::Drawing::Size(174, 32);
+			this->labelOrders->Size = System::Drawing::Size(192, 34);
 			this->labelOrders->TabIndex = 0;
 			this->labelOrders->Text = L"Commandes";
 			// 
@@ -761,13 +786,12 @@ private: System::Windows::Forms::Label^ label1;
 			// labelPersonnels
 			// 
 			this->labelPersonnels->AutoSize = true;
-			this->labelPersonnels->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->labelPersonnels->Font = (gcnew System::Drawing::Font(L"Century Gothic", 21));
 			this->labelPersonnels->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(158)), static_cast<System::Int32>(static_cast<System::Byte>(161)),
 				static_cast<System::Int32>(static_cast<System::Byte>(176)));
 			this->labelPersonnels->Location = System::Drawing::Point(10, 12);
 			this->labelPersonnels->Name = L"labelPersonnels";
-			this->labelPersonnels->Size = System::Drawing::Size(157, 32);
+			this->labelPersonnels->Size = System::Drawing::Size(156, 34);
 			this->labelPersonnels->TabIndex = 0;
 			this->labelPersonnels->Text = L"Personnels";
 			// 
@@ -795,16 +819,20 @@ private: System::Windows::Forms::Label^ label1;
 			// dataGridView5
 			// 
 			this->dataGridView5->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView5->Location = System::Drawing::Point(405, 81);
+			this->dataGridView5->Location = System::Drawing::Point(322, 81);
 			this->dataGridView5->Margin = System::Windows::Forms::Padding(2);
 			this->dataGridView5->Name = L"dataGridView5";
 			this->dataGridView5->RowHeadersWidth = 51;
 			this->dataGridView5->RowTemplate->Height = 24;
-			this->dataGridView5->Size = System::Drawing::Size(292, 338);
+			this->dataGridView5->Size = System::Drawing::Size(375, 338);
 			this->dataGridView5->TabIndex = 9;
 			// 
 			// buttonValeurAchat
 			// 
+			this->buttonValeurAchat->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->buttonValeurAchat->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonValeurAchat->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F));
+			this->buttonValeurAchat->ForeColor = System::Drawing::Color::White;
 			this->buttonValeurAchat->Location = System::Drawing::Point(168, 132);
 			this->buttonValeurAchat->Margin = System::Windows::Forms::Padding(2);
 			this->buttonValeurAchat->Name = L"buttonValeurAchat";
@@ -816,17 +844,25 @@ private: System::Windows::Forms::Label^ label1;
 			// 
 			// buttonValeurCommerciale
 			// 
+			this->buttonValeurCommerciale->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->buttonValeurCommerciale->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonValeurCommerciale->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F));
+			this->buttonValeurCommerciale->ForeColor = System::Drawing::Color::White;
 			this->buttonValeurCommerciale->Location = System::Drawing::Point(168, 81);
 			this->buttonValeurCommerciale->Margin = System::Windows::Forms::Padding(2);
 			this->buttonValeurCommerciale->Name = L"buttonValeurCommerciale";
 			this->buttonValeurCommerciale->Size = System::Drawing::Size(137, 29);
 			this->buttonValeurCommerciale->TabIndex = 7;
-			this->buttonValeurCommerciale->Text = L"Valeur Commerciale Stock";
+			this->buttonValeurCommerciale->Text = L"Valeur Commerciale";
 			this->buttonValeurCommerciale->UseVisualStyleBackColor = true;
 			this->buttonValeurCommerciale->Click += gcnew System::EventHandler(this, &Dashboard::buttonValeurCommerciale_Click);
 			// 
 			// buttonPlusVendus
 			// 
+			this->buttonPlusVendus->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->buttonPlusVendus->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonPlusVendus->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F));
+			this->buttonPlusVendus->ForeColor = System::Drawing::Color::White;
 			this->buttonPlusVendus->Location = System::Drawing::Point(26, 370);
 			this->buttonPlusVendus->Margin = System::Windows::Forms::Padding(2);
 			this->buttonPlusVendus->Name = L"buttonPlusVendus";
@@ -838,6 +874,10 @@ private: System::Windows::Forms::Label^ label1;
 			// 
 			// buttonArticlesMoins
 			// 
+			this->buttonArticlesMoins->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->buttonArticlesMoins->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonArticlesMoins->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F));
+			this->buttonArticlesMoins->ForeColor = System::Drawing::Color::White;
 			this->buttonArticlesMoins->Location = System::Drawing::Point(26, 310);
 			this->buttonArticlesMoins->Margin = System::Windows::Forms::Padding(2);
 			this->buttonArticlesMoins->Name = L"buttonArticlesMoins";
@@ -849,17 +889,25 @@ private: System::Windows::Forms::Label^ label1;
 			// 
 			// buttonMontantTotal
 			// 
+			this->buttonMontantTotal->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->buttonMontantTotal->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonMontantTotal->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F));
+			this->buttonMontantTotal->ForeColor = System::Drawing::Color::White;
 			this->buttonMontantTotal->Location = System::Drawing::Point(26, 247);
 			this->buttonMontantTotal->Margin = System::Windows::Forms::Padding(2);
 			this->buttonMontantTotal->Name = L"buttonMontantTotal";
 			this->buttonMontantTotal->Size = System::Drawing::Size(115, 29);
 			this->buttonMontantTotal->TabIndex = 4;
-			this->buttonMontantTotal->Text = L"Montant Total (Client)";
+			this->buttonMontantTotal->Text = L"Montant Total";
 			this->buttonMontantTotal->UseVisualStyleBackColor = true;
 			this->buttonMontantTotal->Click += gcnew System::EventHandler(this, &Dashboard::buttonMontantTotal_Click);
 			// 
 			// buttonSousSeuil
 			// 
+			this->buttonSousSeuil->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->buttonSousSeuil->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonSousSeuil->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F));
+			this->buttonSousSeuil->ForeColor = System::Drawing::Color::White;
 			this->buttonSousSeuil->Location = System::Drawing::Point(26, 188);
 			this->buttonSousSeuil->Margin = System::Windows::Forms::Padding(2);
 			this->buttonSousSeuil->Name = L"buttonSousSeuil";
@@ -871,6 +919,10 @@ private: System::Windows::Forms::Label^ label1;
 			// 
 			// buttonChiffreAffaire
 			// 
+			this->buttonChiffreAffaire->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->buttonChiffreAffaire->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonChiffreAffaire->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F));
+			this->buttonChiffreAffaire->ForeColor = System::Drawing::Color::White;
 			this->buttonChiffreAffaire->Location = System::Drawing::Point(26, 132);
 			this->buttonChiffreAffaire->Margin = System::Windows::Forms::Padding(2);
 			this->buttonChiffreAffaire->Name = L"buttonChiffreAffaire";
@@ -882,6 +934,10 @@ private: System::Windows::Forms::Label^ label1;
 			// 
 			// buttonPanierMoyen
 			// 
+			this->buttonPanierMoyen->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->buttonPanierMoyen->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->buttonPanierMoyen->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F));
+			this->buttonPanierMoyen->ForeColor = System::Drawing::Color::White;
 			this->buttonPanierMoyen->Location = System::Drawing::Point(26, 81);
 			this->buttonPanierMoyen->Margin = System::Windows::Forms::Padding(2);
 			this->buttonPanierMoyen->Name = L"buttonPanierMoyen";
@@ -894,14 +950,14 @@ private: System::Windows::Forms::Label^ label1;
 			// labelMarketing
 			// 
 			this->labelMarketing->AutoSize = true;
-			this->labelMarketing->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21));
+			this->labelMarketing->Font = (gcnew System::Drawing::Font(L"Century Gothic", 21));
 			this->labelMarketing->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(158)), static_cast<System::Int32>(static_cast<System::Byte>(161)),
 				static_cast<System::Int32>(static_cast<System::Byte>(176)));
 			this->labelMarketing->Location = System::Drawing::Point(21, 14);
 			this->labelMarketing->Name = L"labelMarketing";
-			this->labelMarketing->Size = System::Drawing::Size(139, 32);
+			this->labelMarketing->Size = System::Drawing::Size(168, 34);
 			this->labelMarketing->TabIndex = 0;
-			this->labelMarketing->Text = L"Marketing";
+			this->labelMarketing->Text = L"Statistiques";
 			// 
 			// panelCommandes
 			// 
@@ -991,42 +1047,39 @@ private: System::Windows::Forms::Label^ label1;
 			// labelBienvenue
 			// 
 			this->labelBienvenue->AutoSize = true;
-			this->labelBienvenue->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
-				static_cast<System::Int32>(static_cast<System::Byte>(62)));
-			this->labelBienvenue->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->labelBienvenue->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(68)));
+			this->labelBienvenue->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
 			this->labelBienvenue->ForeColor = System::Drawing::Color::White;
-			this->labelBienvenue->Location = System::Drawing::Point(703, 18);
+			this->labelBienvenue->Location = System::Drawing::Point(681, 24);
 			this->labelBienvenue->Name = L"labelBienvenue";
-			this->labelBienvenue->Size = System::Drawing::Size(74, 17);
+			this->labelBienvenue->Size = System::Drawing::Size(92, 20);
 			this->labelBienvenue->TabIndex = 8;
 			this->labelBienvenue->Text = L"Bienvenue:";
 			// 
 			// labelAdmin
 			// 
 			this->labelAdmin->AutoSize = true;
-			this->labelAdmin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
-				static_cast<System::Int32>(static_cast<System::Byte>(62)));
-			this->labelAdmin->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
+			this->labelAdmin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(68)));
+			this->labelAdmin->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
 			this->labelAdmin->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(36)), static_cast<System::Int32>(static_cast<System::Byte>(232)),
 				static_cast<System::Int32>(static_cast<System::Byte>(166)));
-			this->labelAdmin->Location = System::Drawing::Point(778, 18);
+			this->labelAdmin->Location = System::Drawing::Point(776, 24);
 			this->labelAdmin->Name = L"labelAdmin";
-			this->labelAdmin->Size = System::Drawing::Size(46, 17);
+			this->labelAdmin->Size = System::Drawing::Size(55, 20);
 			this->labelAdmin->TabIndex = 9;
 			this->labelAdmin->Text = L"Admin";
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
-				static_cast<System::Int32>(static_cast<System::Byte>(62)));
+			this->pictureBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(68)));
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(830, 14);
+			this->pictureBox1->Location = System::Drawing::Point(843, 22);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(24, 24);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->Size = System::Drawing::Size(32, 30);
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -1057,6 +1110,33 @@ private: System::Windows::Forms::Label^ label1;
 			this->label1->TabIndex = 11;
 			this->label1->Text = L"label1";
 			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(68)));
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(168, 14);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(34, 37);
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
+			this->pictureBox3->TabIndex = 12;
+			this->pictureBox3->TabStop = false;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(68)));
+			this->label2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::White;
+			this->label2->Location = System::Drawing::Point(209, 24);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(65, 20);
+			this->label2->TabIndex = 13;
+			this->label2->Text = L"Accueil";
+			this->label2->Click += gcnew System::EventHandler(this, &Dashboard::label2_Click);
+			// 
 			// Dashboard
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1065,18 +1145,20 @@ private: System::Windows::Forms::Label^ label1;
 				static_cast<System::Int32>(static_cast<System::Byte>(70)));
 			this->ClientSize = System::Drawing::Size(886, 543);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->pictureBox2);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->labelBienvenue);
 			this->Controls->Add(this->labelAdmin);
 			this->Controls->Add(this->panelTitleBar);
 			this->Controls->Add(this->panelMenu);
-			this->Controls->Add(this->panelMarketing);
+			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->panelOrders);
 			this->Controls->Add(this->panelCommandes);
 			this->Controls->Add(this->panelPersonnels);
 			this->Controls->Add(this->panelProducts);
 			this->Controls->Add(this->panelDashboard);
+			this->Controls->Add(this->panelMarketing);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximumSize = System::Drawing::Size(902, 582);
 			this->MinimumSize = System::Drawing::Size(902, 582);
@@ -1111,6 +1193,7 @@ private: System::Windows::Forms::Label^ label1;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1145,8 +1228,8 @@ private: System::Windows::Forms::Label^ label1;
 			panelMarketing->Visible = false;
 			label1->Visible = false;
 			pictureBox2->Visible = false;
-
 		}
+		chargerClients();
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		pnlNav->Height = button2->Height;
@@ -1574,6 +1657,19 @@ private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ 
 	cmd->ExecuteReader();
 	con->Close();
 }
+
+private: System::Void chargerClients() {
+
+	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+	MySqlConnection^ con = gcnew MySqlConnection(constr);
+	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select * from clients", con);
+	DataTable^ dt = gcnew DataTable();
+	sda->Fill(dt);
+	bindingSource5->DataSource = dt;
+	dataGridView6->DataSource = bindingSource5;
+}
+
+
 private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
 	InterfaceClient^ form6 = gcnew InterfaceClient();
 	form6->Show();
@@ -1581,6 +1677,23 @@ private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ 
 
 private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
 	label1->Text = (System::Convert::ToString(DateTime::Now))->Remove(0, 10);
+}
+private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+	button1->BackColor = Color::FromArgb(31, 30, 68);
+	button2->BackColor = Color::FromArgb(31, 30, 68);
+	button3->BackColor = Color::FromArgb(31, 30, 68);
+	button4->BackColor = Color::FromArgb(31, 30, 68);
+	button5->BackColor = Color::FromArgb(31, 30, 68);
+	panelDashboard->Visible = false;
+	panelOrders->Visible = false;
+	panelProducts->Visible = false;
+	panelPersonnels->Visible = false;
+	panelMarketing->Visible = false;
+	label1->Visible = true;
+	pictureBox2->Visible = true;
+}
+private: System::Void button22_Click(System::Object^ sender, System::EventArgs^ e) {
+	Application::Exit();
 }
 };
 };

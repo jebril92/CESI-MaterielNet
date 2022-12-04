@@ -474,18 +474,26 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// button18
 			// 
+			this->button18->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button18->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button18->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button18->ForeColor = System::Drawing::Color::White;
 			this->button18->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button18.Image")));
 			this->button18->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button18->Location = System::Drawing::Point(583, 425);
 			this->button18->Name = L"button18";
 			this->button18->Size = System::Drawing::Size(125, 39);
 			this->button18->TabIndex = 33;
-			this->button18->Text = L"Charger BDD";
+			this->button18->Text = L"    Charger BDD";
 			this->button18->UseVisualStyleBackColor = true;
 			this->button18->Click += gcnew System::EventHandler(this, &Dashboard::button18_Click);
 			// 
 			// button19
 			// 
+			this->button19->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button19->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button19->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button19->ForeColor = System::Drawing::Color::White;
 			this->button19->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button19.Image")));
 			this->button19->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button19->Location = System::Drawing::Point(458, 329);
@@ -498,6 +506,10 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// button20
 			// 
+			this->button20->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button20->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button20->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button20->ForeColor = System::Drawing::Color::White;
 			this->button20->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button20.Image")));
 			this->button20->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button20->Location = System::Drawing::Point(154, 329);
@@ -510,6 +522,10 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// button21
 			// 
+			this->button21->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button21->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button21->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button21->ForeColor = System::Drawing::Color::White;
 			this->button21->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button21.Image")));
 			this->button21->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button21->Location = System::Drawing::Point(308, 329);
@@ -561,18 +577,26 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// button6
 			// 
+			this->button6->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button6->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button6->ForeColor = System::Drawing::Color::White;
 			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
 			this->button6->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button6->Location = System::Drawing::Point(584, 425);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(125, 39);
 			this->button6->TabIndex = 23;
-			this->button6->Text = L"Charger BDD";
+			this->button6->Text = L"    Charger BDD";
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &Dashboard::button6_Click);
 			// 
 			// button7
 			// 
+			this->button7->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button7->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button7->ForeColor = System::Drawing::Color::White;
 			this->button7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button7.Image")));
 			this->button7->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button7->Location = System::Drawing::Point(460, 329);
@@ -585,6 +609,10 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// button8
 			// 
+			this->button8->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button8->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button8->ForeColor = System::Drawing::Color::White;
 			this->button8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button8.Image")));
 			this->button8->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button8->Location = System::Drawing::Point(156, 329);
@@ -597,6 +625,10 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// button9
 			// 
+			this->button9->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button9->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button9->ForeColor = System::Drawing::Color::White;
 			this->button9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button9.Image")));
 			this->button9->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button9->Location = System::Drawing::Point(310, 329);
@@ -650,18 +682,26 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// button14
 			// 
+			this->button14->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button14->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button14->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button14->ForeColor = System::Drawing::Color::White;
 			this->button14->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button14.Image")));
 			this->button14->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button14->Location = System::Drawing::Point(584, 425);
 			this->button14->Name = L"button14";
 			this->button14->Size = System::Drawing::Size(125, 39);
 			this->button14->TabIndex = 28;
-			this->button14->Text = L"Charger BDD";
+			this->button14->Text = L"    Charger BDD";
 			this->button14->UseVisualStyleBackColor = true;
 			this->button14->Click += gcnew System::EventHandler(this, &Dashboard::button14_Click);
 			// 
 			// button15
 			// 
+			this->button15->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button15->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button15->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button15->ForeColor = System::Drawing::Color::White;
 			this->button15->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button15.Image")));
 			this->button15->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button15->Location = System::Drawing::Point(459, 329);
@@ -674,6 +714,10 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// button16
 			// 
+			this->button16->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button16->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button16->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button16->ForeColor = System::Drawing::Color::White;
 			this->button16->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button16.Image")));
 			this->button16->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button16->Location = System::Drawing::Point(155, 329);
@@ -686,6 +730,10 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// button17
 			// 
+			this->button17->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button17->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button17->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button17->ForeColor = System::Drawing::Color::White;
 			this->button17->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button17.Image")));
 			this->button17->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button17->Location = System::Drawing::Point(309, 329);
@@ -737,18 +785,26 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// btnchargerbdd
 			// 
+			this->btnchargerbdd->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnchargerbdd->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnchargerbdd->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->btnchargerbdd->ForeColor = System::Drawing::Color::White;
 			this->btnchargerbdd->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnchargerbdd.Image")));
 			this->btnchargerbdd->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnchargerbdd->Location = System::Drawing::Point(584, 434);
 			this->btnchargerbdd->Name = L"btnchargerbdd";
 			this->btnchargerbdd->Size = System::Drawing::Size(125, 39);
 			this->btnchargerbdd->TabIndex = 18;
-			this->btnchargerbdd->Text = L"Charger BDD";
+			this->btnchargerbdd->Text = L"    Charger BDD";
 			this->btnchargerbdd->UseVisualStyleBackColor = true;
 			this->btnchargerbdd->Click += gcnew System::EventHandler(this, &Dashboard::btnchargerbdd_Click);
 			// 
 			// btnSupprimer
 			// 
+			this->btnSupprimer->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnSupprimer->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnSupprimer->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->btnSupprimer->ForeColor = System::Drawing::Color::White;
 			this->btnSupprimer->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnSupprimer.Image")));
 			this->btnSupprimer->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnSupprimer->Location = System::Drawing::Point(460, 338);
@@ -761,6 +817,10 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// btnNouveau
 			// 
+			this->btnNouveau->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnNouveau->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnNouveau->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->btnNouveau->ForeColor = System::Drawing::Color::White;
 			this->btnNouveau->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnNouveau.Image")));
 			this->btnNouveau->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnNouveau->Location = System::Drawing::Point(156, 338);
@@ -773,6 +833,10 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// btnModifier
 			// 
+			this->btnModifier->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnModifier->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnModifier->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->btnModifier->ForeColor = System::Drawing::Color::White;
 			this->btnModifier->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnModifier.Image")));
 			this->btnModifier->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnModifier->Location = System::Drawing::Point(310, 338);
@@ -988,17 +1052,25 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// button10
 			// 
+			this->button10->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button10->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button10->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button10->ForeColor = System::Drawing::Color::White;
 			this->button10->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button10.Image")));
 			this->button10->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button10->Location = System::Drawing::Point(584, 425);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(125, 39);
 			this->button10->TabIndex = 28;
-			this->button10->Text = L"Charger BDD";
+			this->button10->Text = L"    Charger BDD";
 			this->button10->UseVisualStyleBackColor = true;
 			// 
 			// button11
 			// 
+			this->button11->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button11->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button11->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button11->ForeColor = System::Drawing::Color::White;
 			this->button11->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button11.Image")));
 			this->button11->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button11->Location = System::Drawing::Point(460, 329);
@@ -1010,6 +1082,10 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// button12
 			// 
+			this->button12->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button12->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button12->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button12->ForeColor = System::Drawing::Color::White;
 			this->button12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button12.Image")));
 			this->button12->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button12->Location = System::Drawing::Point(156, 329);
@@ -1021,6 +1097,10 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			// button13
 			// 
+			this->button13->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button13->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button13->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.25F));
+			this->button13->ForeColor = System::Drawing::Color::White;
 			this->button13->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button13.Image")));
 			this->button13->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button13->Location = System::Drawing::Point(310, 329);
@@ -1153,12 +1233,12 @@ private: System::Windows::Forms::Button^ button22;
 			this->Controls->Add(this->panelTitleBar);
 			this->Controls->Add(this->panelMenu);
 			this->Controls->Add(this->pictureBox2);
-			this->Controls->Add(this->panelOrders);
 			this->Controls->Add(this->panelCommandes);
 			this->Controls->Add(this->panelPersonnels);
 			this->Controls->Add(this->panelProducts);
 			this->Controls->Add(this->panelDashboard);
 			this->Controls->Add(this->panelMarketing);
+			this->Controls->Add(this->panelOrders);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximumSize = System::Drawing::Size(902, 582);
 			this->MinimumSize = System::Drawing::Size(902, 582);

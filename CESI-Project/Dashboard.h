@@ -131,6 +131,11 @@ private: System::Windows::Forms::Button^ button19;
 private: System::Windows::Forms::Button^ button20;
 private: System::Windows::Forms::Button^ button21;
 private: System::Windows::Forms::BindingSource^ bindingSource5;
+private: System::Windows::Forms::PictureBox^ pictureBox1;
+private: System::Windows::Forms::PictureBox^ pictureBox2;
+private: System::Windows::Forms::Timer^ timer1;
+private: System::Windows::Forms::Label^ label1;
+
 
 
 	private: System::ComponentModel::IContainer^ components;
@@ -218,6 +223,10 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 			this->bindingSource3 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->bindingSource4 = (gcnew System::Windows::Forms::BindingSource(this->components));
 			this->bindingSource5 = (gcnew System::Windows::Forms::BindingSource(this->components));
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panelMenu->SuspendLayout();
 			this->panelLogo->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->btnHome))->BeginInit();
@@ -238,6 +247,8 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panelMenu
@@ -397,9 +408,9 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 			// 
 			// panelTitleBar
 			// 
-			this->panelTitleBar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
-				static_cast<System::Int32>(static_cast<System::Byte>(62)));
-			this->panelTitleBar->Location = System::Drawing::Point(165, 0);
+			this->panelTitleBar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(30)),
+				static_cast<System::Int32>(static_cast<System::Byte>(68)));
+			this->panelTitleBar->Location = System::Drawing::Point(165, -1);
 			this->panelTitleBar->Margin = System::Windows::Forms::Padding(2);
 			this->panelTitleBar->Name = L"panelTitleBar";
 			this->panelTitleBar->Size = System::Drawing::Size(721, 63);
@@ -1006,12 +1017,56 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 			this->labelAdmin->TabIndex = 9;
 			this->labelAdmin->Text = L"Admin";
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(26)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(62)));
+			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(830, 14);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(24, 24);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 0;
+			this->pictureBox1->TabStop = false;
+			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(170, 80);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(649, 381);
+			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox2->TabIndex = 10;
+			this->pictureBox2->TabStop = false;
+			// 
+			// timer1
+			// 
+			this->timer1->Tick += gcnew System::EventHandler(this, &Dashboard::timer1_Tick);
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::Black;
+			this->label1->Location = System::Drawing::Point(461, 325);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(93, 33);
+			this->label1->TabIndex = 11;
+			this->label1->Text = L"label1";
+			// 
 			// Dashboard
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::White;
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
+				static_cast<System::Int32>(static_cast<System::Byte>(70)));
 			this->ClientSize = System::Drawing::Size(886, 543);
+			this->Controls->Add(this->label1);
+			this->Controls->Add(this->pictureBox2);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->labelBienvenue);
 			this->Controls->Add(this->labelAdmin);
 			this->Controls->Add(this->panelTitleBar);
@@ -1054,6 +1109,8 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bindingSource5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1070,6 +1127,8 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 		panelProducts->Visible = false;
 		panelPersonnels->Visible = false;
 		panelMarketing->Visible = false;
+		label1->Visible = true;
+		pictureBox2->Visible = true;
 	}
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1084,6 +1143,8 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 			panelProducts->Visible = false;
 			panelPersonnels->Visible = false;
 			panelMarketing->Visible = false;
+			label1->Visible = false;
+			pictureBox2->Visible = false;
 
 		}
 	}
@@ -1099,6 +1160,8 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 			panelProducts->Visible = false;
 			panelPersonnels->Visible = false;
 			panelMarketing->Visible = false;
+			label1->Visible = false;
+			pictureBox2->Visible = false;
 
 		}
 
@@ -1118,6 +1181,8 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 			panelDashboard->Visible = false;
 			panelPersonnels->Visible = false;
 			panelMarketing->Visible = false;
+			label1->Visible = false;
+			pictureBox2->Visible = false;
 
 		}
 
@@ -1135,6 +1200,8 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 			panelDashboard->Visible = false;
 			panelProducts->Visible = false;
 			panelMarketing->Visible = false;
+			label1->Visible = false;
+			pictureBox2->Visible = false;
 
 		}
 		chargerPersonnel();
@@ -1152,6 +1219,8 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 			panelDashboard->Visible = false;
 			panelProducts->Visible = false;
 			panelPersonnels->Visible = false;
+			label1->Visible = false;
+			pictureBox2->Visible = false;
 
 		}
 	}
@@ -1210,6 +1279,7 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 		frm3->Show();
 	}
 	private: System::Void Dashboard_Load(System::Object^ sender, System::EventArgs^ e) {
+		timer1->Start();
 	}
 
 		   // CHARGER PERSONNEL
@@ -1397,6 +1467,7 @@ private: System::Windows::Forms::BindingSource^ bindingSource5;
 		dataGridView5->DataSource = bindingSource4;
 	}
 private: System::Void buttonChiffreAffaire_Click(System::Object^ sender, System::EventArgs^ e) {
+
 }
 private: System::Void buttonSousSeuil_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
@@ -1506,6 +1577,10 @@ private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
 	InterfaceClient^ form6 = gcnew InterfaceClient();
 	form6->Show();
+}
+
+private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) {
+	label1->Text = (System::Convert::ToString(DateTime::Now))->Remove(0, 10);
 }
 };
 };

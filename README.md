@@ -14,15 +14,6 @@
     -   [Suppression](#Suppression)
     -   [Mise à jour](#Mise-à-jour)
 -   [Gestion des statistiques](#Statistiques)
-    -   [Panier moyen](#Calculer-le-panier-moyen)
-    -   [Chiffre d'affaire](#Calculer-le-chiffre-daffaire-sur-un-mois-en-particuler)
-    -   [Produits sous le seuil](#Identifier-les-produits-sous-le-seuil-de-réapprovisionnement)
-    -   [Montant total d'un client](#Calculer-le-montant-total-des-achats-pour-un-client)
-    -   [Dix articles les plus vendus](#Identifier-les-10-articles-les-plus-vendus)
-    -   [Dix articles les moins vendus](#Identifier-les-10-articles-les-moins-vendus)
-    -   [Valeur commerciale du stock (sans variables)](<#Calculer-la-valeur-commerciale-du-stock-(sans-variables)>)
-    -   [Valeur d'achat du stock](#Calculer-la-valeur-dachat-du-stock)
-    -   [Valeur commerciale du stock (avec variables)](<#Calculer-la-variation-commerciale-du-stock-(avec-variables)>)
 
 ## Présentation
 
@@ -132,3 +123,10 @@ Lorsqu'un employé clique sur le bouton **Mettre à jour** après avoir sélecti
 ##### Le formulaire de mise à jour d'une table :
 
 <p align="center"><img src="https://i.imgur.com/gLOncew.png"></img></p>
+
+## Statistiques
+
+Exemple du top 10 des articles les moins vendus.
+
+<p align="center"><img src="https://i.imgur.com/cqVf6Of.png"></img></p>
+

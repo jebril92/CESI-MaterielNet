@@ -79,11 +79,11 @@ Ce projet est mené par:
 
 Pour utiliser cette application il faut tout simplement posséder une connection internet, et lancer le **fichier executable** de l'application qui arrivera sur la page d'accueil :
 
-<p align="center"><img src="https://i.imgur.com/8lIj9rI.png"></img></p>
+<p align="center"><img src="https://i.imgur.com/x3SWnLs.png"></img></p>
 
 Ensuite, il faudra selectionner une catégorie parmis celles ci-dessous :
 
-<p align="center"><img src="https://i.imgur.com/pFCkkek.png"></img></p>
+<p align="center"><img src="https://i.imgur.com/sbKHMae.png"></img></p>
 
 **Note :** Lorsque que vous cliquer sur personnel, cela vous ouvre la page ci-dessous, il suffit de rentrer le mot de passe "motdepasse" pour accéder a la catégorie personnel.
 

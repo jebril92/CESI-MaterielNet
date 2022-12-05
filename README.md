@@ -129,6 +129,6 @@ Lorsqu'un employé clique sur le bouton **Supprimer** après avoir sélectionné
 
 Lorsqu'un employé clique sur le bouton **Mettre à jour** après avoir sélectionné un ID dans l'affichage, une nouvelle fenêtre s'ouvrira avec un formulaire à remplir avec les données souhaitées.
 
-##### Le formulaire de mise à jour d'un Client :
+##### Le formulaire de mise à jour d'une table :
 
-<p align="center"><img src="https://i.imgur.com/LQA6RAr.png"></img></p>
+<p align="center"><img src="https://i.imgur.com/gLOncew.png"></img></p>

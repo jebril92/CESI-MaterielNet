@@ -1,5 +1,7 @@
 <h1 align="center">Projet CESI - Materiel.Net</h1>
 
+[Télécharger la dernière version](https://github.com/jebril92/CESI-MaterielNet/releases)
+
 ## Sommaire
 
 -   [Présentation du projet](#Présentation)

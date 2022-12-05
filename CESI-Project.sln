@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CESI-Project", "CESI-Project\CESI-Project.vcxproj", "{B413E2A5-0505-451E-96EA-218D0F5D54FF}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MaterielNet Setup", "MaterielNet Setup\MaterielNet Setup.vdproj", "{C1611AAD-6A2F-4B5B-A316-9731E34A4B5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,10 @@ Global
 		{B413E2A5-0505-451E-96EA-218D0F5D54FF}.Release|x64.Build.0 = Release|x64
 		{B413E2A5-0505-451E-96EA-218D0F5D54FF}.Release|x86.ActiveCfg = Release|Win32
 		{B413E2A5-0505-451E-96EA-218D0F5D54FF}.Release|x86.Build.0 = Release|Win32
+		{C1611AAD-6A2F-4B5B-A316-9731E34A4B5F}.Debug|x64.ActiveCfg = Debug
+		{C1611AAD-6A2F-4B5B-A316-9731E34A4B5F}.Debug|x86.ActiveCfg = Debug
+		{C1611AAD-6A2F-4B5B-A316-9731E34A4B5F}.Release|x64.ActiveCfg = Release
+		{C1611AAD-6A2F-4B5B-A316-9731E34A4B5F}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

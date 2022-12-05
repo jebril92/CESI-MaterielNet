@@ -79,7 +79,7 @@ Ce projet est mené par:
 
 Pour utiliser cette application il faut tout simplement posséder une connection internet, et lancer le **fichier executable** de l'application qui arrivera sur la page d'accueil :
 
-<p align="center"><img src="https://i.imgur.com/x3SWnLs.png"></img></p>
+<p align="center"><img src="https://i.imgur.com/EO7INJu.png"></img></p>
 
 Ensuite, il faudra selectionner une catégorie parmis celles ci-dessous :
 
@@ -89,7 +89,7 @@ Ensuite, il faudra selectionner une catégorie parmis celles ci-dessous :
 
 ##### La fenêtre d'authentification :
 
-<p align="center"><img src="https://i.imgur.com/sVSmISc.png"></img></p>
+<p align="center"><img src="[https://i.imgur.com/sVSmISc.png](https://i.imgur.com/x3SWnLs.png)"></img></p>
 
 Ensuite vous pouvez choisir une action parmis les 4 boutons qui seront affichés à l'écran (**Afficher**, **Créer**, **Supprimer**, **Mettre à jour**)
 
@@ -101,7 +101,7 @@ Lorsqu'un employé clique sur le bouton **Afficher**, un tableau (_DataGridView_
 
 ##### Voici un exemple de page de gestion (les données sont générées aléatoirement) :
 
-<p align="center"><img src="https://i.imgur.com/mlQt44y.png"></img></p>
+<p align="center"><img src="https://i.imgur.com/iu0q4rV.png"></img></p>
 
 ---
 
@@ -111,11 +111,11 @@ Lorsqu'un employé clique sur le bouton **Créer**, une nouvelle fenêtre s'ouvr
 
 ##### Le formulaire d'insertion de Personnel :
 
-<p align="center"><img src="https://i.imgur.com/yh9vBPk.png"></img></p>
+<p align="center"><img src="https://i.imgur.com/hrjdEEU.png"></img></p>
 
 ##### Le formulaire d'insertion de Commande :
 
-<p align="center"><img src="https://i.imgur.com/J9uJX22.png"></img></p>
+<p align="center"><img src="https://i.imgur.com/qhGGcZs.png"></img></p>
 
 ---
 

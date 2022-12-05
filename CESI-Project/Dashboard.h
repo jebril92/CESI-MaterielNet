@@ -1221,8 +1221,7 @@ private: System::Windows::Forms::Button^ button22;
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
-				static_cast<System::Int32>(static_cast<System::Byte>(70)));
+			this->BackColor = System::Drawing::Color::White;
 			this->ClientSize = System::Drawing::Size(886, 543);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->label2);

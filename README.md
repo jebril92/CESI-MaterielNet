@@ -14,7 +14,7 @@
     -   [Affichage](#Affichage)
     -   [Création](#Création)
     -   [Suppression](#Suppression)
-    -   [Mise à jour](#Mise-à-jour)
+    -   [Modifier](#Modifier)
 -   [Gestion des statistiques](#Statistiques)
 
 ## Présentation
@@ -77,12 +77,6 @@ Ensuite, il faudra selectionner une catégorie parmis celles ci-dessous :
 
 <p align="center"><img src="https://i.imgur.com/sbKHMae.png"></img></p>
 
-**Note :** Lorsque que vous cliquer sur personnel, cela vous ouvre la page ci-dessous, il suffit de rentrer le mot de passe "motdepasse" pour accéder a la catégorie personnel.
-
-##### La fenêtre d'authentification :
-
-<p align="center"><img src="[https://i.imgur.com/sVSmISc.png](https://i.imgur.com/x3SWnLs.png)"></img></p>
-
 Ensuite vous pouvez choisir une action parmis les 4 boutons qui seront affichés à l'écran (**Afficher**, **Créer**, **Supprimer**, **Mettre à jour**)
 
 ---
@@ -117,17 +111,15 @@ Lorsqu'un employé clique sur le bouton **Supprimer** après avoir sélectionné
 
 ---
 
-### Mise à jour
+### Modifier
 
-Lorsqu'un employé clique sur le bouton **Mettre à jour** après avoir sélectionné un ID dans l'affichage, une nouvelle fenêtre s'ouvrira avec un formulaire à remplir avec les données souhaitées.
+Lorsqu'un employé clique sur le bouton **Modifier** après avoir sélectionné un ID dans l'affichage, il pourra modifier l'ensemble de cette ligne. 
 
-##### Le formulaire de mise à jour d'une table :
-
-<p align="center"><img src="https://i.imgur.com/gLOncew.png"></img></p>
 
 ## Statistiques
 
-Exemple du top 10 des articles les moins vendus.
+Exemple des 10 articles les moins vendus.
 
 <p align="center"><img src="https://i.imgur.com/cqVf6Of.png"></img></p>
 
+Il existe comme ci-dessus plusieurs boutons permettant de visualiser l'ensemble des statistiques de la boutique. 

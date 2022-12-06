@@ -308,109 +308,170 @@ namespace CESIProject {
 	}
 
 	private: System::Void textBox1_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (textBox1->Text == "Utilisateur")
-		{
-			textBox1->Text = "";
+		try {
+			if (textBox1->Text == "Utilisateur")
+			{
+				textBox1->Text = "";
+			}
+			if (passwordTextBox->Text == "")
+			{
+				passwordTextBox->Text = "Password";
+			}
 		}
-		if (passwordTextBox->Text == "")
-		{
-			passwordTextBox->Text = "Password";
+		catch (Exception^ ex) {
+			MessageBox::Show("Une Erreur est survenue ! Merci de retaper votre demande.");
 		}
 	}
 
 	private: System::Void passwordTextBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
 
-	private: System::Void passwordTextBox_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (passwordTextBox->Text == "Password")
-		{
-			passwordTextBox->Text = "";
-		}
-		if (textBox1->Text == "")
-		{
-			textBox1->Text = "Utilisateur";
-		}
-	}
-
-	private: System::Void otherclick(System::Object^ sender, System::EventArgs^ e) {
-		if (textBox1->Text == "")
-		{
-			textBox1->Text = "Utilisateur";
-		}
-		if (passwordTextBox->Text == "")
-		{
-			passwordTextBox->Text = "Password";
-		}
-	}
-	private: System::Void termsCheck_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (termsCheck->Checked)
-		{
-			connexionButton->Enabled = true;
-		}
-		else
-		{
-			connexionButton->Enabled = false;
-		}
-	}
-
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (textBox1->Text == "")
-		{
-			textBox1->Text = "Utilisateur";
-		}
-		if (passwordTextBox->Text == "")
-		{
-			passwordTextBox->Text = "Password";
-		}
-
-		System::Diagnostics::Process::Start("mailto:servicesupport@materiel.net?subject=Service Issue | ");
-	}
-
-	private: System::Void connexionButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (textBox1->Text == "admin")
-		{
-			if (passwordTextBox->Text == "root")
+	private: System::Void passwordTextBox_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		try {
+			if (passwordTextBox->Text == "Password")
 			{
-				Dashboard^ frm2 = gcnew Dashboard;
-				frm2->Show();
-				this->Hide();
+				passwordTextBox->Text = "";
+			}
+			if (textBox1->Text == "")
+			{
+				textBox1->Text = "Utilisateur";
 			}
 		}
-		else
+		catch (Exception^ ex)
 		{
-			MessageBox::Show("Identifiant ou Mot de passe Incorrect !");
-		}
-
-		if (textBox1->Text == "")
-		{
-			textBox1->Text = "Utilisateur";
-		}
-		if (passwordTextBox->Text == "")
-		{
-			passwordTextBox->Text = "Password";
+			MessageBox::Show("Une Erreur est survenue ! Merci de retaper votre demande.");
 		}
 	}
 
-	private: System::Void btneyes_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (passwordTextBox->UseSystemPasswordChar == true)
-		{
-			passwordTextBox->UseSystemPasswordChar = false;
+	private: System::Void otherclick(System::Object^ sender, System::EventArgs^ e) 
+	{
+		try {
+			if (textBox1->Text == "")
+			{
+				textBox1->Text = "Utilisateur";
+			}
+			if (passwordTextBox->Text == "")
+			{
+				passwordTextBox->Text = "Password";
+			}
 		}
-		else
+		catch (Exception^ ex)
 		{
-			passwordTextBox->UseSystemPasswordChar = true;
+			MessageBox::Show("Une Erreur est survenue ! Merci de retaper votre demande.");
+		}
+	}
+	private: System::Void termsCheck_CheckedChanged(System::Object^ sender, System::EventArgs^ e) 
+	{
+		try {
+			if (termsCheck->Checked)
+			{
+				connexionButton->Enabled = true;
+			}
+			else
+			{
+				connexionButton->Enabled = false;
+			}
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show("Une Erreur est survenue ! Merci de retaper votre demande.");
+		}
+	}
+
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		try {
+			if (textBox1->Text == "")
+			{
+				textBox1->Text = "Utilisateur";
+			}
+			if (passwordTextBox->Text == "")
+			{
+				passwordTextBox->Text = "Password";
+			}
+
+			System::Diagnostics::Process::Start("mailto:servicesupport@materiel.net?subject=Service Issue | ");
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show("Une Erreur est survenue ! Merci de retaper votre demande.");
+		}
+	}
+
+	private: System::Void connexionButton_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		try {
+			if (textBox1->Text == "admin")
+			{
+				if (passwordTextBox->Text == "root")
+				{
+					Dashboard^ frm2 = gcnew Dashboard;
+					frm2->Show();
+					this->Hide();
+				}
+			}
+			else
+			{
+				MessageBox::Show("Identifiant ou Mot de passe Incorrect !");
+			}
+
+			if (textBox1->Text == "")
+			{
+				textBox1->Text = "Utilisateur";
+			}
+			if (passwordTextBox->Text == "")
+			{
+				passwordTextBox->Text = "Password";
+			}
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show("Une Erreur est survenue ! Merci de retaper votre demande.");
+		}
+	}
+
+	private: System::Void btneyes_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		try {
+			if (passwordTextBox->UseSystemPasswordChar == true)
+			{
+				passwordTextBox->UseSystemPasswordChar = false;
+			}
+			else
+			{
+				passwordTextBox->UseSystemPasswordChar = true;
+			}
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show("Une Erreur est survenue ! Merci de retaper votre demande.");
 		}
 	}
 	private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 	}
-	private: System::Void textBox1_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
-		if (e->KeyValue == (int)Keys::Enter) {
-			passwordTextBox->Focus();
+	private: System::Void textBox1_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) 
+	{
+		try {
+			if (e->KeyValue == (int)Keys::Enter) {
+				passwordTextBox->Focus();
+			}
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show("Une Erreur est survenue ! Merci de retaper votre demande.");
 		}
 	}
-	private: System::Void passwordTextBox_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
-		if (e->KeyValue == (int)Keys::Enter) {
-			connexionButton->PerformClick();
+	private: System::Void passwordTextBox_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) 
+	{
+		try {
+			if (e->KeyValue == (int)Keys::Enter) {
+				connexionButton->PerformClick();
+			}
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show("Une Erreur est survenue ! Merci de retaper votre demande.");
 		}
 	}
 	private: System::Void panel2_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {

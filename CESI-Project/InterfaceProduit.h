@@ -342,20 +342,32 @@ namespace CESIProject {
 	}
 	private: System::Void textBoxNom_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;";
-		MySqlConnection^ con = gcnew MySqlConnection(constr);
-		String^ type_article = textBoxNomArticle->Text;
-		String^ nombre_articles = textBoxNombreArticle->Text;
-		String^ taux_tva = textBoxTauxTVA->Text;
-		String^ prix_ht = textBoxPrixHT->Text;
-		String^ prix_tva = textBoxPrixTVA->Text;
-		String^ quantite_dispo = textBoxQuantiteDispo->Text;
-		con->Open();
-		MySqlCommand^ cmd = gcnew MySqlCommand("insert into article(type_article,nombre_articles,taux_tva,prix_ht,prix_tva,quantite_dispo) values('" + type_article + "','" + nombre_articles + "','" + taux_tva + "','" + prix_ht + "','" + prix_tva + "','" + quantite_dispo + "')", con);
-		cmd->ExecuteReader();
-		MessageBox::Show("L'article : " + type_article + " a été ajouté(e) avec succès !");
-	}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		try {
+			if (textBoxNomArticle && textBoxNombreArticle && textBoxTauxTVA && textBoxPrixHT && textBoxPrixTVA && textBoxQuantiteDispo->Text == "")
+			{
+				MessageBox::Show("Veuillez remplir tous les champs", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+			else {
+				String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;";
+				MySqlConnection^ con = gcnew MySqlConnection(constr);
+				String^ type_article = textBoxNomArticle->Text;
+				String^ nombre_articles = textBoxNombreArticle->Text;
+				String^ taux_tva = textBoxTauxTVA->Text;
+				String^ prix_ht = textBoxPrixHT->Text;
+				String^ prix_tva = textBoxPrixTVA->Text;
+				String^ quantite_dispo = textBoxQuantiteDispo->Text;
+				con->Open();
+				MySqlCommand^ cmd = gcnew MySqlCommand("insert into article(type_article,nombre_articles,taux_tva,prix_ht,prix_tva,quantite_dispo) values('" + type_article + "','" + nombre_articles + "','" + taux_tva + "','" + prix_ht + "','" + prix_tva + "','" + quantite_dispo + "')", con);
+				cmd->ExecuteReader();
+				MessageBox::Show("L'article : " + type_article + " a été ajouté(e) avec succès !");
+			}
+		}
+			catch (Exception^ ex) {
+				MessageBox::Show("Une Erreur est survenue ! Merci de retaper votre demande.");
+			}
+		}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}

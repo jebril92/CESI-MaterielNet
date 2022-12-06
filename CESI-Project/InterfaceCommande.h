@@ -530,24 +530,41 @@ namespace CESIProject {
 
 	private: System::Void textBoxNom_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;";
-		MySqlConnection^ con = gcnew MySqlConnection(constr);
-		String^ nom2 = textBoxNomCommande->Text;
-		String^ prenom2 = textBoxPrenomCommande->Text;
-		String^ Produit = comboBox1->Text;
-		String^ Prix = textBoxPrixCommande->Text;
-		//String^ pays = comboBoxPays2->Text;
-		//String^ ville = textBoxVille2->Text;
-		//String^ codepostal = textBoxCP2->Text;
-		//String^ n_rue = textBoxNumRue2->Text;
-		//String^ rue = textBoxRue2->Text;
-		//String^ etage = textBoxEtage2->Text;
-		//String^ Residence = textBoxResidence2->Text;
-		con->Open();
-		MySqlCommand^ cmd = gcnew MySqlCommand("insert into commande(nom2,prenom2,Produit,Prix) values('" + nom2 + "','" + prenom2 + "','" + Produit + "','" + Prix + "')", con);
-		cmd->ExecuteReader();
-		MessageBox::Show("L'article : " + Produit + " a été commandé(e) avec succès !");
+		
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		try {
+			if (textBoxNomCommande && textBoxPrenomCommande && comboBox1 && textBoxPrixCommande && comboBoxPays2 && textBoxVille2 && textBoxCP2 && textBoxNumRue2 && textBoxRue2 && textBoxEtage2 && textBoxResidence2->Text == "")
+			{
+				MessageBox::Show("Veuillez remplir tous les champs", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+			else
+			{
+				String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;";
+				MySqlConnection^ con = gcnew MySqlConnection(constr);
+				String^ nom2 = textBoxNomCommande->Text;
+				String^ prenom2 = textBoxPrenomCommande->Text;
+				String^ Produit = comboBox1->Text;
+				String^ Prix = textBoxPrixCommande->Text;
+				String^ pays = comboBoxPays2->Text;
+				String^ ville = textBoxVille2->Text;
+				String^ codepostal = textBoxCP2->Text;
+				String^ n_rue = textBoxNumRue2->Text;
+				String^ rue = textBoxRue2->Text;
+				String^ etage = textBoxEtage2->Text;
+				String^ Residence = textBoxResidence2->Text;
+				con->Open();
+				MySqlCommand^ cmd = gcnew MySqlCommand("insert into commande(nom2,prenom2,Produit,Prix) values('" + nom2 + "','" + prenom2 + "','" + Produit + "','" + Prix + "')", con);
+				cmd->ExecuteReader();
+				MessageBox::Show("L'article : " + Produit + " a été commandé(e) avec succès !");
+				con->Close();
+			}
+
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show("Une Erreur est survenue ! Merci de retaper votre demande.");
+		}
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
@@ -558,14 +575,23 @@ namespace CESIProject {
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void comboBox1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
-	String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
-	MySqlConnection^ con = gcnew MySqlConnection(constr);
-	MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select type_article, prix_ht, CONCAT(type_article,' | ',prix_ht, ' euros') as Result from projet.article", con);
-	DataTable^ dt = gcnew DataTable();
-	sda->Fill(dt);
-	comboBox1->DataSource = dt;
-	comboBox1->DisplayMember = "Result";
+private: System::Void comboBox1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) 
+{
+	try 
+	{
+		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;Convert Zero Datetime=True;";
+		MySqlConnection^ con = gcnew MySqlConnection(constr);
+		MySqlDataAdapter^ sda = gcnew MySqlDataAdapter("select type_article, prix_ht, CONCAT(type_article,' | ',prix_ht, ' euros') as Result from projet.article", con);
+		DataTable^ dt = gcnew DataTable();
+		sda->Fill(dt);
+		comboBox1->DataSource = dt;
+		comboBox1->DisplayMember = "Result";
+	}
+	catch (Exception^ ex)
+	{
+		MessageBox::Show("Une Erreur est survenue ! Merci de retaper votre demande.");
+	}
+
 }
 
 private: System::Void comboBoxPrix_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {

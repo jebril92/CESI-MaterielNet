@@ -545,28 +545,42 @@ namespace CESIProject {
 	}
 	private: System::Void textBoxNom_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;";
-		MySqlConnection^ con = gcnew MySqlConnection(constr);
-		String^ superieur = comboBoxsuperieur->Text;
-		String^ nom = textBoxNom->Text;
-		String^ prenom = textBoxPrenom->Text;
-		String^ numero_telephone = textBoxNumTel->Text;
-		String^ adresse_mail = textBoxadressemail->Text;
-		String^ sexe = comboBoxSexe->Text;
-		String^ date_embauche = dateTimePicker1->Text;
-		String^ pays = comboBoxPays->Text;
-		String^ ville = textBoxVille->Text;
-		String^ codepostal = textBoxCP->Text;
-		String^ n_rue = textBoxNumRue->Text;
-		String^ rue = textBoxRue->Text;
-		String^ etage = textBoxEtage->Text;
-		String^ residence = textBoxResidence->Text;
-		con->Open();
-		MySqlCommand^ cmd = gcnew MySqlCommand("insert into personnel(superieur,nom,prenom,numero_telephone,adresse_mail,sexe,date_embauche,pays,ville,codepostal,n_rue,rue,etage,residence) values('" + superieur + "','" + nom + "','" + prenom + "','" + numero_telephone + "','" + adresse_mail + "','" + sexe + "','" + date_embauche + "','" + pays + "','" + ville + "','" + codepostal + "','" + n_rue + "','" + rue + "','" + etage + "','" + residence + "')", con);
-		cmd->ExecuteReader();
-		MessageBox::Show("Le Personnel : " + nom + " " + prenom + " a été ajouté(e) avec succès ! ");
-	}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		try {
+			if (comboBoxsuperieur && textBoxNom && textBoxPrenom && textBoxNumTel && textBoxadressemail && comboBoxSexe && comboBoxPays && textBoxVille && textBoxCP && textBoxNumRue && textBoxRue && textBoxEtage && textBoxResidence->Text == "")
+			{
+				MessageBox::Show("Veuillez remplir tous les champs", "Erreur", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+			else
+			{
+				String^ constr = "Server=cesi-sql.mysql.database.azure.com;Database=projet;Uid=admin13@cesi-sql;Pwd=test123$;";
+				MySqlConnection^ con = gcnew MySqlConnection(constr);
+				String^ superieur = comboBoxsuperieur->Text;
+				String^ nom = textBoxNom->Text;
+				String^ prenom = textBoxPrenom->Text;
+				String^ numero_telephone = textBoxNumTel->Text;
+				String^ adresse_mail = textBoxadressemail->Text;
+				String^ sexe = comboBoxSexe->Text;
+				String^ date_embauche = dateTimePicker1->Text;
+				String^ pays = comboBoxPays->Text;
+				String^ ville = textBoxVille->Text;
+				String^ codepostal = textBoxCP->Text;
+				String^ n_rue = textBoxNumRue->Text;
+				String^ rue = textBoxRue->Text;
+				String^ etage = textBoxEtage->Text;
+				String^ residence = textBoxResidence->Text;
+				con->Open();
+				MySqlCommand^ cmd = gcnew MySqlCommand("insert into personnel(superieur,nom,prenom,numero_telephone,adresse_mail,sexe,date_embauche,pays,ville,codepostal,n_rue,rue,etage,residence) values('" + superieur + "','" + nom + "','" + prenom + "','" + numero_telephone + "','" + adresse_mail + "','" + sexe + "','" + date_embauche + "','" + pays + "','" + ville + "','" + codepostal + "','" + n_rue + "','" + rue + "','" + etage + "','" + residence + "')", con);
+				cmd->ExecuteReader();
+				MessageBox::Show("Le Personnel : " + nom + " " + prenom + " a été ajouté(e) avec succès ! ");
+			}
+			}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show("Une Erreur est survenue ! Merci de retaper votre demande.");
+		}
+}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}

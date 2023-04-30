@@ -29,8 +29,8 @@ Le logiciel a été programmé en **C++** et utilise **MySQL** (pour les requêt
 
 Ce projet est mené par:
 
--   [**Yanis ETHVIGNOT**](https://github.com/yaniswav)
--   [**Jebril Hocine**](https://github.com/jebril92)
+-   [**Yanis**](https://github.com/yaniswav)
+-   [**Jebril**](https://github.com/jebril92)
 
 ### Fonctionnalités
 
